@@ -1,0 +1,272 @@
+.card-bottom-back {
+    display: flex !important;
+    justify-content: space-evenly;
+    background: white !important;
+}
+.card-btn,
+.card-btn:hover {
+    background: #be6dee;
+    color: white;
+}
+
+.card-create-btn {
+    background: #00c0ef;
+    color: white;
+}
+
+.menu-top {
+    font-size: 18px;
+    padding: 13px 15px !important;
+}
+.menu-top::before {
+    content: none !important;
+}
+.main-sidebar,
+.sidebar-header {
+    font-size: 20px !important;
+}
+
+.treeview-menu > li > a {
+    padding: 5px 5px 5px 15px;
+    display: block;
+    font-size: 18px;
+}
+
+.route-buyer {
+    font-size: 16px !important;
+}
+
+.mb-5 {
+    display: flex;
+}
+
+.justify-content-center {
+    display: flex;
+    justify-content: space-between;
+    color: black;
+}
+.justify-content-center > a {
+    color: black;
+}
+.part-row {
+    box-shadow: 5px 10px 18px #888888;
+    margin-left: 15px;
+    background: #ffffff;
+    padding-bottom: 10px;
+}
+.alert-info {
+    color: #075d76 !important;
+    background-color: #cff0f9 !important;
+    border-color: #bbeaf7;
+}
+
+.part-row > .row {
+    margin-top: 22px;
+}
+.search-bar {
+    display: flex !important;
+}
+.rebate-dates > .row {
+    padding: 10px;
+}
+.btn-rebate-export {
+    width: 100%;
+}
+
+.rebate-export {
+    margin-top: 20px;
+}
+.export-text {
+    display: flex;
+    align-items: center;
+}
+.msg-content {
+    display: flex;
+    flex-flow: column;
+    color: black;
+}
+.msg-content > .active {
+    background: #20a8d8 !important;
+}
+.table-hover {
+    margin-top: 20px;
+}
+.msg-height {
+    min-height: 140px;
+}
+.part-row > .col-sm-2 {
+    margin-top: 10px;
+}
+
+.content-header-height {
+    min-height: 50px;
+}
+.content-header {
+    min-height: 50px;
+}
+.box-head {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #d2d6de;
+}
+.table-main {
+    border: 1px solid #d2d6de;
+    padding: 10px;
+    align-items: center;
+}
+.table-main > tbody > tr {
+    align-items: center;
+}
+.padd-main {
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+.part-row-wallet > .row {
+    margin-top: 22px;
+    border-bottom: 0px solid #ecf0f5;
+}
+.part-row-wallet {
+    min-height: 207px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.text-usd {
+    color: #0db3e3 !important;
+    font-weight: bold;
+}
+.right-padd {
+    padding-right: 25px;
+}
+.bank-card-footer {
+    background: #f0f3f5;
+    padding: 10px;
+}
+.card-btn {
+    background: #0db3e3 !important;
+}
+.wallet-card {
+    padding-bottom: 0px;
+    margin-top: 20px;
+}
+.wallet-card > .row {
+    border-bottom: 0px solid #ecf0f5;
+}
+.card-header {
+    border-bottom: 1px solid #c8ced3 !important;
+}
+.card-group {
+    display: flex !important;
+}
+.card {
+    margin-bottom: 1.25rem;
+    border: 0;
+}
+.card .card-header {
+    background-color: #fff;
+    border-color: #c8ced3;
+}
+.card-body {
+    flex: 1 1 auto;
+    padding: 1.5625rem;
+}
+.nice-accordion .card {
+    border: 1px solid #f3f3f3;
+}
+.card {
+    margin-bottom: 1.25rem;
+    border: 0;
+    padding: 8px;
+}
+
+.card-header-faq {
+    min-height: 46px;
+    align-items: center;
+    display: flex;
+    font-size: 24px;
+}
+.card-header-faq,
+.nice-accordion > .card > .card-header {
+    border-bottom: 0px solid black !important;
+}
+
+.roboto-medium {
+    color: black;
+}
+
+.modal .modal-header {
+    border-bottom: none;
+    position: relative;
+}
+.modal .modal-header .btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 0;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.modal .modal-footer {
+    border-top: none;
+    padding: 0;
+}
+.modal .modal-footer .btn-group > .btn:first-child {
+    border-bottom-left-radius: 0;
+}
+.modal .modal-footer .btn-group > .btn:last-child {
+    border-top-right-radius: 0;
+}
+
+.modal-backdrop {
+    z-index: 105 !important;
+}
+.modal-content {
+    z-index: 1060 !important;
+}
+
+.aff-header {
+    display: flex;
+    align-items: center;
+    background: #3c8dbc;
+    margin-top: -23px;
+}
+.instru-btn {
+    border: 1px solid !important;
+}
+.stat-row {
+    border-bottom: 1px solid #ecf0f5;
+}
+.paypal-connect {
+    padding: 10px;
+    zoom: 0.8;
+}
+.user-info {
+    width: 150px !important;
+}
+.user-body {
+    padding: 5px !important;
+}
+.user-intro {
+    background: #e4e7ea;
+}
+.user-info-text {
+    margin-bottom: 0px !important;
+}
+
+.user-info-list {
+    margin-left: 10px;
+}
+.remove-bottom-line {
+    border-bottom: 0px solid black !important;
+}
+.account-right-side {
+    display: flex !important;
+    justify-content: space-between;
+}
+.profile-struct {
+    display: flex;
+}
+.timezone {
+    font-size: 12px;
+    text-align: right;
+}

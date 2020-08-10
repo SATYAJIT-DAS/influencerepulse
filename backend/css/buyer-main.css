@@ -1,0 +1,35 @@
+.message-bg {
+    background: url(../../intro/img/messages-bg.png) no-repeat bottom center !important;
+    background-size: 100% auto;
+}
+.main-bg {
+    background: white;
+}
+
+form .form-group .input-group-shadow .input-group-prepend .input-group-text {
+    border: 0;
+    background-color: #fff;
+}
+
+.width-full {
+    width: 100% !important;
+}
+.margin-auto {
+    margin: auto;
+}
+#buyers-testimonials .testimonial-block img {
+    width: 5.625rem;
+    height: 5.625rem;
+    border-radius: 50%;
+}
+#chrome-extension-hero .row .chrome-start {
+    background: transparent url(../../intro/img/map-bg.png) 0 0 no-repeat
+        padding-box;
+}
+
+#chrome-extension-hero .row .chrome-savings {
+    background-color: #20a8d8;
+}
+.left-320 {
+    margin-left: -320px !important;
+}

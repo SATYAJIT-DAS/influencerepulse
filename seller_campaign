@@ -1,0 +1,32 @@
+When user create  a new campaign  it's  status  will be pending  
+
+And after admin approval  it will go online 
+
+And if a campaign  is paused from seller end it will be offline 
+
+
+And when  seller ends the campaign  it will be completed 
+
+And if admin  cancelle a campaign  at middle it will be incomplete 
+
+{{{And if seller set a future  date think  after 7 days and pays initial  paymeny then it's  status is ready  but it will active  at selected  day}}}
+
+
+And you know the delete  is
+
+When admin delete  a campaign  it only can be delete  
+
+
+If seller  pause a campaign  it will be in offline  status And if  a seller  mark to end or complete  the campaign  the  it's  status  is completed 
+Think i have a running  campaign  and i think  i won't  run the campaign  for next two days and then i will start the campaign  again on these two days period  it will be in offline  status
+
+And i seller think  i won't  run a  campaign  anymore and make it end then it  will be completed 
+
+--seller--
+1: before payment: incomplete //
+2: after payment: pending//
+3: admin approve: online  //
+4: pause: offline 
+5: end: complete 
+6: admin-cancel: incomplete //
+7: delete: delete; //

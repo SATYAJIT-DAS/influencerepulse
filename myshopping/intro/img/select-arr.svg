@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="8" height="5" viewBox="0 0 8 5">
+    <defs>
+        <style>
+            .cls-1{fill:#666}
+        </style>
+    </defs>
+    <path id="Path" d="M1.074 4L4.865.688a.368.368 0 0 0 0-.57.509.509 0 0 0-.652 0L.13 3.685A.369.369 0 0 0 0 4a.369.369 0 0 0 .128.316l4.085 3.566a.509.509 0 0 0 .652 0 .368.368 0 0 0 0-.57L1.074 4z" class="cls-1" transform="rotate(-90 2.5 2.5)"/>
+</svg>
