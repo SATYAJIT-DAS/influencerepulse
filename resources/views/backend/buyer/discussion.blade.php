@@ -58,7 +58,7 @@
                                             </div>
                                             @endforeach
 
-                                            
+
                                         </div>
                                     </div>
                                     <div class="arrow-down slick-arrow" style=""><i
@@ -77,7 +77,7 @@
                                                         style="width: 100%; display: inline-block;"></div>
                                             </div>
                                             @endforeach
-                                            
+
                                         </div>
                                     </div>
                                 </div>
@@ -177,7 +177,7 @@
                     our TOS and its against TOS of all major marketplaces, including Amazon, Walmart, etc. You can leave
                     an unbiased product review only willingly and only if you wish to do so. </div>
 
-                    
+
 
                 <ul class="timeline">
 
@@ -216,7 +216,7 @@
                             </div>
                             <div class="timeline-footer">
                                 <small class="text-muted">
-                                    <i class="fal fa-clock"></i> 
+                                    <i class="fal fa-clock"></i>
                                     {{ date('F j, Y  h:m ', strtotime($msg->date)) }}
                                 </small>
                                 @if($msg->file_path)
@@ -236,7 +236,7 @@
 
                 <div class="text-center mt-5">
                     <a data-e2e="btn-reply" id="btn-reply" class="btn btn-lg btn-primary" data-toggle="modal"
-                        data-target="#generic-modal" style="color:white;" 
+                        data-target="#generic-modal" style="color:white;"
                         >
                         Reply to {{$order->getCamp->user->name}} </a>
 
@@ -279,7 +279,7 @@
                                 <div class="controls">
                                     <textarea data-e2e="message" name="message" id="message" class="form-control md-textarea"
                                         autofocus="" data-fv-field="message">
-                                            
+
                                         </textarea>
                                         <i style=""
                                         class="fv-control-feedback fal fa-asterisk" data-fv-icon-for="message"></i>
@@ -313,7 +313,7 @@
                     </div>
                     <script type="text/javascript">
                         function show_file(url){
-                            url="https://"+window.location.hostname+"/shop_site/storage/app/"+url;
+                            url="https://"+window.location.hostname+"/public/files/"+url;
                             var win=window.open(url, '_blank');
                         }
                     </script>
@@ -385,3 +385,4 @@
 
 </main>
 @endsection
+

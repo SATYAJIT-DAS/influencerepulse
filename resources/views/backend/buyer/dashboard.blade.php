@@ -1167,7 +1167,7 @@
                     $("#price").html(camp.price);
                     $("#save_price").html(camp.rebate_price);
 
-                    $("#daily_count").html(camp.daily_rebates - camp.daily_count);
+                    $("#daily_count").html(camp.remaining_deals_for_the_day);
                     // $("#marketplace").html(camp..market_name);
                     $("#start_time").attr('title', 'Rebates released ' + camp.start_time);
                     $("#description").html(camp.description);
@@ -1184,7 +1184,7 @@
                         console.log(btn_content);
                         $("#product_url").html(btn_content);
 
-                    } else if (camp.daily_rebates - camp.daily_count <= 0) {
+                    } else if (camp.remaining_deals_for_the_day <= 0) {
                         $("#product_url").addClass('disabled');
                         $("#product_url").html('Count Limit');
                     } else {
@@ -1280,3 +1280,4 @@
     </main>
 
 @endsection
+

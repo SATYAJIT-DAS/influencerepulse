@@ -41,7 +41,7 @@
                 <a href="{{route('camp-forms', array('camp_id' => $camp->id, 'page' => 'pic'))}}">
                     <span class="circle">2</span>
                     <span class="label">Pictures</span>
-                   
+
                 </a>
             </li>
 
@@ -49,7 +49,7 @@
                 <a href="{{route('camp-forms', array('camp_id' => $camp->id, 'page' => 'set'))}}" >
                     <span class="circle">3</span>
                     <span class="label">Settings</span>
-                    
+
                 </a>
             </li>
 
@@ -299,7 +299,7 @@
 
                                                 <div class="text-center small-text mb-1">
                                                     <small>
-                                                        Only <b>{{$camp->daily_rebates}}</b> more available today! </small>
+                                                        Only <b>{{$camp->daily_rebates-$camp->daily_count}}</b> more available today! </small>
                                                 </div>
 
                                                 <div class="d-flex justify-content-center small-text">
@@ -369,8 +369,8 @@
 
     <script src="{{asset('backend/js/addthis_widget.js#pubid=ra-5a17677794ca7129')}}"></script>
     <script>
-        
-        
+
+
     $('.slick-slide').on('click', function() {
         $('.slick-slide').removeClass('slick-current  slick-active');
         $(".main-slide").css("opacity", "0");
@@ -395,3 +395,4 @@
 </main>
 
 @endsection
+
