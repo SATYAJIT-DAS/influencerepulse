@@ -31,6 +31,28 @@
     width: 149px;
     height: 44px;
 }
+.bg-primary,
+.btn-primary,
+.bg-primary-light {
+    background-color: #00ce90 !important;
+}
+.btn-primary {
+    border-color: #00ce90 !important;
+}
+
+.text-start {
+    color: #00ce90;
+}
+.text-start:hover {
+    color: #fff;
+}
+a.bg-primary-light:hover,
+a.bg-primary-light:focus,
+button.bg-primary-light:hover,
+button.bg-primary-light:focus {
+    background-color: #20a77e !important;
+}
+
 </style>
 <main class="main">
     <section id="unlock-exclusive-rebates" class="main-bg">
@@ -297,7 +319,7 @@
                 <p class="mb-xl-5 mb-4 text-white">
                     Join tens of thousands of smart and happy shoppers! What are you waiting for? </p>
 
-                <a href="{{route('intro.buyer-signup')}}" class="btn btn-secondary btn-lg text-primary-light px-5-5">
+                <a href="{{route('intro.buyer-signup')}}" class="btn btn-secondary btn-lg text-start px-5-5 start-txt">
                     Start Now! </a>
 
             </div>
