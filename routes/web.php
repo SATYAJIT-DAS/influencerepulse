@@ -34,6 +34,12 @@ Route::get('/', 'HomeController@index')->name('intro.home')->middleware('guest')
 Route::get('/about-us', function () {
     return view('intro.about-us');
 })->name('intro.aboutUs');
+Route::get('/buyers-influencers', function () {
+    return view('intro.buyers-influencers');
+})->name('intro.buyers-influencers');
+Route::get('/brands-sellers', function () {
+    return view('intro.brands-sellers');
+})->name('intro.brands-sellers');
 Route::get('/chrome', function () {
     return view('intro.chrome');
 })->name('intro.chrome');

@@ -12,7 +12,20 @@
             <li class="nav-item d-md-down-none">
                 <a class="nav-link" href="{{route('intro.home')}}">
                     Home
-                </a></li>
+                </a>
+            </li>
+
+            <li class="nav-item d-md-down-none">
+                <a class="nav-link" href="{{ route('intro.buyers-influencers') }}">
+                    Buyers or Influencer
+                </a>
+            </li>
+            <li class="nav-item d-md-down-none">
+                <a class="nav-link" href="{{ route('intro.brands-sellers') }}">
+                    Brands or Sellers
+                </a>
+            </li>
+
             <li class="nav-item d-md-down-none">
                 <a class="nav-link" href="{{ route('intro.aboutUs') }}">
                     About Us

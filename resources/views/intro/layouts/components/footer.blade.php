@@ -130,14 +130,17 @@
         <hr />
 
         <div class="py-lg-2-5 py-1-5 row align-items-center">
-            <div class="col-6 text-center text-md-right d-flex flex-column d-md-block pr-8">
-               <!--  <a href="{{ route('intro.home') }}" rel="nofollow">influencerpulse</a>
-                <span>© 2020</span> -->
+             <!-- <div class="col-6 text-center text-md-right d-flex flex-column d-md-block pr-8">
+               <a href="{{ route('intro.home') }}" rel="nofollow">influencerpulse</a>
+                <span>© 2020</span>
             </div>
+            -->
             <div class="col-6 text-center text-md-left d-flex flex-column d-md-block">
-                <a href="{{ route('intro.term') }}" rel="nofollow">Terms of use</a>
+                <a href="{{ route('intro.term') }}" rel="nofollow">Terms of service</a>
                 <span class="d-none d-md-inline"> - </span>
-                <a href="{{ route('intro.privacy') }}" rel="nofollow">Privacy policy</a>
+                <a href="{{ route('intro.privacy') }}" rel="nofollow">Privacy Policy</a>
+                 <span class="d-none d-md-inline"> - </span>
+                 <a href="{{ route('intro.privacy') }}" rel="nofollow">Privacy policy</a>
             </div>
         </div>
 
