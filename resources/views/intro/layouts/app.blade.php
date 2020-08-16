@@ -8,7 +8,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <link rel="shortcut icon" href="intro/img/favicon2.jpeg" type="image/x-icon" />
+    <link rel="shortcut icon" href="intro/img/favicon2.png" type="image/x-icon" />
     <title>Get Up To 100% Cash Back When Shopping Online - Influencer Pulse</title>
     <meta property="og:title" content="Influencer Pulse - Get Up To 100% Cash Back, When Shopping Online">
     <meta property="og:description"
