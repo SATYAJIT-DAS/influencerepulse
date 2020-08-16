@@ -72,9 +72,9 @@
         <div class="col-lg col-12 card with-small-shadow pt-8 px-3 pb-5-5">
 
           <div class="mb-2-5">
-            <div class="position-absolute about-us-icon d-flex">
+            {{-- <div class="position-absolute about-us-icon d-flex">
               <i class="sprite-icon-key m-auto"></i>
-            </div>
+            </div> --}}
             <h4 class="text-dark mb-0">influencerpulse works like those old mail-in influencerpulse, just faster!</h4>
           </div>
 
@@ -86,10 +86,10 @@
           <div class="col-lg col-12 card with-small-shadow pt-8 px-3 pb-5-5">
 
             <div class="mb-2-5">
-              <div class="position-absolute about-us-icon d-flex">
+              {{-- <div class="position-absolute about-us-icon d-flex">
                 <i class="sprite-icon-handshake m-auto"></i>
-              </div>
-              <h4 class="text-dark mb-0">Why does influencerpulse offer such high influencerpulse?</h4>
+              </div> --}}
+              <h4 class="text-dark mb-0">Why does influencerpulse offer such high Offers</h4>
             </div>
 
             <p class="mb-0">Our sellers want you to try their products because they understand that word of
@@ -101,13 +101,13 @@
             <div class="col-lg col-12 card with-small-shadow pt-8 px-3 pb-5-5">
 
               <div class="mb-2-5">
-                <div class="position-absolute about-us-icon d-flex">
+                {{-- <div class="position-absolute about-us-icon d-flex">
                   <i class="sprite-voucher m-auto"></i>
-                </div>
-                <h4 class="text-dark mb-0">influencerpulse manages the entire influencerpulse process</h4>
+                </div> --}}
+                <h4 class="text-dark mb-0">influencerpulse manages the entire Deals process</h4>
               </div>
 
-              <p class="mb-0">You don’t have to worry about getting your influencerpulse as we collect influencerpulse funds
+              <p class="mb-0">You don’t have to worry about getting your Refund as we collect Deal funds
                 upfront from our sellers.</p>
 
               </div>

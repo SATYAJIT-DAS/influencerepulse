@@ -15,6 +15,7 @@
     <script src="{{ asset('backend/js/e5a339db27258413bd6f.js')}}"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112840276-1"></script>
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset('public/css/custom.css')}}">
 
     <!--Start of Tawk.to Script-->
 <script type="text/javascript">

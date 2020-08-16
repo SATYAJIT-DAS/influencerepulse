@@ -1,7 +1,7 @@
 <header class="navbar navbar-expand-lg navbar-light app-header">
     <div class="container-fluid">
         <a class="navbar-brand" href="{{route('intro.home')}}">
-            <img src="{{asset('intro/img/logo.png')}}" alt="influencerpulse" class="img-fluid" style="width:12rem !important">
+            <img src="{{asset('intro/img/influencers pulse logo.png')}}" alt="influencerpulse" class="img-fluid" style="width:12rem !important">
         </a>
         <ul class="nav navbar-nav navbar-main-menu text-center justify-content-center flex-grow-2">
             <li class="nav-item">
