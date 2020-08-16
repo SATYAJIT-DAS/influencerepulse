@@ -8,15 +8,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-
-    <!-- <link rel="manifest" href="manifest.json" crossorigin="use-credentials"> -->
-    <title>Get Up To 100% Cash Back influencer  When Shopping Online - Influencer Pulse</title>
     <link rel="shortcut icon" href="intro/img/favicon2.jpeg" type="image/x-icon" />
-    <link rel="icon" href="favicon2.png" type="image/x-icon" />
-    <meta property="og:title" content="Influencer Pulse - Get Up To 100% Cash Back influencer When Shopping Online">
+    <title>Get Up To 100% Cash Back When Shopping Online - Influencer Pulse</title>
+    <meta property="og:title" content="Influencer Pulse - Get Up To 100% Cash Back, When Shopping Online">
     <meta property="og:description"
-        content="Highest Cash Back and influencer paid when shopping on your favorite brands at your favorite stores. Get Up To 100% Cash Back influencer!">
-    <meta property="og:site_name" content="Influencer Pulse - Get Up To 100% Cash Back influencer When Shopping Online">
+        content="Get Highest Cashback offers when shopping on your favorite brands at your favorite stores. Get Up To 100% Cash Back Deals">
+    <meta property="og:site_name" content="Influencer Pulse - Get Up To 100% Cash Back, When Shopping Online">
     <meta property="og:type" content="website">
     <meta property="og:url" content="index.html">
     <meta property="og:image" content="intro/img/fb_share.jpg">
@@ -33,7 +30,7 @@
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112840276-1"></script>
 
-
+    <link rel="stylesheet" href="{{asset('public/css/custom.css')}}">
 
 
     <noscript>

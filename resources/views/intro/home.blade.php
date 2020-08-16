@@ -31,28 +31,6 @@
     width: 149px;
     height: 44px;
 }
-.bg-primary,
-.btn-primary,
-.bg-primary-light {
-    background-color: #00ce90 !important;
-}
-.btn-primary {
-    border-color: #00ce90 !important;
-}
-
-.text-start {
-    color: #00ce90;
-}
-.text-start:hover {
-    color: #fff;
-}
-a.bg-primary-light:hover,
-a.bg-primary-light:focus,
-button.bg-primary-light:hover,
-button.bg-primary-light:focus {
-    background-color: #20a77e !important;
-}
-
 </style>
 <main class="main">
     <section id="unlock-exclusive-rebates" class="main-bg">
