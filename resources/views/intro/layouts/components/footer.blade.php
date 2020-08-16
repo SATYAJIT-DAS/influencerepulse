@@ -139,8 +139,10 @@
                 <a href="{{ route('intro.term') }}" rel="nofollow">Terms of service</a>
                 <span class="d-none d-md-inline"> - </span>
                 <a href="{{ route('intro.privacy') }}" rel="nofollow">Privacy Policy</a>
-                 <span class="d-none d-md-inline"> - </span>
-                 <a href="{{ route('intro.privacy') }}" rel="nofollow">Privacy policy</a>
+                <span class="d-none d-md-inline"> - </span>
+                <a href="{{ route('intro.shipping-policy') }}" rel="nofollow">Shipping policy</a>
+                <span class="d-none d-md-inline"> - </span>
+                <a href="{{ route('intro.refund-policy') }}" rel="nofollow">Refund policy</a>
             </div>
         </div>
 
