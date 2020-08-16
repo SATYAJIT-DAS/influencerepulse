@@ -61,6 +61,12 @@ Route::get('/term', function () {
 Route::get('/privacy', function () {
     return view('intro.privacy');
 })->name('intro.privacy');
+Route::get('/shipping-policy', function () {
+    return view('intro.shipping-policy');
+})->name('intro.shipping-policy');
+Route::get('/refund-policy', function () {
+    return view('intro.refund-policy');
+})->name('intro.refund-policy');
 
 Route::get('/single-page/{id}/{state}', 'Intro\SingleController@show')->name('single-page');
 
