@@ -55,7 +55,7 @@
                                                 tabindex="-1">
                                                 <div><img src="{{asset('public/images/'.$img->image_path)}}"
                                                         alt="{{$camp->product_name}}"
-                                                        style="width: 100%; display: inline-block;">
+                                                        style="height: 100%; width:auto; display: inline-block;">
                                                 </div>
                                             </div>
                                             @endforeach
