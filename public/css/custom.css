@@ -1,10 +1,12 @@
 .bg-primary,
 .btn-primary,
 .bg-primary-light,
-.sidebar .nav-link:hover {
+.sidebar .nav-link:hover,
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link,.btn-rebate {
     background-color: #00ce90 !important;
 }
-.btn-primary {
+.btn-primary,.btn-rebate {
     border-color: #00ce90 !important;
 }
 
