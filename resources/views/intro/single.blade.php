@@ -37,7 +37,7 @@
                                                 <div>
                                                     <img src="{{asset('public/images/'.$img->image_path)}}"
                                                         alt="{{$camp->product_name}}"
-                                                        style="width: 100%; display: inline-block;">
+                                                        style="width:auto ;height: 100%; display: inline-block;">
                                                 </div>
                                             </div>
                                             @endforeach
