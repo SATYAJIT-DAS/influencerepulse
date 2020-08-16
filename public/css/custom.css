@@ -1,14 +1,22 @@
 .bg-primary,
 .btn-primary,
-.bg-primary-light {
+.bg-primary-light,
+.sidebar .nav-link:hover,
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link,.btn-rebate {
     background-color: #00ce90 !important;
 }
-.btn-primary {
+.btn-primary,.btn-rebate {
     border-color: #00ce90 !important;
 }
 
-.text-start {
-    color: #03a877;
+.text-start,
+a,
+.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .show > .nav-link {
+    color: #00ce90;
 }
 .text-start:hover {
     color: #fff;
@@ -19,4 +27,12 @@ a.bg-primary-light:focus,
 button.bg-primary-light:hover,
 button.bg-primary-light:focus {
     background-color: #20a77e !important;
+}
+
+.btn-rebate:not(:disabled):not(.disabled).active,
+.btn-rebate:not(:disabled):not(.disabled):active,
+.show > .btn-rebate.dropdown-toggle {
+    color: #fff;
+    background-color: #00ce90 !important;
+    border-color: #00ce90 !important;
 }

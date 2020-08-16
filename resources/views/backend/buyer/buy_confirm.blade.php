@@ -28,27 +28,27 @@
                                     <span class="circle">1</span>
                                     <span class="label text-left">
                                         Buy The Product <b>At Full Price</b> - <b>Do Not Use Discount Codes</b>
-                                        Sold By <span class="text-primary">Bone and Oak</span> </span>
+                                        Sold By <span class="text-primary">{{$camp->brand_name}}</span> </span>
                                 </a>
                                 <div id="step-content-1" class="step-content py-0 px-0-5  d-none d-lg-block">
                                     Click on “Buy Product” - you will be redirected to another website, where you can
                                     buy the product.
-                                    All purchases happen outside of influencerpulse. You may be redirected to Amazon, Walmart,
-                                    Jet.com or another eCommerce website.
+                                    All purchases happen outside of influencerpulse. You may be redirected to Amazon, Flipkart,
+                                    Snapdeal or another eCommerce website.
                                     <b>Buy the product at full price. Products purchased with discount codes will NOT
-                                        get a rebate.</b>
+                                        get a refund.</b>
                                 </div>
                             </li>
 
                             <li id="step-2" class="active">
                                 <a href="#!" data-toggle="collapse" data-target="#step-content-2">
                                     <span class="circle">2</span>
-                                    <span class="label">Confirm Your Rebate Key</span>
+                                    <span class="label">Confirm Your Deal</span>
                                 </a>
                                 <div id="step-content-2" class="step-content py-0 px-0-5 d-none d-lg-block">
                                     You have <b>1 hour</b> to buy the product and report back with influencerpulse. Use Order
-                                    ID as the Rebate Key to confirm your purchase to the seller. <b>Don’t postpone!</b>
-                                    If you don’t report the Rebate Key within 1 hour, the purchase will not be
+                                    ID  to confirm your purchase to the seller. <b>Don’t postpone!</b>
+                                    If you don’t report the Order ID  within 1 hour, the purchase will not be
                                     registered.
                                 </div>
                             </li>
@@ -59,11 +59,11 @@
                                     <span class="label">Wait For Seller Approval</span>
                                 </a>
                                 <div id="step-content-3" class="step-content py-0 px-0-5  d-none d-lg-block">
-                                    When the Rebate Key is provided, the rebate is automatically pre-approved and on
-                                    hold for 30 days.
+                                    When the Order ID is provided, the Deal  is automatically pre-approved and on
+                                    hold for 10 days.
                                     After that period, the seller has 5 days to approve or dispute it.
-                                    The Rebate Key is automatically approved if the seller does nothing.
-                                    After 35 days the money is credited to your account and the check is issued.
+                                    The Deal  is automatically approved if the seller does nothing.
+                                    After 10 days the money is credited to your account .
                                 </div>
                             </li>
 
@@ -171,7 +171,7 @@
                                 </a>
                                 <div class="step-content py-0 px-0-5">
                                     You are only allowed one account per address/household. You can not claim more than
-                                    one Rebate for the same product. Please, stay away from cheating or fraud. It's not
+                                    one Deal  for the same product. Please, stay away from cheating or fraud. It's not
                                     worth it!
                                 </div>
                             </li>
@@ -187,14 +187,14 @@
                             <li class="active warning">
                                 <a href="#!">
                                     <span class="circle">!</span>
-                                    <span class="label">35 Days Hold</span>
+                                    <span class="label">15 Days Hold</span>
                                 </a>
                                 <div class="step-content py-0 px-0-5">
-                                    Why 35 days? Most online
-                                    stores allow return of the items within 30 days. To avoid situations when you are
-                                    given a rebate plus you get a refund for a
+                                    Why 15 days? Most online
+                                    stores allow return of the items within 10 days. To avoid situations when you are
+                                    given a Deal plus you get a refund for a
                                     returned item, we have to hold the funds for 35 days.
-                                    Also, the seller can dispute the rebate within the last 5 days.
+                                    Also, the seller can dispute the Deal within the last 5 days.
                                 </div>
                             </li>
 
@@ -213,7 +213,7 @@
                                 </a>
                                 <div class="step-content py-0 px-0-5">
                                     Reselling the products acquired via influencerpulse is against our Terms of Service, and
-                                    will result in cancelation of all the Rebates and suspension of the buyer account.
+                                    will result in cancelation of all the Deals and suspension of the buyer account.
                                 </div>
                             </li>
 
@@ -258,7 +258,7 @@
                         <div>You'd like to buy the product later?</div>
 
                         <a class="btn btn-link btn-back" href="{{route('buyer.index')}}">
-                            Go back to rebates </a>
+                            Go back to Deals </a>
 
                     </div>
 

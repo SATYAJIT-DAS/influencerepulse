@@ -37,7 +37,7 @@
                                                 <div>
                                                     <img src="{{asset('public/images/'.$img->image_path)}}"
                                                         alt="{{$camp->product_name}}"
-                                                        style="width: 100%; display: inline-block;">
+                                                        style="width:auto ;height: 100%; display: inline-block;">
                                                 </div>
                                             </div>
                                             @endforeach
@@ -55,7 +55,7 @@
                                                 tabindex="-1">
                                                 <div><img src="{{asset('public/images/'.$img->image_path)}}"
                                                         alt="{{$camp->product_name}}"
-                                                        style="width: 100%; display: inline-block;">
+                                                        style="height: 100%; width:auto; display: inline-block;">
                                                 </div>
                                             </div>
                                             @endforeach
@@ -72,7 +72,7 @@
 
                             <div class="d-flex align-items-center mb-1">
                                 <div class="percent bg-danger text-white">
-                                    Rebate: {{round((100-$camp->rebate_price/$camp->price*100)*100)/100}}%
+                                    Deal: {{round((100-$camp->rebate_price/$camp->price*100)*100)/100}}%
                                 </div>
                                 <div class="d-flex align-items-center text-info font-weight-bold ml-3">
                                     <i class="sprite-icon-piggy-bank mr-1"></i>
@@ -102,7 +102,7 @@
                                     Starting soon... </h5>--}}
 
                                 <p class="mb-2-5">
-                                    The rebate starts on {{$camp->start_date."  ".$camp->start_time."  EST" }} </p>
+                                    The Deals starts on {{$camp->start_date."  ".$camp->start_time."  EST" }} </p>
 
                                 <a style="color:white;" class="btn btn-primary btn-block mb-2-5 py-1" id="camp-url" href="{{route('buyer.buy_confirm',$camp->id)}}">
                                     Buy Product
@@ -140,7 +140,7 @@
         <div class="container-fluid py-xl-10 py-6">
 
             <h2 class="mb-xl-6 mb-3 text-center">
-                Similar Rebates and Coupons </h2>
+                Similar Deals and Coupons </h2>
 
             <div class="row mt-5">
                 @foreach($camps as $key => $camp)
