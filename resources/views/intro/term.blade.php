@@ -8,364 +8,124 @@
             <div class="col-lg-6 col-md-8 px-0-5 mx-auto my-4">
 
                 <h1 class="mb-5 text-center">
-                    Terms of Use Agreement </h1>
+                    Terms of service </h1>
 
-                <p>Influencer Pulse is a service by Influencer Pulse, Inc. We provide a
-                    service of rebates . Sellers list their
-                    items for sale on the Site and provide the URL to where the item can be purchased. Rebates are
-                    claimed through the Site, and we send the check to the buyer for the Rebate.</p>
+                    <h3>OVERVIEW</h3>
 
-                <p>These Terms of Use shall apply to your use of the Site and any and all services available on or
-                    through the Site (the “Services”). By accessing and/or using the Site, you are expressly
-                    agreeing to comply with and be bound by the following Terms of Use, Influencer Pulse’s Privacy Policy
-                    located her.
-                    and any other policies, rules or guidelines that
-                    may be applicable to Services on the Site (“Additional Terms”), as well as all applicable laws
-                    and regulations. “You,” or “your,” refers to you, a user of the Site. “Seller” refers to a user
-                    of the site that lists an item eligible for a Rebate. “Buyer” refers to user of the Site that
-                    purchases an item from a Seller and is eligible to submit a claim for a Rebate through the
-                    Site.</p>
+                <p>This website is operated by InfluencerPulse. Throughout the site, the terms “we”, “us” and “our” refer to InfluencerPulse. InfluencerPulse offers this website, including all information, tools and services available from this site to you, the user, conditioned upon your acceptance of all terms, conditions, policies and notices stated here.</p>
 
-                <p>We may revise and update these Terms of Use at any time; please periodically review them, because
-                    your continued usage of the Site indicates your agreement with any such changes. Any changes we
-                    make will be effective immediately upon notice, which we may provide by any means including,
-                    without limitation, posting a revised version of these Terms of Use on the Site. You can
-                    determine when these Terms of Use were last revised by referring to the “Last Updated” legend at
-                    the top of these Terms of Use.</p>
+                <p>By visiting our site and/ or purchasing something from us, you engage in our “Service” and agree to be bound by the following terms and conditions (“Terms of Service”, “Terms”), including those additional terms and conditions and policies referenced herein and/or available by hyperlink. These Terms of Service apply to all users of the site, including without limitation users who are browsers, vendors, customers, merchants, and/ or contributors of content.</p>
 
-                <p>These Terms of Use will remain in full force and effect as long as you are a user of the Site and in
-                    the event of termination of your account, or any service or feature, you will still be bound by your
-                    obligations under these Terms of Use, including any indemnifications, warranties and limitations of
-                    liability.</p>
+                <p>Please read these Terms of Service carefully before accessing or using our website. By accessing or using any part of the site, you agree to be bound by these Terms of Service. If you do not agree to all the terms and conditions of this agreement, then you may not access the website or use any services. If these Terms of Service are considered an offer, acceptance is expressly limited to these Terms of Service.</p>
 
-                <p><b>By using or attempting to use the Site, you certify that you are a resident of the United States
-                        and are at least 18 years of age. You also certify that you are not a person barred from
-                        receiving services
-                        under the laws of the United States or other applicable jurisdiction. If you do not meet these
-                        requirements or, if for any reason, you do not agree with all of the terms and conditions
-                        contained
-                        in these Terms of Use, please discontinue using the Site immediately.</b></p>
+                <p>Any new features or tools which are added to the current store shall also be subject to the Terms of Service. You can review the most current version of the Terms of Service at any time on this page. We reserve the right to update, change or replace any part of these Terms of Service by posting updates and/or changes to our website. It is your responsibility to check this page periodically for changes. Your continued use of or access to the website following the posting of any changes constitutes acceptance of those changes.</p>
 
-                <h3>Rebates</h3>
+                <p>Our store is hosted on Shopify Inc. They provide us with the online e-commerce platform that allows us to sell our products and services to you.</p>
 
-                <p>In order to qualify for a Rebate, you must: (i) be signed up for a Influencer Pulse account. You can set
-                    up your account here
-                    and (ii) complete a purchase using the
-                    URL provided from the Site (“Qualified Purchase”). If you complete your purchase through another URL
-                    not associated through the Site, you may not be eligible to receive the Rebate. Once your
-                    information is received, your Rebate will be reviewed and approved by the Seller in their sole
-                    discretion. Influencer Pulse is not responsible for any unapproved Rebates. In addition, if you return the
-                    item subject to the Rebate, you forfeit your right to the Rebate and the amount will be deducted
-                    from your account.</p>
+                <h3>SECTION 1 - ONLINE STORE TERMS</h3>
 
-                <h3>Buyer Rebate Payment Requirements</h3>
+                <p>By agreeing to these Terms of Service, you represent that you are at least the age of majority in your state or province of residence, or that you are the age of majority in your state or province of residence and you have given us your consent to allow any of your minor dependents to use this site.</p>
+                <p>You may not use our products for any illegal or unauthorized purpose nor may you, in the use of the Service, violate any laws in your jurisdiction (including but not limited to copyright laws).
+You must not transmit any worms or viruses or any code of a destructive nature.
+A breach or violation of any of the Terms will result in an immediate termination of your Services.
+</p>
 
-                <p>As a condition of payment of applicable Rebates, you must establish and maintain an account with
-                    the information necessary to process your payment: your first and last name, a valid email address
-                    at which you are able to receive email, a valid postal address at which you are able to receive
-                    mail, and a password to protect your account. You further agree to provide additional information
-                    we may reasonably request to verify your identity as a condition for receiving payment.</p>
+                <h3>SECTION 2 - GENERAL CONDITIONS</h3>
 
-                <p>As a condition of payment of applicable Rebates, you agree not to resell any products you purchased
-                    in connection with the Site. If you resell any products we reserve the right to cancel the Rebates
-                    and your account. You further agree not have more than one account per household. You agree not to
-                    claim more than one Rebate per unique product in connection with the Site. You further agree not to
-                    apply any additional promotional coupons or discounts when you claim Rebates in connection with the
-                    Site.</p>
-
-                <p>Influencer Pulse and its designees shall have the right to remove any Buyer Content, as determined in
-                    their sole discretion.</p>
-
-                <p>We pay Rebates to Buyer in U.S. dollars via check which will be sent to the address provided in your
-                    account. Other payment options may be made available in the future. Rebates are paid to you as the
-                    payout date comes, weekly or monthly.
-                    We reserve the right to modify the payment schedule at any
-                    time. It is your responsibility to keep your address in your account up to date. We are not
-                    responsible for payments delivered to the wrong address. If your check expires without being cashed
-                    or deposited, or if it is returned uncashed to Influencer Pulse, we will return the amount to your
-                    Account, however, it will be subject to a returned check fee in the amount of $5 which will be
-                    deducted automatically from your account.</p>
-
-                <p>The determination of a Rebate dispute should be based on the compliance of one or more of the
-                    following reasons:</p>
-                <ul>
-                    <li>The Influencer Pulse submitted was not legitimate.</li>
-                    <li>The order was cancelled or refunded.</li>
-                    <li>The product was returned.</li>
-                    <li>Extra discount coupons or codes were used along with the Influencer Pulse offer.</li>
-                    <li>The item bought was not the one advertised on the site.</li>
-                    <li>The item has been bought multiple times from a same account on the marketplace, in connection
-                        with the site (this depends on the seller policies).</li>
-                </ul>
-                <p>Any other reasons may be added at the sole discretion of Influencer Pulse. It is your responsibility
-                    to check your account regularly to ensure that your Rebates are accurately reflected and that your
-                    account balance is accurate. If you believe that a Rebate has not been correctly added to your
-                    account, you must contact Influencer Pulse Customer Service atwithin sixty (60) days
-                    of the transaction. Should you disagree with any adjustments made to your account or payments made
-                    to you, your sole remedy is to cancel your account and cease using our Services. You will be solely
-                    responsible for any and all tax liability arising out of any payments you may receive from us.</p>
-
-                <h3>Communications</h3>
-
-                <p>By signing up to for an account, you agree to receive communications that are account related (e.g.,
-                    that we are mailing you a check on a certain date, etc.) as well as periodic shopping-related emails
-                    that highlight Rebates and special deals that are available to you. We may communicate with you by
-                    electronic communications or direct mail using information you provided during the registration
-                    process. Your consent to receive electronic communications includes any notices or other information
-                    that we may be required by law to provide you in writing or otherwise. You agree to keep us apprised
-                    of your current email address should the same change subsequent to the date you create an account.
-                    You may opt out of receiving certain communications in accordance with our Privacy Policy.</p>
+                <p>We reserve the right to refuse service to anyone for any reason at any time.</p>
+                <p>You understand that your content (not including credit card information), may be transferred unencrypted and involve (a) transmissions over various networks; and (b) changes to conform and adapt to technical requirements of connecting networks or devices. Credit card information is always encrypted during transfer over networks.</p>
+                <p>You agree not to reproduce, duplicate, copy, sell, resell or exploit any portion of the Service, use of the Service, or access to the Service or any contact on the website through which the service is provided, without express written permission by us.</p>
+                <p>The headings used in this agreement are included for convenience only and will not limit or otherwise affect these Terms.</p>
 
 
-                <h3>Seller Store Policies; Rebate Approval; Seller Products</h3>
+                <h3>SECTION 3 - ACCURACY, COMPLETENESS AND TIMELINESS OF INFORMATION</h3>
+                <p>We are not responsible if information made available on this site is not accurate, complete or current. The material on this site is provided for general information only and should not be relied upon or used as the sole basis for making decisions without consulting primary, more accurate, more complete or more timely sources of information. Any reliance on the material on this site is at your own risk.</p>
 
-                <p>A product purchased from any Seller through the Site is governed by and subject to the applicable
-                    Seller’s store policies, including applicable exchange and shipping policies. We encourage you to
-                    read and understand these policies before making a purchase. You agree that we are not agents of any
-                    Seller and that the Sellers operate independently and are not under our control with respect to the
-                    Rebates or otherwise. Accordingly, your participation in offers or promotions of, or correspondence
-                    with, any Seller is solely between you and that Seller. We do not assume any liability, obligation
-                    or responsibility for any part of such correspondence, offer or Rebate, including, without
-                    limitation, the withdrawal or modification of any such offer or Rebate.</p>
+                <p>This site may contain certain historical information. Historical information, necessarily, is not current and is provided for your reference only. We reserve the right to modify the contents of this site at any time, but we have no obligation to update any information on our site. You agree that it is your responsibility to monitor changes to our site.</p>
 
-                <p>All matters concerning the products and services posted from a Seller, including but not limited to
-                    purchase terms, payment terms, warranties, guarantees, maintenance and delivery, are solely between
-                    you and Seller. Influencer Pulse makes no warranties or representations whatsoever with regard to any
-                    goods or services provided by Sellers. You will not consider Influencer Pulse, nor will Influencer Pulse be
-                    construed as, a party to such transactions, whether or not Influencer Pulse may have received some form of
-                    revenue or other remuneration in connection with the transaction. You agree that Influencer Pulse will not
-                    be liable for any costs or damages arising out of such transactions, either directly or indirectly.
-                    We are not responsible for examining or evaluating, and we do not warrant the offerings of, any of
-                    these businesses or individuals. Influencer Pulse does not assume any responsibility or liability for the
-                    actions, product or content of all these and any other third parties. If you want to request a
-                    refund, you must request the refund directly from the Seller. To the extent that a purchase or a
-                    Rebate is cancelled or does not meet your expectations for any reason, you must contact the Seller
-                    and your sole and exclusive remedy with respect to the purchase is with the Seller and not with
-                    Influencer Pulse. All communications or disputes regarding Rebates or refunds are between the Seller and
-                    you. Influencer Pulse will not be responsible or liable in any way for Rebates, refunds, errors in issuing
-                    Rebates or refunds or lack of Rebates or refunds. In addition, Influencer Pulse is not responsible for the
-                    truth or accuracy of any Seller Content (defined below) or the ability of any Seller complete a
-                    transaction. Notwithstanding the foregoing, you may report the misconduct of any Seller and/or third
-                    parties in connection with the Site or any Services to us, and we, in our sole discretion, may
-                    investigate the claim and take action.</p>
+                <h3>SECTION 4 - MODIFICATIONS TO THE SERVICE AND PRICES</h3>
+                <p>Prices for our products are subject to change without notice.</p>
+                <p>We reserve the right at any time to modify or discontinue the Service (or any part or content thereof) without notice at any time.</p>
+                <p>We shall not be liable to you or to any third-party for any modification, price change, suspension or discontinuance of the Service.</p>
 
+                <h3>SECTION 5 - PRODUCTS OR SERVICES (if applicable)</h3>
 
-                <h3>How to Become a Seller; Seller Accounts; Seller Content</h3>
+                <p>Certain products or services may be available exclusively online through the website. These products or services may have limited quantities and are subject to return or exchange only according to our Return Policy.</p>
+                <p>We have made every effort to display as accurately as possible the colors and images of our products that appear at the store. We cannot guarantee that your computer monitor's display of any color will be accurate.</p>
+                <p>We reserve the right, but are not obligated, to limit the sales of our products or Services to any person, geographic region or jurisdiction. We may exercise this right on a case-by-case basis. We reserve the right to limit the quantities of any products or services that we offer. All descriptions of products or product pricing are subject to change at anytime without notice, at the sole discretion of us. We reserve the right to discontinue any product at any time. Any offer for any product or service made on this site is void where prohibited.</p>
+                <p>We do not warrant that the quality of any products, services, information, or other material purchased or obtained by you will meet your expectations, or that any errors in the Service will be corrected.</p>
 
-                <p>To become a Seller and list your products and Rebates on the site, you must first sign up for a
-                    Seller account:  There
-                    will be no refunds to sellers, as the
-                    money from Rebate is sent to a Buyer.</p>
+                <h3>SECTION 6 - ACCURACY OF BILLING AND ACCOUNT INFORMATION</h3>
+                <p>We reserve the right to refuse any order you place with us. We may, in our sole discretion, limit or cancel quantities purchased per person, per household or per order. These restrictions may include orders placed by or under the same customer account, the same credit card, and/or orders that use the same billing and/or shipping address. In the event that we make a change to or cancel an order, we may attempt to notify you by contacting the e mail and/or billing address/phone number provided at the time the order was made. We reserve the right to limit or prohibit orders that, in our sole judgment, appear to be placed by dealers, resellers or distributors.</p>
+                <p>You agree to provide current, complete and accurate purchase and account information for all purchases made at our store. You agree to promptly update your account and other information, including your email address and credit card numbers and expiration dates, so that we can complete your transactions and contact you as needed.</p>
+                <p>For more detail, please review our Returns Policy.</p>
 
-                <p>By submitting products for sale on the Site, Sellers will be allowed to submit information, product
-                    descriptions, content, graphics, artwork or other copyrighted works and materials related to the
-                    products listed for sale (collectively, “Seller Content”). By sending or transmitting Seller Content
-                    to Influencer Pulse, or by posting such Seller Content to any area of the Site, SELLER HEREBY GRANTS
-                    Influencer Pulse AND ITS DESIGNEES A PERPETUAL, WORLDWIDE, NON-EXCLUSIVE, UNLIMITED, TRANSFERABLE, FULLY
-                    SUBLICENSEABLE (THROUGH MULTIPLE TIERS), ASSIGNABLE, ROYALTY-FREE, FULLY PAID UP, IRREVOCABLE RIGHT
-                    AND LICENSE TO USE, REPRODUCE, DISTRIBUTE (THROUGH MULTIPLE TIERS), MODIFY, ADAPT, COMBINE WITH
-                    OTHER WORKS, CREATE DERIVATIVE WORKS OF, PUBLICLY PERFORM, DISPLAY, STORE, DIGITALLY PERFORM,
-                    PUBLISH (ON THE SITE, ON ANY OTHER WEBSITE(S), IN PRINT, RADIO, TELEVISION OR ELSEWHERE), IN ANY
-                    MANNER AND CONTEXT (INCLUDING BUT NOT LIMITED TO USAGE IN COMMERCIAL, ADVERTISING OR PROMOTIONAL
-                    MATERIALS), NOW KNOWN OR IN THE FUTURE DISCOVERED, IN Influencer Pulse’S SOLE DISCRETION, IN ANY WAY, IN
-                    ANY AND ALL MEDIA NOW KNOWN OR HEREINAFTER DISCOVERED, WITHOUT LIMITATION AND WITHOUT ANY
-                    COMPENSATION OR ACKNOWLEDGMENT TO SELLER OR ANY THIRD PARTY. To the extent permitted by law, Seller
-                    specifically waive any “moral rights” in and to the Seller Content. The foregoing grant includes
-                    without limitation, any copyrights and other intellectual property in and to the Seller Content.
-                    None of the Seller Content will be subject to any obligation, whether of confidentiality,
-                    attribution or otherwise, on our part and we will not be liable for any use or disclosure of any
-                    Seller Content. If you have any Seller Content that you would like to keep confidential and/or do
-                    not want others to use, do not post it to the Site. Influencer Pulse IS NOT RESPONSIBLE FOR A PARTY’S
-                    MISUSE OR MISAPPROPRIATION OF ANY SELLER CONTENT SELLER POSTS TO THE SITE.</p>
+                <h3>SECTION 7 - OPTIONAL TOOLS</h3>
+                <p>We may provide you with access to third-party tools over which we neither monitor nor have any control nor input.</p>
+                <p>You acknowledge and agree that we provide access to such tools ”as is” and “as available” without any warranties, representations or conditions of any kind and without any endorsement. We shall have no liability whatsoever arising from or relating to your use of optional third-party tools.</p>
+                <p>Any use by you of optional tools offered through the site is entirely at your own risk and discretion and you should ensure that you are familiar with and approve of the terms on which tools are provided by the relevant third-party provider(s).</p>
+                <p>We may also, in the future, offer new services and/or features through the website (including, the release of new tools and resources). Such new features and/or services shall also be subject to these Terms of Service.</p>
 
-                <p>Seller is solely responsible for Seller’s own Seller Content and the consequences of posting or
-                    publishing them. In connection with Seller Content, Seller affirms, represents and/or warrants that
-                    Seller owns, or have the necessary licenses, rights, consents, and permissions to the Seller Content
-                    and to grant the rights and licenses to Influencer Pulse under all patent, trademark, trade secret,
-                    copyright or other proprietary or intellectual property rights in and to any and all Seller Content
-                    in the manner contemplated by the Site and these Terms of Use. Seller further understands that the
-                    internet has no geographical boundaries, and Seller therefore agrees to comply with all local rules
-                    regarding online conduct and acceptable Seller Content. Seller also agree to comply with all
-                    applicable laws regarding the transmission of technical data exported from the United States or the
-                    country in which you reside.</p>
+                <h3>SECTION 8 - THIRD-PARTY LINKS</h3>
+                <p>
+                    Certain content, products and services available via our Service may include materials from third-parties.
+                </p>
+                <p>
+                    Third-party links on this site may direct you to third-party websites that are not affiliated with us. We are not responsible for examining or evaluating the content or accuracy and we do not warrant and will not have any liability or responsibility for any third-party materials or websites, or for any other materials, products, or services of third-parties.
+                </p>
+                <p>
+                    We are not liable for any harm or damages related to the purchase or use of goods, services, resources, content, or any other transactions made in connection with any third-party websites. Please review carefully the third-party's policies and practices and make sure you understand them before you engage in any transaction. Complaints, claims, concerns, or questions regarding third-party products should be directed to the third-party.
+                </p>
+                <h3>SECTION 9 - USER COMMENTS, FEEDBACK AND OTHER SUBMISSIONS</h3>
+                <p>If, at our request, you send certain specific submissions (for example contest entries) or without a request from us you send creative ideas, suggestions, proposals, plans, or other materials, whether online, by email, by postal mail, or otherwise (collectively, 'comments'), you agree that we may, at any time, without restriction, edit, copy, publish, distribute, translate and otherwise use in any medium any comments that you forward to us. We are and shall be under no obligation (1) to maintain any comments in confidence; (2) to pay compensation for any comments; or (3) to respond to any comments.</p>
+                <p>We may, but have no obligation to, monitor, edit or remove content that we determine in our sole discretion are unlawful, offensive, threatening, libelous, defamatory, pornographic, obscene or otherwise objectionable or violates any party’s intellectual property or these Terms of Service.
+You agree that your comments will not violate any right of any third-party, including copyright, trademark, privacy, personality or other personal or proprietary right. You further agree that your comments will not contain libelous or otherwise unlawful, abusive or obscene material, or contain any computer virus or other malware that could in any way affect the operation of the Service or any related website. You may not use a false e mail address, pretend to be someone other than yourself, or otherwise mislead us or third-parties as to the origin of any comments. You are solely responsible for any comments you make and their accuracy. We take no responsibility and assume no liability for any comments posted by you or any third-party.
+</p>
+                <h3>SECTION 10 - PERSONAL INFORMATION</h3>
+                <p>Your submission of personal information through the store is governed by our Privacy Policy. To view our Privacy Policy.</p>
 
-                <p>Influencer Pulse reserves the right to delete from the Site any Seller Content and will cooperate fully
-                    with any law enforcement officials and/or agencies in any investigation, up to and including
-                    complete and immediate termination of your registration and/or accounts with Influencer Pulse. Influencer Pulse
-                    and its designees shall have the right to remove any Seller Content, as determined in their sole
-                    discretion. Seller agrees that Seller must evaluate, and bear all risks associated with, the use of
-                    any Seller Content, including any reliance on the accuracy, completeness, or usefulness of such
-                    Seller Content. In this regard, you acknowledge that you may not rely on any Seller Content created
-                    by Influencer Pulse or submitted to Influencer Pulse.</p>
+                <h3>SECTION 11 - ERRORS, INACCURACIES AND OMISSIONS</h3>
+                <p>
+                   Occasionally there may be information on our site or in the Service that contains typographical errors, inaccuracies or omissions that may relate to product descriptions, pricing, promotions, offers, product shipping charges, transit times and availability. We reserve the right to correct any errors, inaccuracies or omissions, and to change or update information or cancel orders if any information in the Service or on any related website is inaccurate at any time without prior notice (including after you have submitted your order).
+                </p>
+                <p>
+                    We undertake no obligation to update, amend or clarify information in the Service or on any related website, including without limitation, pricing information, except as required by law. No specified update or refresh date applied in the Service or on any related website, should be taken to indicate that all information in the Service or on any related website has been modified or updated.
+                </p>
+                <h3>SECTION 12 - PROHIBITED USES</h3>
+                <p>
+                    In addition to other prohibitions as set forth in the Terms of Service, you are prohibited from using the site or its content: (a) for any unlawful purpose; (b) to solicit others to perform or participate in any unlawful acts; (c) to violate any international, federal, provincial or state regulations, rules, laws, or local ordinances; (d) to infringe upon or violate our intellectual property rights or the intellectual property rights of others; (e) to harass, abuse, insult, harm, defame, slander, disparage, intimidate, or discriminate based on gender, sexual orientation, religion, ethnicity, race, age, national origin, or disability; (f) to submit false or misleading information; (g) to upload or transmit viruses or any other type of malicious code that will or may be used in any way that will affect the functionality or operation of the Service or of any related website, other websites, or the Internet; (h) to collect or track the personal information of others; (i) to spam, phish, pharm, pretext, spider, crawl, or scrape; (j) for any obscene or immoral purpose; or (k) to interfere with or circumvent the security features of the Service or any related website, other websites, or the Internet. We reserve the right to terminate your use of the Service or any related website for violating any of the prohibited uses.
+                </p>
+                <h3>SECTION 13 - DISCLAIMER OF WARRANTIES; LIMITATION OF LIABILITY</h3>
+                <p>We do not guarantee, represent or warrant that your use of our service will be uninterrupted, timely, secure or error-free.
+We do not warrant that the results that may be obtained from the use of the service will be accurate or reliable.
+</p>
+<p>You agree that from time to time we may remove the service for indefinite periods of time or cancel the service at any time, without notice to you.</p>
+   <p>You expressly agree that your use of, or inability to use, the service is at your sole risk. The service and all products and services delivered to you through the service are (except as expressly stated by us) provided 'as is' and 'as available' for your use, without any representation, warranties or conditions of any kind, either express or implied, including all implied warranties or conditions of merchantability, merchantable quality, fitness for a particular purpose, durability, title, and non-infringement.<br>
+In no case shall InfluencerPulse, our directors, officers, employees, affiliates, agents, contractors, interns, suppliers, service providers or licensors be liable for any injury, loss, claim, or any direct, indirect, incidental, punitive, special, or consequential damages of any kind, including, without limitation lost profits, lost revenue, lost savings, loss of data, replacement costs, or any similar damages, whether based in contract, tort (including negligence), strict liability or otherwise, arising from your use of any of the service or any products procured using the service, or for any other claim related in any way to your use of the service or any product, including, but not limited to, any errors or omissions in any content, or any loss or damage of any kind incurred as a result of the use of the service or any content (or product) posted, transmitted, or otherwise made available via the service, even if advised of their possibility. Because some states or jurisdictions do not allow the exclusion or the limitation of liability for consequential or incidental damages, in such states or jurisdictions, our liability shall be limited to the maximum extent permitted by law.
+</p>
 
-                <p>You shall not make any conditions for the buyers to be eligible to claim Rebates, e.g. ask them
-                    visit your site, leave a review, provide feedback.</p>
+        <h3>SECTION 14 - INDEMNIFICATION</h3>
+        <p>You agree to indemnify, defend and hold harmless InfluencerPulse and our parent, subsidiaries, affiliates, partners, officers, directors, agents, contractors, licensors, service providers, subcontractors, suppliers, interns and employees, harmless from any claim or demand, including reasonable attorneys’ fees, made by any third-party due to or arising out of your breach of these Terms of Service or the documents they incorporate by reference, or your violation of any law or the rights of a third-party.</p>
+        <h3>SECTION 15 - SEVERABILITY</h3>
+        <p>In the event that any provision of these Terms of Service is determined to be unlawful, void or unenforceable, such provision shall nonetheless be enforceable to the fullest extent permitted by applicable law, and the unenforceable portion shall be deemed to be severed from these Terms of Service, such determination shall not affect the validity and enforceability of any other remaining provisions.</p>
+        <h3>SECTION 16 - TERMINATION</h3>
+        <p>The obligations and liabilities of the parties incurred prior to the termination date shall survive the termination of this agreement for all purposes.</p>
+        <p>These Terms of Service are effective unless and until terminated by either you or us. You may terminate these Terms of Service at any time by notifying us that you no longer wish to use our Services, or when you cease using our site.</p>
+        <p>If in our sole judgment you fail, or we suspect that you have failed, to comply with any term or provision of these Terms of Service, we also may terminate this agreement at any time without notice and you will remain liable for all amounts due up to and including the date of termination; and/or accordingly may deny you access to our Services (or any part thereof).</p>
+        <h3>SECTION 17 - ENTIRE AGREEMENT</h3>
+        <p>The failure of us to exercise or enforce any right or provision of these Terms of Service shall not constitute a waiver of such right or provision.</p>
+        <p>These Terms of Service and any policies or operating rules posted by us on this site or in respect to The Service constitutes the entire agreement and understanding between you and us and govern your use of the Service, superseding any prior or contemporaneous agreements, communications and proposals, whether oral or written, between you and us (including, but not limited to, any prior versions of the Terms of Service).</p>
+        <p>Any ambiguities in the interpretation of these Terms of Service shall not be construed against the drafting party.</p>
+        <h3>SECTION 18 - GOVERNING LAW</h3>
+        <p>These Terms of Service and any separate agreements whereby we provide you Services shall be governed by and construed in accordance with the laws of India.</p>
+        <h3>SECTION 19 - CHANGES TO TERMS OF SERVICE</h3>
+        <p>You can review the most current version of the Terms of Service at any time at this page.
+We reserve the right, at our sole discretion, to update, change or replace any part of these Terms of Service by posting updates and changes to our website. It is your responsibility to check our website periodically for changes. Your continued use of or access to our website or the Service following the posting of any changes to these Terms of Service constitutes acceptance of those changes.
+</p>
+        <h3>SECTION 20 - CONTACT INFORMATION</h3>
+        <p>Questions about the Terms of Service should be sent to us at <a href="mailto:InfluencerPulse@gmail.com">InfluencerPulse@gmail.com</a> .</p>
 
-                <p>You shall not ask buyers for a review in exchange for a rebate. Not under any circumstance
-                    you are allowed to ask, trick or suggest to the buyer that he has to leave a review.</p>
-
-                <p>You shall not provide obscure or confusing URLs, your URL must lead to the product detail page.
-                    You shall not manipulate the price of the product. The price listed on the Site must match
-                    the price on your marketplace.</p>
-
-                <p>Influencer Pulse and its designees shall have the right to remove any Seller Content, as determined in
-                    their sole discretion.</p>
-
-                <h3>Termination or Suspension</h3>
-
-                <p>These Terms and Conditions are effective when accepted by you and will remain in effect until you or
-                    we terminate your account. We may terminate these Terms and Conditions and your use of or access to
-                    the Site at any time, for any reason or no reason. Any violation of these Terms and Conditions may
-                    result in cancellation of your Account and/or forfeiture of pending or prior Rebates. We may, in our
-                    sole discretion, at any time and without prior notice, discontinue, cancel, suspend, change or limit
-                    access to all or any part of the Site. You agree that Influencer Pulse will not be liable to you or to any
-                    third party for any modification, suspension, or termination of these Terms and Conditions or your
-                    access to the Site. If you are dissatisfied with any aspect of the Site or the Services at any time,
-                    your sole and exclusive remedy is to cease using the Site and the Services and terminate your
-                    account. Upon any termination of your account, your right to use and access the Services and to
-                    receive Rebates, will terminate. Termination will not prejudice either your or our remedies at law
-                    or in equity. If as a buyer your account is suspended for a violation of our TOS, all your pending
-                    rebate checks will be declined and reimbursed to the seller.</p>
-
-                <h3>Disclaimers</h3>
-
-                <p>THE SITE AND ANY PRODUCT OR SERVICE OBTAINED THROUGH THE SITE IS PROVIDED “AS IS” AND “AS AVAILABLE”
-                    WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED. TO THE FULLEST EXTENT PERMISSIBLE
-                    PURSUANT TO APPLICABLE LAW, Influencer Pulse DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, WITH RESPECT TO
-                    THE SITE AND ANY PRODUCT OR SERVICE OBTAINED THROUGH THE SITE, INCLUDING, WITHOUT LIMITATION,
-                    IMPLIED WARRANTIES OF TITLE, NON-INFRINGEMENT, ACCURACY, MERCHANTABILITY, AND FITNESS FOR A
-                    PARTICULAR PURPOSE, AND ANY WARRANTIES THAT MAY ARISE FROM COURSE OF DEALING, COURSE OF PERFORMANCE
-                    OR USAGE OF TRADE.</p>
-
-                <p>IN MOST INSTANCES, THE ABILITY OF Influencer Pulse TO PROVIDE SERVICES IS DEPENDENT UPON A
-                    TELECOMMUNICATIONS NETWORK OR THE INTERNET, WHICH MAY NOT BE FULLY SECURED, AS WELL AS GOODS AND
-                    SERVICES PROVIDED BY SELLERS AND VARIOUS OTHER VENDORS AND THIRD PARTIES. Influencer Pulse DOES NOT
-                    WARRANT THAT YOUR USE OF THE SITE WILL BE UNINTERRUPTED, ERROR-FREE OR SECURE, THAT DEFECTS WILL BE
-                    CORRECTED, THAT THE SITE OR THE SERVER(S) ON WHICH THE SITE IS HOSTED IS FREE OF VIRUSES OR OTHER
-                    HARMFUL COMPONENTS, THE SITE WILL MEET YOUR REQUIREMENTS, THE INFORMATION THAT MAY BE OBTAINED FROM
-                    THE USE OF THE SITE WILL BE ACCURATE OR RELIABLE, OR THE QUALITY OF ANY PRODUCTS, SERVICES,
-                    INFORMATION, OR OTHER MATERIAL OBTAINED BY YOU THROUGH THE SITE WILL MEET YOUR EXPECTATIONS. YOU
-                    ACKNOWLEDGE THAT YOU ARE RESPONSIBLE FOR OBTAINING AND MAINTAINING ALL TELEPHONE, COMPUTER HARDWARE
-                    AND OTHER EQUIPMENT NEEDED TO ACCESS AND USE THE SITE, AND ALL CHARGES RELATED THERETO. YOU ASSUME
-                    ALL RESPONSIBILITY AND RISK FOR YOUR USE OF THE SITE AND YOUR RELIANCE THEREON. Influencer Pulse DOES NOT
-                    WARRANT, ENDORSE, GUARANTEE, OR ASSUME RESPONSIBILITY FOR ANY PRODUCT OR SERVICE ADVERTISED OR
-                    OFFERED BY A SELLER OR ANY OTHER THIRD PARTY THROUGH THE SITE OR ANY HYPERLINKED SITE, OR FEATURED
-                    IN ANY BANNER OR OTHER ADVERTISING, AND Influencer Pulse WILL NOT BE A PARTY TO OR IN ANY WAY MONITOR ANY
-                    TRANSACTION BETWEEN YOU AND A SELLER OR ANY OTHER THIRD-PARTY PROVIDERS OF PRODUCTS OR SERVICES.
-                    YOUR USE OF THE SITE AND ANY SERVICES PROVIDED THROUGH THE SITE ARE ENTIRELY AT YOUR OWN RISK.
-                    Influencer Pulse IS NOT RESPONSIBLE FOR ANY UNFAVORABLE CONSEQUENCES IN THE MARKETPLACE ACCOUNT. YOU
-                    WILL BE SOLELY RESPONSIBLE FOR ANY DAMAGE TO YOUR COMPUTER SYSTEM OR LOSS OF DATA THAT RESULTS FROM
-                    THE DOWNLOAD OF ANY SUCH MATERIAL. NO ADVICE OR INFORMATION, WHETHER ORAL OR WRITTEN, OBTAINED BY
-                    YOU FROM Influencer Pulse AND/OR ITS AFFILIATED PARTIES OR ON OR THROUGH THE SITE SHALL CREATE ANY
-                    WARRANTY NOT EXPRESSLY STATED IN THESE TERMS OF USE.</p>
-
-                <h3>Limitation of Liability</h3>
-
-                <p>TO THE GREATEST EXTENT PERMITTED BY LAW, YOU EXPRESSLY ACKNOWLEDGE AND AGREE THAT NEITHER Influencer Pulse
-                    NOR ANY OF ITS AFFILIATES, SHAREHOLDERS, LICENSORS, SUPPLIERS, OR ADVERTISERS, NOR ITS OR THEIR
-                    DIRECTORS, OFFICERS, EMPLOYEES, CONSULTANTS, AGENTS OR OTHER REPRESENTATIVES, ARE OR WILL BE
-                    RESPONSIBLE OR LIABLE TO YOU OR TO ANY THIRD PARTY FOR ANY INDIRECT, DIRECT, INCIDENTAL,
-                    CONSEQUENTIAL, SPECIAL, EXEMPLARY, PUNITIVE OR OTHER DAMAGES (INCLUDING, WITHOUT LIMITATION, DAMAGES
-                    FOR LOSS OF BUSINESS, LOSS OF DATA OR LOST PROFITS), UNDER ANY CONTRACT, NEGLIGENCE, STRICT
-                    LIABILITY OR OTHER THEORY ARISING OUT OF OR RELATING IN ANY WAY TO THE SITE AND/OR PRODUCTS
-                    CONTAINED ON THE SITE, ANY LINKED SITE OR ANY PRODUCT OR SERVICE PURCHASED THROUGH THE SITE. WITHOUT
-                    LIMITING THE FOREGOING, TO THE GREATEST EXTENT PERMITTED BY LAW, YOU EXPRESSLY ACKNOWLEDGE AND AGREE
-                    THAT Influencer Pulse SHALL HAVE NO LIABILITY OR RESPONSIBILITY WHATSOEVER FOR (I) THE USE OR THE
-                    INABILITY TO USE THE SITE, PRODUCTS, SERVICES OR ANY LINKED SITE; (II) PERSONAL INJURY OR PROPERTY
-                    DAMAGE, OF ANY NATURE WHATSOEVER, WHETHER ARISING IN CONTRACT OR IN TORT WHETHER OR NOT ARISING FROM
-                    THE NEGLIGENCE OF Influencer Pulse; (III) UNAUTHORIZED ACCESS TO OR ALTERATION OF YOUR TRANSMISSIONS OR
-                    DATA AND/OR ANY AND ALL PERSONAL INFORMATION AND/OR FINANCIAL INFORMATION STORED THEREIN; (IV)
-                    STATEMENTS OR CONDUCT OF ANY THIRD PARTY ON THE SITE OR ANY LINKED SITE; (V) ANY INTERRUPTION OR
-                    CESSATION OF TRANSMISSION TO OR FROM OUR SITE; (VII) ANY BUGS, VIRUSES, WORMS, TROJAN HORSES,
-                    DEFECTS, DATE BOMBS, TIME BOMBS OR OTHER ITEMS OF A DESTRUCTIVE NATURE WHICH MAY BE TRANSMITTED TO
-                    OR THROUGH OUR SITE BY ANY THIRD PARTY; (VIII) THE QUALITY, SAFETY OR LEGALITY OF PRODUCTS
-                    ADVERTISED ON THE SITE; AND/OR (IX) ANY OTHER MATTER RELATING TO THE SITE, OR Influencer Pulse SERVICES.
-                    THE MAXIMUM TOTAL AGGREGATE LIABILITY OF Influencer Pulse, ITS AFFILIATES, SHAREHOLDERS, LICENSORS,
-                    SUPPLIERS, ADVERTISERS AND SPONSORS, AND ITS OR THEIR DIRECTORS, OFFICERS, EMPLOYEES, CONSULTANTS,
-                    AGENTS AND OTHER REPRESENTATIVES, AND YOUR SOLE AND EXCLUSIVE REMEDY, FOR ALL DAMAGES, LOSSES
-                    SUFFERED BY YOU AND CAUSES OF ACTION, WHETHER IN CONTRACT, TORT (INCLUDING, WITHOUT LIMITATION,
-                    NEGLIGENCE) OR OTHERWISE, SHALL BE THE GREATER OF THE TOTAL AMOUNT OF MONIES RECEIVED BY Influencer Pulse
-                    FROM YOU OR $100 USD.</p>
-
-                <p>CERTAIN STATE LAWS DO NOT ALLOW LIMITATIONS ON IMPLIED WARRANTIES OR THE EXCLUSION OR LIMITATION OF
-                    CERTAIN DAMAGES. IF THESE LAWS APPLY TO YOU, SOME OR ALL OF THE ABOVE DISCLAIMERS, EXCLUSIONS, OR
-                    LIMITATIONS MAY NOT APPLY TO YOU, AND YOU MIGHT HAVE ADDITIONAL RIGHTS.</p>
-
-                <h3>Indemnification</h3>
-
-                <p>You agree to indemnify, defend and hold Influencer Pulse and its affiliates, licensors, suppliers,
-                    advertisers and sponsors, and their respective directors, officers, employees, consultants, agents
-                    and other representatives, harmless from and against any and all claims, damages, losses, costs
-                    (including reasonable attorneys’ fees) and other expenses that arise directly or indirectly out of
-                    or from (a) your breach of these Terms of Use; (b) any allegation that any Seller Content or other
-                    materials you submit to us or transmit to the Site infringe or otherwise violate the copyright,
-                    trademark, trade secret or other intellectual property or other rights of any third party; (c) your
-                    activities in connection with the Site; and/or (d) termination of your access to the Site.</p>
-
-                <h3>Ownership</h3>
-
-                <p>All right, title, and interest in the Site and the Services belong solely to Influencer Pulse or its
-                    licensors. Additionally, Influencer Pulse shall maintain all right, title, and interest in “Influencer Pulse”
-                    and any other marks, service marks, trademarks, or logos of Influencer Pulse (collectively, the “Marks”)
-                    that are registered in the U.S. and other countries. The Marks owned by Influencer Pulse, whether
-                    registered or unregistered, may not be used in connection with any product or service that is not
-                    offered by Influencer Pulse, in any manner that is likely to cause confusion with customers, or in any
-                    manner that disparages Influencer Pulse. Nothing contained on the Site should be construed as granting, by
-                    implication, estoppel or otherwise, any license or right to use any Mark without the express written
-                    permission of Influencer Pulse, Influencer Pulse’s licensors or suppliers, or the third-party owner of any such
-                    Mark. Misuse of any Marks is prohibited, and Influencer Pulse will aggressively enforce its intellectual
-                    property rights in such Marks, including via civil and criminal proceedings. You shall not mention
-                    or use Influencer Pulse in any ad text, extensions or banner ads without the express written consent of
-                    Influencer Pulse.</p>
-
-
-                <h3>Governing Law; Dispute Resolution</h3>
-
-                <p>The validity, construction, and interpretation of this Agreement, and the rights and duties of the
-                    parties hereto, will be governed by and construed in accordance with the laws of the State of
-                    Wyoming in the United States, without regard to conflicts of law provisions contained there.
-                    You agree that any dispute, claim or controversy arising out of or in connection with Influencer Pulse’s
-                    business, the Services or this Agreement or relating in any way to the Site shall be determined by
-                    binding arbitration. You further agree that the U.S. Federal Arbitration Act and federal arbitration
-                    law shall govern the interpretation and enforcement of this agreement to arbitrate. You also agree
-                    to waive the right to a trial by jury or to participate in a class action. These waivers are mutual
-                    as between you and Influencer Pulse, and Influencer Pulse waives its right to a trial by jury or to participate
-                    in a class action against you. This means that neither you nor Influencer Pulse can seek to assert class
-                    or representative claims against each other either in court or in arbitration and no relief can be
-                    awarded on a class or representative basis. The arbitrator also may not consolidate or join another
-                    person’s claim with your claim or issue an order that would achieve the same result. You and Rebate
-                    Key further agree that if the provisions of this paragraph are found to be unenforceable, then the
-                    entire provision compelling arbitration shall be null and void. You also agree that all issues are
-                    for the arbitrator to decide. This includes all issues related to the scope, application,
-                    interpretation and enforceability of this Agreement and this arbitration provision. The arbitrator
-                    shall also decide whether any claim is subject to arbitration. The arbitration will be governed by
-                    the Commercial Arbitration Rules (the “AAA Rules”) of the American Arbitration Association (“AAA”),
-                    as modified by this Agreement, and will be administered by the AAA. The AAA Rules are available
-                    online at www.adr.com. The arbitrator is bound by the terms of this Agreement. If your claim in
-                    arbitration is for less than $50,000, Influencer Pulse will reimburse you for filing and arbitrator fees
-                    at the conclusion of the proceeding unless your claim is found to be frivolous by the arbitrator. In
-                    lieu of arbitration, you may also elect to have your claims decided in small-claims court, so long
-                    as the small-claims court does not permit class, representative, or consolidated actions, or the
-                    award of relief in favor of any person or entity that is not a named party to the small-claims
-                    action.</p>
-
-                <h3>Miscellaneous</h3>
-
-                <p>You may not assign your rights and obligations under this Agreement, in whole or in part, without
-                    our prior written consent, and any such assignment without such consent will be null and void.
-                    Headings under this Agreement intended only for convenience and shall not affect the interpretation
-                    of this Agreement. Any waiver or failure to enforce any provision of this Agreement on one occasion
-                    will not be deemed a waiver of any other provision or of such provision on any other occasion. If
-                    any provision of this Agreement is held to be invalid, such invalidity shall not affect the
-                    remaining provisions. This Agreement represents the entire agreement of the parties with respect to
-                    the subject matter hereof, and supersedes all prior or contemporaneous agreements or
-                    representations, written or oral (including without limitation, earlier versions of this Agreement
-                    that may have been accepted by you).</p>
-
-                <p></p>
-                <p class="text-right">Last update: <i>December 02, 2019</i></p>
-
-            </div>
+   </div>
 
         </div>
 
