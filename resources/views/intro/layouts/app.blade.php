@@ -11,8 +11,8 @@
 
     <!-- <link rel="manifest" href="manifest.json" crossorigin="use-credentials"> -->
     <title>Get Up To 100% Cash Back influencer  When Shopping Online - Influencer Pulse</title>
-    <link rel="shortcut icon" href="intro/img/favicon.ico" type="image/x-icon" />
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="intro/img/favicon2.jpeg" type="image/x-icon" />
+    <link rel="icon" href="favicon2.png" type="image/x-icon" />
     <meta property="og:title" content="Influencer Pulse - Get Up To 100% Cash Back influencer When Shopping Online">
     <meta property="og:description"
         content="Highest Cash Back and influencer paid when shopping on your favorite brands at your favorite stores. Get Up To 100% Cash Back influencer!">
