@@ -84,7 +84,7 @@
                                     <del>₹{{$camp->price}}</del>
                                 </h5>
                                 <h4 class="new-price text-green roboto-black mb-0">
-                                    $<span>{{$camp->rebate_price}}</span>
+                                    ₹<span>{{$camp->rebate_price}}</span>
                                 </h4>
                             </div>
                             {{--<div class="mb-2-5"><small class="d-block">
