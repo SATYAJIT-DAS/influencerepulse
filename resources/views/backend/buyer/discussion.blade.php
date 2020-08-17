@@ -220,7 +220,7 @@
                                     {{ date('F j, Y  h:m ', strtotime($msg->date)) }}
                                 </small>
                                 @if($msg->file_path)
-                                <a href="" onclick="show_file('{{$msg->file_path}}')" title="{{$msg->file_title}}">
+                                <a href="" onclick="show_file_satya('{{$msg->file_path}}')" title="{{$msg->file_title}}">
                                         <i class="fal fa-file-o"></i> Attachment
                                 </a>
                                 @endif
@@ -314,6 +314,10 @@
                     <script type="text/javascript">
                         function show_file(url){
                             url="https://"+window.location.hostname+"/public/files/"+url;
+                            var win=window.open(url, '_blank');
+                        }
+                        function show_file_satya(url){
+                            url="https://"+window.location.hostname+"/"+url;
                             var win=window.open(url, '_blank');
                         }
                     </script>
