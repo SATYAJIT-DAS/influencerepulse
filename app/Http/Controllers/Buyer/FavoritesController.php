@@ -14,8 +14,9 @@ class FavoritesController extends Controller
         $role=auth()->user()->role->name;
 
         $camps=Campaign::where('permission', 'online')->where('favorite',1)->orderby('updated_at','DESC')->get();
-        $coupons=Coupon::where('permission', 'online')->where('favorite',1)->orderby('updated_at','DESC')->get();  
+        $coupons=Coupon::where('permission', 'online')->where('favorite',1)->orderby('updated_at','DESC')->get();
 
         return view('backend.buyer.favorites',compact('camps','coupons'));
     }
 }
+

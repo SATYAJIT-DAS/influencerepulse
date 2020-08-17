@@ -433,7 +433,7 @@ Route::group(['middleware' => ['web', 'auth']], function () {
 
             Route::post('clear', 'Admin\HomeController@site_clear')->name('admin.clear');
 
-            Route::get('/clear', 'HomeController@clear');
+            Route::get('clear', 'HomeController@clear');
 
         });
     });

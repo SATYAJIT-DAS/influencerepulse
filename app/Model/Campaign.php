@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Campaign extends Model
 {
-    protected $fillable=[
+    protected $fillable = [
         'id',
         'user_id',
         'product_name',
@@ -33,25 +33,59 @@ class Campaign extends Model
         'permission',
         'favorite',
         'wallet',
+
     ];
 
-    public function user(){
+    protected $appends = ['remaining_deals_for_the_day'];
+
+    public function user()
+    {
         return $this->belongsTo('App\User');
     }
 
-    public function market(){
-        return $this->belongsTo('App\Model\Marketplace','marketplace','id');
+    public function market()
+    {
+        return $this->belongsTo('App\Model\Marketplace', 'marketplace', 'id');
     }
 
-    public function getCategory(){
-        return $this->belongsTo('App\Model\Category','category','id');
+    public function getCategory()
+    {
+        return $this->belongsTo('App\Model\Category', 'category', 'id');
     }
 
-    public function pic(){
-        return $this->hasMany('App\Model\Camimage','cam_id','id');
+    public function pic()
+    {
+        return $this->hasMany('App\Model\Camimage', 'cam_id', 'id');
     }
 
-    public function getOrder(){
-        return $this->hasMany('App\Model\Order','camp_id','id');
+    public function getOrder()
+    {
+        return $this->hasMany('App\Model\Order', 'camp_id', 'id');
+    }
+
+    public function getRemainingDealsForTheDayAttribute()
+    {
+
+        $get_total_no_of_rebates_already_processed_or_in_progress = Order::where('camp_id', $this->getAttribute('id'))->whereIn('status', [
+            'Waiting for purchase',
+            'pre_approved',
+            'approved',
+            'paidout',
+            'paid completed'
+        ])->count();
+
+
+        $daily_deals = $this->getAttribute('daily_rebates') - $this->getAttribute('daily_count');
+        $total_remaining_deals = $this->getAttribute('total_rebates') - $get_total_no_of_rebates_already_processed_or_in_progress;
+        $remaining_deals_for_the_day = $daily_deals;
+        if ($total_remaining_deals < $daily_deals) {
+            $remaining_deals_for_the_day = $total_remaining_deals;
+        }
+
+        $this->setAttribute('remaining_deals_for_the_day', (int)$remaining_deals_for_the_day);
+
+        return (int)$remaining_deals_for_the_day;
+
     }
 }
+
