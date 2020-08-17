@@ -3,10 +3,12 @@
 .bg-primary-light,
 .sidebar .nav-link:hover,
 .nav-pills .nav-link.active,
-.nav-pills .show > .nav-link,.btn-rebate {
+.nav-pills .show > .nav-link,
+.btn-rebate {
     background-color: #00ce90 !important;
 }
-.btn-primary,.btn-rebate {
+.btn-primary,
+.btn-rebate {
     border-color: #00ce90 !important;
 }
 
@@ -35,4 +37,10 @@ button.bg-primary-light:focus {
     color: #fff;
     background-color: #00ce90 !important;
     border-color: #00ce90 !important;
+}
+@media (max-width: 768px) {
+    .deal-single .product-gallery .slider-main-img {
+        height: 15.9375rem;
+        width: auto;
+    }
 }

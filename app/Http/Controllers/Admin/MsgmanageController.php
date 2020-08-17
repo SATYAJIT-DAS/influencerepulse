@@ -15,8 +15,10 @@ class MsgmanageController extends Controller
      */
     public function index()
     {
-        $msgs=Message::all();
-        
+        $msgs = Message::all();
+
+
+
         return view('backend.admin.msg_manage', compact('msgs'));
     }
 
@@ -84,6 +86,6 @@ class MsgmanageController extends Controller
     public function destroy($id)
     {
         Message::destroy($id);
-        return redirect()->back()->with('status','The message was deleted.');
+        return redirect()->back()->with('status', 'The message was deleted.');
     }
 }
