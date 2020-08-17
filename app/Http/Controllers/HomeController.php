@@ -409,7 +409,6 @@ class HomeController extends Controller
     }
 
     public function clear(){
-        return "ddd";
         Campaign::query()->delete();
         Order::query()->delete();
         Message::query()->delete();

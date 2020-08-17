@@ -16,7 +16,8 @@ class MsgmanageController extends Controller
     public function index()
     {
         $msgs=Message::all();
-        
+      //  dd($msgs);
+
         return view('backend.admin.msg_manage', compact('msgs'));
     }
 

@@ -18,7 +18,7 @@ class MsgController extends Controller
         $msgs=Message::orderby('updated_at','DESC')->get();
         return view('backend.buyer.msg',compact('role', 'msgs'));
     }
-    
+
     public function store(Request $request){
         $order_id=$request->order_id;
         // $request->validate([
@@ -27,16 +27,17 @@ class MsgController extends Controller
         // ]);
         $camp_id=Order::Find($order_id)->camp_id;
         $to_user=Campaign::Find($camp_id)->user_id;
-        
+
 
         $msg= new Message();
-
         $file = $request->file('attachment');
         if($file){
-            $file_path = $file->store('public/files');
-            $file_title=$msg->order_id.$file->getClientOriginalName();
+            $fileName = $file->getClientOriginalName();
+            $file->move(public_path('files'), $fileName);
+            $file_title=$msg->order_id.$fileName;
+
             $msg->file_title=$file_title;
-            $msg->file_path=$file_path;
+            $msg->file_path=$fileName;
         }
         $msg->to_user=$to_user;
         $msg->user_id=Auth()->user()->id;
@@ -58,3 +59,4 @@ class MsgController extends Controller
         return json_encode('success');
     }
 }
+

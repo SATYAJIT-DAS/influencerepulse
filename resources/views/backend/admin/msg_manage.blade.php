@@ -7,14 +7,14 @@
         </li>
         <li class="breadcrumb-item active">Message Manage</li>
     </ol>
-    @if (session('status'))
+    <!-- @if (session('status'))
     <section class="section section-flash aos-init aos-animate" data-aos="flip-up">
         <div class="container-fluid">
             <div class="alert alert-success" role="alert">
                 <i class="fal fa-check"></i> {{ session('status') }}</div>
         </div>
     </section>
-    @endisset
+    @endisset -->
     <div class="container-fluid">
 
         <div class="card">
@@ -54,13 +54,14 @@
                                 </thead>
 
                                 <tbody>
-                                    @foreach($msgs as $key =>$msg)
+                                    @foreach($msgs as $key => $msg)
                                     <tr>
+                                        
                                         <td>{{$key+1}}</td>
                                         <td>{{$msg->date}}</td>
                                         <td> {{$msg->getFrom->name}}</td>
                                         <td> {{($msg->getTo['name'])}} </td>
-                                        
+
                                         <td> {{$msg->message}}</td>
                                         <td> @if($msg->msg_status == 1)
                                             Read
@@ -68,7 +69,6 @@
                                             Unread
                                             @endif
                                         </td>
-
                                         <td class="text-center">
                                             <a class="btn btn-danger" href="{{route('msg_manage.delete', $msg->id)}}">
                                                 Delete </a>

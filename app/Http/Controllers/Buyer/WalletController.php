@@ -15,7 +15,10 @@ class WalletController extends Controller
 
         $wallets=Wallet::where('user_id',$user_id)->orderby('updated_at','DESC')->get();
         $wallet_sum=Wallet::where('user_id',$user_id)->sum('amount');
+        
 
         return view('backend.buyer.wallet',compact('wallets', 'wallet_sum'));
+        
     }
 }
+
