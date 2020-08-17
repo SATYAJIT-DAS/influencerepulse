@@ -36,3 +36,11 @@ button.bg-primary-light:focus {
     background-color: #00ce90 !important;
     border-color: #00ce90 !important;
 }
+@media (max-width : 992px){
+    .navbar-brand {
+        margin-left: -5.75rem !important;
+  }
+  .nav .fa-sign-in{
+      font-size: 28px!important;
+  }
+}
