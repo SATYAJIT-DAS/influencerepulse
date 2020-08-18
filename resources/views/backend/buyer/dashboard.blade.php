@@ -478,7 +478,7 @@
                                 </div>
                                 <div class="prod-description col mt-3 mt-xl-0 pl-xl-3">
 
-                                    <h2 class="deal-title mb-2-5 roboto-medium" id="product_name">
+                                    <h5 class="deal-title mb-2-5 roboto-medium" style="font-size:30px;" id="product_name">
 
                                     </h2>
                                     <div class="d-flex align-items-center mb-1 justify-content-center">
@@ -499,6 +499,10 @@
                                     <div class="d-flex align-items-center mb-1 justify-content-center">
                                         <div>
                                             <h3 class="p-1 bg-danger text-white">You save <span id="per_data"></span>% </h3>
+<<<<<<< HEAD
+=======
+
+>>>>>>> a00ff632687e58d71231b860a8a773fa7f818a65
                                         </div>
                                     </div>
 
@@ -1300,4 +1304,3 @@
     </main>
 
 @endsection
-
