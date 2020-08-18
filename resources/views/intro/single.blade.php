@@ -70,7 +70,10 @@
                             <h1 class="deal-title mt-2 mb-2-5 roboto-medium">
                                 {{$camp->product_name}}</h1>
 
-                            <div class="d-flex align-items-center mb-1">
+                            {{-- <div class="d-flex align-items-center mb-1 justify-content-center">
+                                <div>
+                                   <h3>₹{{$camp->rebate_price}} After Discount</h3>
+                                </div>
                                 <div class="percent bg-danger text-white">
                                     Deal: {{round((100-$camp->rebate_price/$camp->price*100)*100)/100}}%
                                 </div>
@@ -78,15 +81,35 @@
                                     <i class="sprite-icon-piggy-bank mr-1"></i>
                                     YOU SAVE ₹{{$camp->price-$camp->rebate_price}}
                                 </div>
+                            </div> --}}
+                            <div class="d-flex align-items-center mb-1 justify-content-center">
+                                <div>
+                                    <h3>₹{{$camp->price-$camp->rebate_price}} After Discount</h3>
+                                </div>
                             </div>
-                            <div class="d-flex align-items-center mb-2-5">
+                            <div class="d-flex align-items-center mb-1 justify-content-center">
+                                <div>
+                                    <h3>You will purchase for ₹{{$camp->price}} </h3>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center mb-1 justify-content-center">
+                                <div>
+                                    <h3>You will recive cashback for ₹{{$camp->price-$camp->rebate_price}} </h3>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center mb-1 justify-content-center">
+                                <div>
+                                    <h3 class="p-1 bg-danger text-white">You save {{round((100-$camp->rebate_price/$camp->price*100)*100)/100}}% </h3>
+                                </div>
+                            </div>
+                            {{-- <div class="d-flex align-items-center mb-2-5">
                                 <h5 class="old-price lato-medium mb-0 mr-0-5">
                                     <del>₹{{$camp->price}}</del>
                                 </h5>
                                 <h4 class="new-price text-green roboto-black mb-0">
                                     ₹<span>{{$camp->rebate_price}}</span>
                                 </h4>
-                            </div>
+                            </div> --}}
                             {{--<div class="mb-2-5"><small class="d-block">
                                     <i class="fal fa-fw fa-link"></i> See this <a
                                         href="https://www.amazon.com/Lego-Sets/dp/B07QQ39RY3"

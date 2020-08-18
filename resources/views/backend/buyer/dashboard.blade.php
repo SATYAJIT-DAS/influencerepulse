@@ -466,8 +466,8 @@
                                                          data-slick-index="0"
                                                          aria-hidden="false"
                                                          style="width: 380px; position: relative; left: 0px; top: 0px; z-index: 999; opacity: 1;">
-                                                        <div><img alt="Washi Tape Gift set"
-                                                                  style="width: 100%; display: inline-block;"
+                                                        <div><img alt=""
+                                                                  style="height: 100%;width: auto;display: inline-block;"
                                                                   id="main_image">
                                                         </div>
                                                     </div>
@@ -481,8 +481,28 @@
                                     <h5 class="deal-title mb-2-5 roboto-medium" id="product_name">
 
                                     </h5>
+                                    <div class="d-flex align-items-center mb-1 justify-content-center">
+                                        <div>
+                                            <h3>₹<span id="rebate_price"></span> After Discount</h3>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-1 justify-content-center">
+                                        <div>
+                                            <h3>You will purchase for ₹<span id="price"></span> </h3>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-1 justify-content-center">
+                                        <div>
+                                            <h3>You will recive cashback for ₹<span id="save_price"> </h3>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-1 justify-content-center">
+                                        <div>
+                                            <h3 class="p-1 bg-danger text-white">You save <span id="per_data">% </h3>
+                                        </div>
+                                    </div>
 
-                                    <div class="d-flex align-items-center mb-1">
+                                    {{-- <div class="d-flex align-items-center mb-1">
                                         <div class="percent bg-danger text-white">
                                             Discount: <span id="per_data"></span>%
                                         </div>
@@ -499,7 +519,7 @@
                                             ₹<span id="save_price"></span>
                                         </h4><small class="d-inline-block ml-0-5" style="color: #989a9c;">+ Free
                                             shipping</small>
-                                    </div>
+                                    </div> --}}
 
                                     <a id="product_url" class="btn btn-primary btn-block mb-2-5 py-1">
                                         Buy Product </a>
@@ -511,7 +531,7 @@
                                                 Only <b id="daily_count"></b> more available today! </small>
                                         </div>
 
-                                        <div class="d-flex justify-content-center small-text">
+                                        {{-- <div class="d-flex justify-content-center small-text">
                                             <div class="sold-by mb-1 small-text">
                                                 <small>Sold on <span class="text-primary" id="marketplace"></span> by
                                                     <span class="text-primary">Gift Bee</span></small>
@@ -522,7 +542,7 @@
                                                        title="Rebates released @ 04:00 am EST" id=></i>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> --}}
                                     </div>
 
                                 </div>
