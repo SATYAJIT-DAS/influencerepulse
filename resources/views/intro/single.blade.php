@@ -84,7 +84,7 @@
                             </div> --}}
                             <div class="d-flex align-items-center mb-1 justify-content-center">
                                 <div>
-                                    <h3>₹{{$camp->price-$camp->rebate_price}} After Discount</h3>
+                                    <h3>₹{{$camp->rebate_price}} After Discount</h3>
                                 </div>
                             </div>
                             <div class="d-flex align-items-center mb-1 justify-content-center">
