@@ -11,7 +11,7 @@
         }
 
         .opacity-zero {
-            opacity: 0;
+            opacity: 1;
         }
 
         .opacity-one {
@@ -478,7 +478,7 @@
                                 </div>
                                 <div class="prod-description col mt-3 mt-xl-0 pl-xl-3">
 
-                                    <h5 class="deal-title mb-2-5 roboto-medium" style="font-size:30px;" id="product_name">
+                                    <h5 class="deal-title mb-2-5 roboto-medium" style="font-size:20px;" id="product_name">
 
                                     </h2>
                                     <div class="d-flex align-items-center mb-1 justify-content-center">
@@ -488,17 +488,17 @@
                                     </div>
                                     <div class="d-flex align-items-center mb-1 justify-content-center">
                                         <div>
-                                            <h3>You will purchase for ₹<span id="price"></span> </h3>
+                                            <p>You will purchase for ₹<span id="price"></span> </p>
                                         </div>
                                     </div>
                                     <div class="d-flex align-items-center mb-1 justify-content-center">
                                         <div>
-                                            <h3>You will recive cashback for ₹<span id="rebate_price"> </h3>
+                                            <p>You will recive cashback for ₹<span id="rebate_price"> </p>
                                         </div>
                                     </div>
                                     <div class="d-flex align-items-center mb-1 justify-content-center">
                                         <div>
-                                            <h3 class="p-1 bg-danger text-white">You save <span id="per_data"></span>% </h3>
+                                            <h4 class="p-1" style="color:#f86c6b">You save <span id="per_data"></span>% </h4>
                                         </div>
                                     </div>
 
