@@ -483,7 +483,7 @@
                                     </h5>
                                     <div class="d-flex align-items-center mb-1 justify-content-center">
                                         <div>
-                                            <h3>₹<span id="rebate_price"></span> After Discount</h3>
+                                            <h3>₹<span id="save_price"></span> After Discount</h3>
                                         </div>
                                     </div>
                                     <div class="d-flex align-items-center mb-1 justify-content-center">
@@ -493,12 +493,12 @@
                                     </div>
                                     <div class="d-flex align-items-center mb-1 justify-content-center">
                                         <div>
-                                            <h3>You will recive cashback for ₹<span id="save_price"> </h3>
+                                            <h3>You will recive cashback for ₹<span id="rebate_price"> </h3>
                                         </div>
                                     </div>
                                     <div class="d-flex align-items-center mb-1 justify-content-center">
                                         <div>
-                                            <h3 class="p-1 bg-danger text-white">You save <span id="per_data">% </h3>
+                                            <h3 class="p-1 bg-danger text-white">You save <span id="per_data">% </span></h3>
                                         </div>
                                     </div>
 
