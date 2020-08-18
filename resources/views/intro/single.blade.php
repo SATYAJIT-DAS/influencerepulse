@@ -67,8 +67,8 @@
                         </div>
                         <div class="prod-description col pl-xl-3">
 
-                            <h1 class="deal-title mt-2 mb-2-5 roboto-medium">
-                                {{$camp->product_name}}</h1>
+                            <h5 class="deal-title mt-2 mb-2-5 roboto-medium" style="font-size: 20px;">
+                                {{$camp->product_name}}</h5>
 
                             {{-- <div class="d-flex align-items-center mb-1 justify-content-center">
                                 <div>
@@ -84,22 +84,22 @@
                             </div> --}}
                             <div class="d-flex align-items-center mb-1 justify-content-center">
                                 <div>
-                                    <h3>₹{{$camp->rebate_price}} After Discount</h3>
+                                    <h2>₹{{$camp->rebate_price}} After Discount</h2>
                                 </div>
                             </div>
                             <div class="d-flex align-items-center mb-1 justify-content-center">
                                 <div>
-                                    <h3>You will purchase for ₹{{$camp->price}} </h3>
+                                    <p>You will purchase for ₹{{$camp->price}} </p>
                                 </div>
                             </div>
                             <div class="d-flex align-items-center mb-1 justify-content-center">
                                 <div>
-                                    <h3>You will recive cashback for ₹{{$camp->price-$camp->rebate_price}} </h3>
+                                    <p>You will recive cashback for ₹{{$camp->price-$camp->rebate_price}} </p>
                                 </div>
                             </div>
                             <div class="d-flex align-items-center mb-1 justify-content-center">
                                 <div>
-                                    <h3 class="p-1 bg-danger text-white">You save {{round((100-$camp->rebate_price/$camp->price*100)*100)/100}}% </h3>
+                                    <h3 class="p-1 " style="color:#f86c6b">You save {{round((100-$camp->rebate_price/$camp->price*100)*100)/100}}% </h3>
                                 </div>
                             </div>
                             {{-- <div class="d-flex align-items-center mb-2-5">
