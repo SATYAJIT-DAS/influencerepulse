@@ -499,6 +499,7 @@
                                     <div class="d-flex align-items-center mb-1 justify-content-center">
                                         <div>
                                             <h3 class="p-1 bg-danger text-white">You save <span id="per_data"></span>% </h3>
+
                                         </div>
                                     </div>
 
