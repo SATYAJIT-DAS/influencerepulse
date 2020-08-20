@@ -445,7 +445,7 @@
                                     <div
                                         class="product-gallery col-12 col-md justify-content-center flex-column flex-md-row d-flex">
                                         <div
-                                            class="slider-nav d-md-block d-none slick-initialized slick-slider slick-vertical"
+                                            class="slider-nav d-md-block  slick-initialized slick-slider slick-vertical"
                                             style="visibility: visible;">
                                             <div class="arrow-up slick-arrow" style=""><i
                                                     class="fas fa-chevron-up text-center"></i></div>

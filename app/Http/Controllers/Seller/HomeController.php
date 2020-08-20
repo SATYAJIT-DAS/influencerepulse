@@ -51,7 +51,6 @@ class HomeController extends Controller
 
             if (($camp->count_time < $start_date) && ($camp->permission == "offline")) {
                 $camp->daily_count = 0;
-                $camp->permission = "online";
                 $camp->save();
             }
         }

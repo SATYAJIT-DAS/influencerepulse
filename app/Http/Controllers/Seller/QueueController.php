@@ -74,7 +74,6 @@ class QueueController extends Controller
 
             // decrement camp wallet
             $camp->wallet -= ($camp->price - $camp->rebate_price + $rebate_fee);
-            $camp->save();
             // end
 
             $order->approved_date = date('yy-m-d h:i:s');
@@ -135,10 +134,18 @@ class QueueController extends Controller
             $transaction_b->status = $state;
             $transaction_b->camp_id = $camp->id;
             $transaction_b->save();
+            
+            //just update the campaign if daily count is reached
+            if ($camp->total_rebates == $camp->total_count) { // means completed
+            	$camp->permission = "completed";
+            } else if ($camp->daily_rebates == $camp->daily_count) {
+            	$camp->permission = "offline";
+            }
+            $camp->save();
 
             // campaign wallet check
             // recurring process
-            $seller_id = $camp->user_id;
+            /*$seller_id = $camp->user_id;
             $general_amount = Wallet::where('user_id', $seller_id)->where('operation', 'general charge')->sum('amount');
             $wallet = new Wallet();
             $wallet_camp = new Wallet();
@@ -199,7 +206,7 @@ class QueueController extends Controller
                     $msg->type = 3;
                     $msg->save();
                 }
-            }
+            }*/
             // end
         }
 

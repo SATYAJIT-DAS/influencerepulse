@@ -33,28 +33,22 @@ class HomeController extends Controller
         $today = strtotime(date('yy-m-d'));
         $camps = Campaign::all();
         foreach ($camps as $key => $camp) {
-            //echo '<pre>'; var_dump($camp);die('end');
-            //echo '--'.$camp->remaining_deals_for_the_day;die('-0');
-            //echo '<pre>'; var_dump($camp);	die('here');
-            //die($camp->remaining_deals_for_the_day);
+        
             if (($today >= strtotime($camp->start_date)) && ($camp->permission == "ready")) {
                 $camp->permission = "pending";
                 $camp->save();
             }
-            if (($today > strtotime($camp->count_time)) && ($camp->permission == "online")) {
+            
+            if (($today > strtotime($camp->count_time)) && $camp->total_count < $camp->total_rebates) {
                 $camp->count_time = date('yy-m-d');
-                if ($camp->daily_count == 0) {
-                    $camp->daily_count = 0;
-                }
+                $camp->daily_count = 0;
                 $camp->save();
             }
 
-            if (($camp->permission == "offline") && $today > strtotime($camp->count_time) && $camp->wallet <= 0) {
+            if (($camp->permission == "offline") && $camp->wallet <= 0) {
 
                 $amount_to_be_considered_for_deduction_from_general_wallet = QueueController::getCalcAmountConsideredTobeDeductedFromGeneralWallet($camp->id);
                 $general_amount = Wallet::where('user_id', $camp->user_id)->where('operation', 'general charge')->sum('amount');
-
-                //echo $amount_to_be_considered_for_deduction_from_general_wallet.' > 0 && '. $amount_to_be_considered_for_deduction_from_general_wallet.' <= '.$general_amount;die('-');
 
                 if ($amount_to_be_considered_for_deduction_from_general_wallet > 0 && $amount_to_be_considered_for_deduction_from_general_wallet <= $general_amount) {
                     $wallet = new Wallet();

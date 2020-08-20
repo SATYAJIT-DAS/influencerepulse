@@ -2,7 +2,7 @@
 @section('content')
 <style>
 .opacity-zero {
-    opacity: 0;
+    opacity: 1;
 }
 
 .opacity-one {
@@ -26,7 +26,7 @@
 
 
                             <div class="product-gallery col-12 col-md justify-content-center flex-column flex-md-row d-flex">
-                                <div class="slider-nav d-md-block d-none slick-initialized slick-slider slick-vertical"
+                                <div class="slider-nav d-md-block  slick-initialized slick-slider slick-vertical "
                                     style="visibility: visible;">
                                     <div class="slick-list draggable" style="height: 330px;">
                                         <div class="slick-track" style="opacity: 1; height: 264px; ">
