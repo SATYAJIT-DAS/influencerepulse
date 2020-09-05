@@ -376,7 +376,10 @@ Route::group(['middleware' => ['web', 'auth']], function () {
             //footer
             Route::get('/buyer/term', 'Buyer\TermController@index')->name('buyer.term');
             Route::get('/buyer/privacy', 'Buyer\PrivacyController@index')->name('buyer.privacy');
+
+            //Route::get('seller/order_change/{order_id}/{state}', 'Seller\QueueController@orderChange')->name('order.change');
         });
+
         //admin
         Route::group(['middleware' => ['admin']], function () {
 

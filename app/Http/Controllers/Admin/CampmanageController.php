@@ -168,8 +168,8 @@ class CampmanageController extends Controller
         $camp->rebate_price=$request->rebate_price;
         $camp->start_date=$request->start_date;
         $camp->start_time=$request->start_time;
-        $camp->daily_rebates=$request->max_intents_daily;
-        $camp->total_rebates=$request->max_intents_total;
+        $camp->daily_rebates=$request->daily_rebates;
+        $camp->total_rebates=$request->total_rebates;
         $camp->product_url=$request->product_url;
         $camp->keyword1=$request->keyword1;
         $camp->keyword2=$request->keyword2;
@@ -203,7 +203,7 @@ class CampmanageController extends Controller
                 $rebates=Order::where('camp_id',$camp_id)->where('status','Declined')->get();
                 $count=Order::where('camp_id',$camp_id)->where('status','Declined')->count();
                 break;
-            
+
             default:
                 $rebates=Order::where('camp_id',$camp_id)->get();
                 $count=Order::where('camp_id',$camp_id)->count();
