@@ -45,7 +45,10 @@ class WalletController extends Controller
 
         $wallet_sum = Wallet::where('user_id', $user_id)->sum('amount');
 
-        $general_amount = Wallet::where('user_id', $user_id)->where('operation', 'general charge')->sum('amount');
+        $general_amount = Wallet::where('user_id', $user_id)->where(function($query) {
+                $query->where('operation', 'general charge')
+                      ->orWhere('operation', 'Return in wallet');
+            })->sum('amount');
 
         $offline = Campaign::where('user_id', $user_id)->where('permission', 'offline')
             ->orderby('updated_at', 'DESC')

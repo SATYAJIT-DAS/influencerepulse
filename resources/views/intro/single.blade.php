@@ -1,13 +1,13 @@
 @extends('intro.layouts.app')
 @section('content')
 <style>
-.opacity-zero {
-    opacity: 1;
-}
+/*.opacity-zero {*/
+/*    opacity: 1;*/
+/*}*/
 
-.opacity-one {
-    opacity: 1;
-}
+/*.opacity-one {*/
+/*    opacity: 1;*/
+/*}*/
 </style>
 <main class="main">
     <section>
@@ -25,7 +25,7 @@
 
 
 
-                            <div class="product-gallery col-12 col-md justify-content-center flex-column flex-md-row d-flex">
+                            <div class="product-gallery col-12 col-md justify-content-md-center flex-column-reverse flex-md-row d-flex">
                                 <div class="slider-nav d-md-block  slick-initialized slick-slider slick-vertical "
                                     style="visibility: visible;">
                                     <div class="slick-list draggable" style="height: 330px;">
@@ -49,9 +49,9 @@
                                     <div class="slick-list draggable">
                                         <div class="slick-track" style="opacity: 1; width: 1520px;">
                                             @foreach($camp->pic as $key => $img)
-                                            <div class="slick-slide opacity-zero{{$key}} opacity-zero main-slide"
+                                            <div class="slick-slide opacity-zero{{$key}} opacity-zero main-slide deal-slider-img-sat"
                                                 data-slick-index="{{$key}}" aria-hidden="true"
-                                                style="width: 380px; position: relative; left: {{-380*$key}}px; top: 0px; z-index: 998; transition: opacity 500ms ease 0s;"
+                                                style=" position: relative; left: {{-380*$key}}px; top: 0px; z-index: 998; transition: opacity 500ms ease 0s;"
                                                 tabindex="-1">
                                                 <div><img src="{{asset('public/images/'.$img->image_path)}}"
                                                         alt="{{$camp->product_name}}"

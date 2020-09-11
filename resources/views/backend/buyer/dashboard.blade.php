@@ -404,7 +404,7 @@
 
                         <div class="modal-header d-flex justify-content-end pt-0-5 pb-0">
 
-                            <div class="mt-1-5 mr-6 mb-0 social d-flex align-items-center">
+                            <div class="mt-1-5 mr-6 mb-0 social d-flex align-items-md-center">
 
                                 <div>
                                     <div class="favorite">
@@ -437,25 +437,25 @@
 
                         <div class="modal-body p-lg-5">
 
-                            <div class="d-flex flex-column flex-xl-row align-items-center">
+                            <div class="d-flex flex-column flex-xl-row align-items-md-center">
 
-                                <div class="deal-slider ml-md-3 mx-md-0 mx-auto">
+                                <div class="deal-slider ml-md-3 mx-md-0">
 
 
                                     <div
-                                        class="product-gallery col-12 col-md justify-content-center flex-column flex-md-row d-flex">
+                                        class="product-gallery col-12 col-md justify-content-center flex-column-reverse flex-md-row d-flex">
                                         <div
-                                            class="slider-nav d-md-block  slick-initialized slick-slider slick-vertical"
+                                            class="slider-nav d-md-block  slick-initialized slick-slider slick-vertical d-flex flex-sm-column flex-md-row"
                                             style="visibility: visible;">
-                                            <div class="arrow-up slick-arrow" style=""><i
+                                            <div class="arrow-up slick-arrow d-none d-md-block" style=""><i
                                                     class="fas fa-chevron-up text-center"></i></div>
-                                            <div class="slick-list draggable" style="height: 330px;">
+                                            <div class="slick-list draggable buyer-slick-img">
                                                 <div class="slick-track" style="opacity: 1; height: 1122px;"
                                                      id="sub_images">
 
                                                 </div>
                                             </div>
-                                            <div class="arrow-down slick-arrow" style=""><i
+                                            <div class="arrow-down slick-arrow d-none d-md-block" style=""><i
                                                     class="fas fa-chevron-down text-center"></i></div>
                                         </div>
                                         <div class="slider-main-img slick-initialized slick-slider main-slide"

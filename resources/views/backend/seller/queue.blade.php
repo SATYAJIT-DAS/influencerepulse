@@ -153,8 +153,8 @@
 
                                                 <a class="dropdown-item"
                                                     href="{{route('order.change',
-                                                        array('id' =>  $order->id, 'state' => 'Declined' ))}}">
-                                                    Decline
+                                                        array('id' =>  $order->id, 'state' => 'disputed' ))}}">
+                                                    Raise Dispute
                                                 </a>
                                             </div>
                                         </td>
@@ -217,7 +217,7 @@
                                         <td>{{$order->order_id}} </td>
                                         <td><small>
                                                 {{round((100-$order->getCamp->rebate_price/$order->getCamp->price*100)*100)/100}}% OFF </small></td>
-                                        <td>₹{{$order->dis_reason}} </td>
+                                        <td>{{$order->dis_reason}} </td>
                                         <td>
                                             <a class="btn btn-primary btn-block msg-btn" data-toggle="modal"
                                                     data-target="#msg-modal" data-id="{{$order->id}}" style="color: white;" 
@@ -227,9 +227,7 @@
                                                 href="{{route('seller.discussion',$order->id)}}">
                                                 View Discussion </a>
 
-                                            <a class="btn btn-danger btn-block"
-                                                    data-id="{{$order->id}}" href="{{route('seller_resolve', $order->id)}}">
-                                                    Resolve </a>
+                                            
 
                                                                          
                                         </td>
@@ -352,11 +350,11 @@
                                                     Pay Out
                                                 </a>
 
-                                                <a class="dropdown-item"
+                                                <!--<a class="dropdown-item"
                                                     href="{{route('order.change',
                                                         array('id' =>  $order->id, 'state' => 'Declined' ))}}">
                                                     Decline 
-                                                </a>
+                                                </a>-->
 
                                                 <a class="btn btn-danger btn-block  dispute-modal"
                                                     data-toggle="modal"
@@ -503,11 +501,7 @@
                                             </button>
                                             <div class="dropdown-menu dropdown-menu-right"
                                                 aria-labelledby="actions-menu">
-                                                <a class="dropdown-item"
-                                                    href="{{route('order.change',
-                                                        array('id' =>  $order->id, 'state' => 'approved' ))}}">
-                                                    Approve
-                                                </a>
+                                                
 
                                                 <a class="btn btn-danger btn-block  dispute-modal"
                                                     data-toggle="modal"

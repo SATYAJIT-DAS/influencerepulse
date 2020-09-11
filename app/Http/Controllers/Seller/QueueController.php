@@ -68,7 +68,7 @@ class QueueController extends Controller
         $rebate_fee = Fee::first()->rebate_fee;
         $order = Order::Find($order_id);
         $order->status = $state;
-        // wallet move
+        // wallet moveDeclined
         if ($state == 'approved') {
             $camp = Campaign::find($order->camp_id);
 
@@ -209,6 +209,52 @@ class QueueController extends Controller
             }*/
             // end
         }
+        if ($state == 'disputed') {
+            $camp = Campaign::find($order->camp_id);
+            $order->disputed_date = date('yy-m-d h:i:s');
+            $camp->wallet -= ($camp->price - $camp->rebate_price + $rebate_fee);
+            $seller = User::Find($camp->user_id);
+
+            $wallet_seller = new Wallet();
+            $wallet_seller->amount = 0 - ($camp->price - $camp->rebate_price + $rebate_fee);
+            $wallet_seller->user_id = $seller->id;
+            $wallet_seller->camp_id = $camp->id;
+            $wallet_seller->order_id = $order_id;
+            $wallet_seller->date = date('yy-m-d h:i:s');
+            $wallet_seller->description = 'In hold as dipute rise';
+            $wallet_seller->operation = 'discharge';
+            $wallet_seller->save();
+            
+            
+            $transaction = new Transaction();
+            $transaction->wallet_id = $wallet_seller->id;
+            $transaction->order_id = $order_id;
+            $transaction->user_id = $camp->user_id;
+            $transaction->transaction_num = $this->generateTransactionNum();
+            $transaction->amount = $camp->rebate_price + $rebate_fee;
+            $transaction->date = date('yy-m-d h:i:s');
+            $transaction->payment_method = 'discharge';
+            $transaction->fee = $rebate_fee;
+            $transaction->status = $state;
+            $transaction->camp_id = $camp->id;
+            $transaction->save();
+            
+
+            $wallet_admin = new Wallet();
+            $wallet_admin->amount = $camp->price_rebate_price + $rebate_fee;
+            $wallet_admin->user_id = 1;
+            $wallet_admin->date = date('yy-m-d h:i:s');
+            $wallet_admin->description = 'In hold as dipute rise';
+            $wallet_admin->save();
+
+            if ($camp->total_rebates == $camp->total_count) { // means completed
+            	$camp->permission = "completed";
+            } else if ($camp->daily_rebates == $camp->daily_count) {
+            	$camp->permission = "offline";
+            }
+            $camp->save();
+
+        }
 
         // notification to admin
         if ($state == 'paidout') {
@@ -230,8 +276,52 @@ class QueueController extends Controller
         $order = Order::Find($request->order_id);
         $order->status = "disputed";
         $order->dis_reason = $request->reason;
-        $order->disputed_date = date('yy-m-d h:i:s');
-        $order->save();
+        
+        
+        $camp = Campaign::find($order->camp_id);
+         
+            $order->disputed_date = date('yy-m-d h:i:s');
+            //$camp->wallet -= ($camp->price - $camp->rebate_price + $rebate_fee);
+             $buyer = User::Find($order->buyer_id);
+            $wallet_buyer = new Wallet();
+            $wallet_buyer->amount =  - $camp->price_rebate_price;
+            $wallet_buyer->user_id = $buyer->id;
+            $wallet_buyer->camp_id = $camp->id;
+            $wallet_buyer->order_id = $request->order_id;
+            $wallet_buyer->date = date('yy-m-d h:i:s');
+            $wallet_buyer->description = 'hold because seeler apply for dispute';
+            $wallet_buyer->operation = 'discharge';
+            $wallet_buyer->save();
+
+            $transaction_b = new Transaction();
+            $transaction_b->wallet_id = $wallet_buyer->id;
+
+            $transaction_b->order_id = $request->order_id;
+            $transaction_b->user_id = $buyer->id;
+            $transaction_b->transaction_num = $this->generateTransactionNum();
+            $transaction_b->date = date('yy-m-d h:i:s');
+            $transaction_b->amount = 0 - $camp->price_rebate_price;
+            $transaction_b->fee = 0;
+            $transaction_b->payment_method = 'discharge';
+            $transaction_b->status = "disputed";
+            $transaction_b->camp_id = $camp->id;
+            $transaction_b->save();
+            
+
+            $wallet_admin = new Wallet();
+            $wallet_admin->amount = $camp->price_rebate_price;
+            $wallet_admin->user_id = 1;
+            $wallet_admin->date = date('yy-m-d h:i:s');
+            $wallet_admin->description = 'In hold as dipute rise in aproved stage';
+            $wallet_admin->save();
+
+            if ($camp->total_rebates == $camp->total_count) { // means completed
+            	$camp->permission = "completed";
+            } else if ($camp->daily_rebates == $camp->daily_count) {
+            	$camp->permission = "offline";
+            }
+            $camp->save();
+            $order->save();
         return redirect()->route('seller.queue')->with('status','Order status is dispute.');
     }
 

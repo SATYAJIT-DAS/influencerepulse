@@ -5,11 +5,19 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-use App\Model\Order;
-use App\Model\Message;
+ use App\Model\Order;
+ use App\Model\Message;
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Eloquent\Builder;
+
+
+use App\Model\Campaign;
+use App\Model\Wallet;
+use App\Model\Transaction;
+use App\Model\Fee;
+use App\Model\Service;
+use App\User;
 
 class OrderController extends Controller
 {
@@ -49,10 +57,106 @@ class OrderController extends Controller
 
         return redirect()->back()->with('status','The message was sent successfully.');
     }
-
+ function generateTransactionNum()
+    {
+        $num = date('ymdhis');
+        $num = $num . strval(random_int(1000, 9999));
+        return $num;
+    }
     public function disputeResolve($order_id, $status){
+        $rebate_fee = Fee::first()->rebate_fee;
         $order=Order::Find($order_id);
-        $order->status=$status;
+         $order->status = $status;
+        if ($status == 'vic_seller') {
+            $camp = Campaign::find($order->camp_id);
+            
+            $order->approved_date = date('yy-m-d h:i:s');
+
+            $seller = User::Find($camp->user_id);
+
+            $wallet_seller = new Wallet();
+            
+            $wallet_seller->amount =  $camp->price_rebate_price + $rebate_fee;
+            $wallet_seller->user_id = $seller->id;
+            $wallet_seller->camp_id = $camp->id;
+            $wallet_seller->order_id = $order_id;
+            $wallet_seller->date = date('yy-m-d h:i:s');
+            $wallet_seller->description = 'Win the Dispute';
+            $wallet_seller->operation = 'Return in wallet';
+            $wallet_seller->save();
+            
+
+            $transaction = new Transaction();
+            
+            $transaction->wallet_id = $wallet_seller->id;
+            $transaction->order_id = $order_id;
+            $transaction->user_id = $camp->user_id;
+            $transaction->transaction_num = $this->generateTransactionNum();
+            $transaction->amount = $camp->price_rebate_price;
+            $transaction->date = date('yy-m-d h:i:s');
+            $transaction->payment_method = 'Win the Dispute';
+            $transaction->fee = 0;
+            $transaction->status = $status;
+            $transaction->camp_id = $camp->id;
+            $transaction->save();
+
+            $wallet_admin = new Wallet();
+            
+            $wallet_admin->amount = 0 - ($camp->price_rebate_price+ $rebate_fee);
+            $wallet_admin->user_id = 1;
+            $wallet_admin->camp_id = $camp->id;
+            $wallet_admin->date = date('yy-m-d h:i:s');
+            $wallet_admin->order_id = $order_id;
+            $wallet_admin->description = 'pay for approved';
+            $wallet_seller->operation = 'Return in Seller wallet';
+            $wallet_admin->save();
+        }
+        else if ($status == 'vic_buyer') {
+            $camp = Campaign::find($order->camp_id);
+            
+            $order->approved_date = date('yy-m-d h:i:s');
+
+            $buyer = User::Find($order->buyer_id);
+
+            $wallet_buyer = new Wallet();
+            
+            $wallet_buyer->amount =  $camp->price_rebate_price;
+            $wallet_buyer->user_id = $buyer->id;
+            $wallet_buyer->camp_id = $camp->id;
+            $wallet_buyer->order_id = $order_id;
+            $wallet_buyer->date = date('yy-m-d h:i:s');
+            $wallet_buyer->description = 'Win the Dispute';
+            $wallet_buyer->operation = 'Return in wallet';
+            $wallet_buyer->save();
+            
+
+            $transaction = new Transaction();
+            
+            $transaction->wallet_id = $wallet_buyer->id;
+            $transaction->order_id = $order_id;
+            $transaction->user_id = $camp->user_id;
+            $transaction->transaction_num = $this->generateTransactionNum();
+            $transaction->amount = $camp->price_rebate_price;
+            $transaction->date = date('yy-m-d h:i:s');
+            $transaction->payment_method = 'Win the Dispute';
+            $transaction->fee = 0;
+            $transaction->status = $status;
+            $transaction->camp_id = $camp->id;
+            $transaction->save();
+
+            $wallet_admin = new Wallet();
+            
+            $wallet_admin->amount = 0 - ($camp->price_rebate_price);
+            $wallet_admin->user_id = 1;
+            $wallet_admin->camp_id = $camp->id;
+            $wallet_admin->date = date('yy-m-d h:i:s');
+            $wallet_admin->order_id = $order_id;
+            $wallet_admin->description = 'pay for approved';
+            $wallet_buyer->operation = 'Return in Buyer  wallet';
+           // dd($wallet_admin);
+            $wallet_admin->save();
+        }
+        
         $order->save();
 
         return redirect()->back()->with('status', 'The dispute was resolved.');
