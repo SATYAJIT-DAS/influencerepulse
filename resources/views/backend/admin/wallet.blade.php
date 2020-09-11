@@ -74,8 +74,8 @@
                                         <td class="w-50" style="max-width: 500px !important;">{{$wallet->description}}</td>
                                         <td>
                                             ₹{{$wallet->amount}} <br>
-                                            <small class="text-muted">
-                                                + ₹{{$wallet->fee_amount}} fee </small>
+                                            <!--<small class="text-muted">-->
+                                            <!--    + ₹{{$wallet->fee_amount}} fee </small>-->
                                         </td>
                                     </tr>
                                     @endforeach

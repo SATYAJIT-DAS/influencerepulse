@@ -38,11 +38,44 @@ button.bg-primary-light:focus {
     background-color: #00ce90 !important;
     border-color: #00ce90 !important;
 }
+.deal-single .product-gallery .slider-nav{
+    
+    z-index:999!important;
+}
+.buyer-slick-img{
+    height:330px;
+}
+
+.deal-single .product-gallery .slider-main-img .slick-slide img{
+    
+    margin:initial!important;
+    
+}
+.deal-slider-img-sat {
+    
+    width:380px;
+}
+
 @media (max-width: 768px) {
     .deal-single .product-gallery .slider-main-img {
         height: 15.9375rem;
         width: auto;
+       
     }
+    .buyer-slick-img{
+    height:75px;
+}
+.deal-single .product-gallery .slider-nav {
+    height: 75px!important;
+    max-width: 100vw!important;
+}
+header.app-header.navbar .navbar-brand{
+  left:50vw!important;  
+}
+.deal-single .product-gallery .slider-main-img .slick-slide div{
+    display:block!important;
+    text-align:center!important;
+}
 }
 @media (max-width: 992px) {
     .navbar-brand {

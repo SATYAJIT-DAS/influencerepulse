@@ -32,24 +32,24 @@ class HomeController extends Controller
     {
         $today = strtotime(date('yy-m-d'));
         $camps = Campaign::all();
-        
+
         foreach ($camps as $key => $camp) {
-        
+
             $updateCampaign = false;
-            
+
             if (($today >= strtotime($camp->start_date)) && ($camp->permission == "ready")) {
                 $camp->permission = "pending";
            	$updateCampaign = true;
             }
-            
+
             if (($today > strtotime($camp->count_time)) && $camp->permission == "offline") {
-            	 
+
             	 if ($camp->total_count < $camp->total_rebates) {
                     $camp->count_time = date('yy-m-d');
                     $camp->daily_count = 0;
                     $updateCampaign = true;
                 }
-                
+
                 if ($camp->permission == "offline" && $camp->wallet <= 0 && $camp->total_count < $camp->total_rebates) {
                 	$amount_to_be_considered_for_deduction_from_general_wallet = QueueController::getCalcAmountConsideredTobeDeductedFromGeneralWallet($camp->id);
                 	$general_amount = Wallet::where('user_id', $camp->user_id)->where('operation', 'general charge')->sum('amount');
@@ -77,7 +77,7 @@ class HomeController extends Controller
                     		$updateCampaign = true;
                 	}
                 }
-                  
+
             }
 
            if ($updateCampaign) {
@@ -103,9 +103,9 @@ class HomeController extends Controller
     }
 
     public function confirm($camp_id){
-    
+
     	 $camp = Campaign::FindOrFail($camp_id);
-        
+
         if ($camp->daily_count >= $camp->daily_rebates) {
             return redirect()->back()->with('status', 'Sorry, deals are closed for the day, please try to avail deal tomorrow.');
         }
@@ -131,16 +131,16 @@ class HomeController extends Controller
 
     public function confirmRedirect(Request $request)
     {
-    
-    	
+
+
         $rebate_fee = Fee::first()->rebate_fee;
 
         $camp = Campaign::FindOrFail($request->camp_id);
-        
+
         if ($camp->daily_count >= $camp->daily_rebates) {
             return redirect()->back()->with('status', 'Sorry, deals are closed for the day, please try to avail deal tomorrow.');
         }
-        
+
         $camp->daily_count += 1;
         $camp->total_count += 1;
         $camp->save();
@@ -488,4 +488,3 @@ class HomeController extends Controller
         //
     }
 }
-

@@ -523,11 +523,12 @@
                                                         data-id="{{$order->id}}" data-to="{{$order->getBuyer->name}}"
                                                         href="">
                                                         Message Buyer </a>
-                                                        <a class="dropdown-item msg-class"
+                                                       
+                                                       <!-- <a class="dropdown-item msg-class"
                                                             href="{{route('order.change',
                                                                 array('id' =>  $order->id, 'state' => 'approved' ))}}">
                                                             Approve
-                                                        </a>
+                                                        </a> -->
 
                                                                                            
 
