@@ -42,7 +42,7 @@ class HomeController extends Controller
            	$updateCampaign = true;
             }
             
-            if ($today > strtotime($camp->count_time)) {
+            if (($today > strtotime($camp->count_time)) && $camp->permission == "offline") {
             	 
             	 if ($camp->total_count < $camp->total_rebates) {
                     $camp->count_time = date('yy-m-d');
