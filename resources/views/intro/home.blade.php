@@ -59,56 +59,88 @@
                 <div class="col-md-4 col-lg-4 col-xxl-3 offset-md-3 offset-lg-3 offset-xl-4 mt-3 mt-md-0">
 
 
-                    <form id="buyer-sign-up-form" method="post" class="text-left"   action="{{ route('register') }}">
-                        @csrf
+                    <form id="buyer-sign-up-form" method="post" class="text-left"  action="{{ route('register') }}">
+                @csrf
 
-                        <div class="form-group">
-                            <label class="sr-only" for="name">Full name</label>
-                            <div class="form-controls">
-                                <div class="input-group input-group-shadow">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text"><i class="sprite-icon-user"></i></span>
-                                    </div>
-                                    <input class="form-control" id="name" name="name" maxlength="255" type="text"
-                                        value="" autofocus placeholder="Full name">
-                                </div>
-                            </div>
+                <div class="row">
+
+                  <div class="col-md-6">
+
+                    <div class="form-group">
+                      <label class="sr-only" for="email">{{ __('E-Mail Address') }}</label>
+                      <div class="form-controls">
+                        <div class="input-group input-group-shadow">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">
+                              <i class="sprite-icon-envelope"></i>
+                            </span>
+                          </div>
+                          <input class="form-control @error('email') is-invalid @enderror" type="email" id="email" name="email"
+                          maxlength="190" value="" placeholder="Email address">
                         </div>
-                        <input type="password"  style="display: none;"  name="password" id="password" value="12345678">
-                        <input type="password" style="display: none;" name="password_confirmation" id="password_confirmation" value="12345678">
+                      </div>
+                    </div>
 
-                        <input type="hidden" name="role_id" value="2">
+                  </div>
+                  <input type="password"  style="display: none;"  name="password" id="password" value="12345678">
+                  <input type="password" style="display: none;" name="password_confirmation" id="password_confirmation" value="12345678">
 
-                        <div class="form-group">
-                            <label class="sr-only" for="email">Email address</label>
-                            <div class="form-controls">
-                                <div class="input-group input-group-shadow">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text"><i class="sprite-icon-envelope"></i></span>
-                                    </div>
-                                    <input class="form-control" type="email" id="email" name="email" maxlength="190"
-                                        value="" placeholder="Email address">
-                                </div>
+                  <input type="hidden" name="role_id" value="2">
+
+                  <div class="col-md-6">
+
+                    <div class="form-group">
+                      <label class="sr-only" for="name">Full name</label>
+                      <div class="form-controls">
+                        <div class="input-group input-group-shadow">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text"><i
+                              class="sprite-icon-user"></i></span>
                             </div>
+                            <input class="form-control" id="name" name="name" maxlength="255"
+                            type="text" value="" autofocus placeholder="Full name">
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <div class="col-md-12">
+
+                      <div class="form-group">
+                        <label class="sr-only" for="name">Phone Name</label>
+                        <div class="form-controls">
+                          <div class="input-group input-group-shadow">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text"><i
+                                class="sprite-icon-phone"></i></span>
+                              </div>
+                              <input class="form-control" id="phone" name="phone" minlength="6"
+                              type="text" value="" autofocus placeholder="Phone Number">
+                            </div>
+                          </div>
                         </div>
 
-                        <button class="btn btn-lg btn-block btn-coupon" type="submit">
-                            Get FREE Access </button>
+                      </div>
 
-                        <p class="mt-4 text-center mb-0 px-1 text-medium-grey">
-                            <small class=" text-dark">
-                                By signing up, you agree to our <a href="{{route('intro.term')}}" target="_blank"
-                                    rel="nofollow" class="text-danger">Terms of Service</a>, <a href=""
-                                    target="_blank" rel="nofollow" class="text-red">Privacy Policy</a> and to receive
-                                Influencer Pulse emails,
-                                newsletters & updates. This site is protected the Google <a
-                                    href="https://policies.google.com/terms" target="_blank" rel="nofollow"
-                                    class="text-danger">Terms of Service</a> and <a
-                                    href="https://policies.google.com/privacy" target="_blank" rel="nofollow"
-                                    class="text-danger">Privacy Policy</a> apply. </small>
-                        </p>
 
-                    </form>
+                    </div>
+
+                    <button class="btn btn-lg btn-block btn-dark" type="submit">
+                      Sign Up and Start Shopping </button>
+
+                      <p class="mt-4 text-center small-text mb-0 px-3">
+                        By signing up, you agree to our <a href="{{route('intro.term')}}" target="_blank"
+                        rel="nofollow" class="text-danger">Terms of Service</a>, <a href="{{route('intro.term')}}"
+                        target="_blank" rel="nofollow" class="text-dark">Privacy Policy</a> and to receive
+                        Influencer Pulse emails,
+                        newsletters & updates. This site is protected the Google <a
+                        href="https://policies.google.com/terms" target="_blank" rel="nofollow"
+                        class="text-danger">Terms of Service</a> and <a
+                        href="https://policies.google.com/privacy" target="_blank" rel="nofollow"
+                        class="text-danger">Privacy Policy</a> apply. </small>
+
+                      </form>
 
                 </div>
 
