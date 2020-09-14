@@ -62,30 +62,30 @@
                         title="List of rebates that are unclaimed">
                         <a class="nav-link " data-toggle="tab" href="#preapproved" data-id='preapproved' id='preapproved-tab'>Pre Approved
                             ({{count($preapps)}})</a>
-                    </li> 
+                    </li>
 
 
                     <li class="nav-item" data-toggle="tooltip" data-placement="top"
                         title="List of rebates that are unclaimed">
                         <a class="nav-link " data-toggle="tab" href="#approved" data-id='approved' id='approved-tab'>Approved
                             ({{count($apps)}})</a>
-                    </li>   
+                    </li>
 
                     <li class="nav-item" data-toggle="tooltip" data-placement="top"
                         title="List of rebates that are unclaimed">
                         <a class="nav-link " data-toggle="tab" href="#paidout" data-id='paidout' id='paidout-tab'>Paid Out
                             ({{count($paidouts)}})</a>
-                    </li> 
+                    </li>
 
                      <li class="nav-item" data-toggle="tooltip" data-placement="top"
                         title="List of rebates that are unclaimed">
                         <a class="nav-link " data-toggle="tab" href="#paid_com" data-id='paid_com' id='paid_com-tab'>Paid Completed
                             ({{count($paid_com)}})</a>
-                    </li>       
+                    </li>
 
                     <li class="nav-item" data-toggle="tooltip" data-placement="top" title="List of rebates on dispute">
                         <a class="nav-link " data-toggle="tab" href="#declines" data-id='declines' id='declines-tab'>Declined ({{count($declines)}})</a>
-                    </li>             
+                    </li>
 
                     <li class="nav-item" data-toggle="tooltip" data-placement="top" title="List of rebates on dispute">
                         <a class="nav-link active" data-toggle="tab" href="#disputed" data-id='disputed' id='disputed-tab'>Disputes ({{count($disputes)}})</a>
@@ -95,7 +95,7 @@
                         title="List of rebates that are unclaimed">
                         <a class="nav-link" data-toggle="tab" href="#resolution" data-id='resolution' id='resolution-tab'>Disputes Resolved
                             ({{count($resolves)}})</a>
-                    </li> 
+                    </li>
 
                     <li class="nav-item" data-toggle="tooltip" data-placement="top" title="List of rebates on dispute">
                         <a class="nav-link active" data-toggle="tab" href="#cancelled" data-id='cancelled' id='cancelled-tab'>Cancelled ({{count($cancelled)}})</a>
@@ -285,10 +285,10 @@
                                                     data-order="{{$order}}" data-buyer="{{$order->getBuyer->name}}"
                                                     data-amount="{{$order->getCamp->price-$order->getCamp->rebate_price}}"
                                                     href="">
-                                                    Pay Now 
+                                                    Pay Now
                                                 </a>
                                             </td>
-                                            
+
                                             <!-- <td>
                                                 <a class="btn btn-primary btn-block msg-class" data-toggle="modal"
                                                     data-target="#msg-modal"
@@ -356,8 +356,8 @@
                                             <td>
                                                 <span class="text-danger">{{$order->status}}</span>
                                             </td>
-                                            
-                                            
+
+
                                             <!-- <td>
                                                 <a class="btn btn-primary btn-block msg-class" data-toggle="modal"
                                                     data-target="#msg-modal"
@@ -443,7 +443,7 @@
                                                     Approve
                                                 </a>
                                             </td>
-                                                
+
                                         </tr>
                                         @endforeach
                                     @else
@@ -511,7 +511,7 @@
                                                     </button>
                                                     <div class="dropdown-menu dropdown-menu-right"
                                                         aria-labelledby="actions-menu">
-                                                        
+
                                                         <a class="dropdown-item msg-class" data-toggle="modal"
                                                         data-target="#msg-modal"
                                                         data-id="{{$order->id}}" data-to="{{$order->getCamp->user->name}}"
@@ -523,18 +523,18 @@
                                                         data-id="{{$order->id}}" data-to="{{$order->getBuyer->name}}"
                                                         href="">
                                                         Message Buyer </a>
-                                                       
+
                                                        <!-- <a class="dropdown-item msg-class"
                                                             href="{{route('order.change',
                                                                 array('id' =>  $order->id, 'state' => 'approved' ))}}">
                                                             Approve
                                                         </a> -->
 
-                                                                                           
 
-                                                       
+
+
                                                     </div>
-                                                           
+
                                                 </div>
 
 
@@ -546,10 +546,10 @@
                                                     </button>
                                                     <div class="dropdown-menu dropdown-menu-right"
                                                         aria-labelledby="actions-menu">
-                                                        
+
                                                         <a class="dropdown-item"
                                                         data-id="{{$order->id}}"
-                                                        data-type="seller" 
+                                                        data-type="seller"
                                                         href="{{route('resolve',['order_id' => $order->id, 'status' => 'vic_seller'])}}">
                                                         Victory Seller </a>
 
@@ -557,9 +557,9 @@
                                                         data-id="{{$order->id}}" href="{{route('resolve',['order_id' => $order->id, 'status' => 'vic_buyer'])}}">
                                                         Victory Buyer </a>
                                                     </div>
-                                                           
+
                                                 </div>
-                                                
+
                                             </td>
                                         </tr>
                                         @endforeach
@@ -626,7 +626,7 @@
                                                 Seller Victory
                                                 @endif
                                             </td>
-                                            
+
                                         </tr>
                                         @endforeach
                                     @else
@@ -690,7 +690,7 @@
                                                     </button>
                                                     <div class="dropdown-menu dropdown-menu-right"
                                                         aria-labelledby="actions-menu">
-                                                        
+
                                                         <a class="dropdown-item msg-class" data-toggle="modal"
                                                         data-target="#msg-modal"
                                                         data-id="{{$order->id}}" data-to="{{$order->getCamp->user->name}}"
@@ -703,7 +703,7 @@
                                                         href="">
                                                         Message Buyer </a>
                                                     </div>
-                                                           
+
                                                 </div>
 
 
@@ -715,15 +715,15 @@
                                                     </button>
                                                     <div class="dropdown-menu dropdown-menu-right"
                                                         aria-labelledby="actions-menu">
-                                                        
+
                                                         <a class="dropdown-item time-class" data-id="{{$order->id}}" data-toggle="modal"
                                                         data-target="#time-delay" href="">
                                                         Time Delay </a>
 
                                                     </div>
-                                                           
+
                                                 </div>
-                                                
+
                                             </td>
                                         </tr>
                                         @endforeach
@@ -773,14 +773,14 @@
                         <button
                             type="submit" class="fv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
 
-                        <input type="hidden" name="order_id" id="order_id" value="">
+                        <input type="hidden" name="order_id" id="order_id" >
                         <input type="hidden" name="msg_type" id="msg_type">
 
                         <div class="form-group fv-has-feedback">
                             <label for="message" class="form-control-label">Message</label>
                             <div class="controls">
                                 <textarea data-e2e="message" name="message" id="message" class="form-control md-textarea" autofocus="" data-fv-field="message">
-                                        
+
                                 </textarea>
                                 <i style=""
                                 class="fv-control-feedback fal fa-asterisk" data-fv-icon-for="message"></i>
@@ -824,7 +824,7 @@
                         $("#order_id").val(order_id);
                         $("#msg_type").val(type);
                     })
-                    
+
 
                     $('#write-message-form').on('init.field.fv', function(e, data) {
                         const $icon = data.element.data('fv.icon'),
@@ -897,8 +897,8 @@
                             <label for="message" class="form-control-label">Left Time</label>
                             <div class="controls">
                                 <select class="form-control" name="left_time" id="left_time">
-                                    <?php 
-                                        for ($i=1; $i < 6; $i++) { 
+                                    <?php
+                                        for ($i=1; $i < 6; $i++) {
                                            echo "<option value=".$i.">".$i."h</option>";
                                         }
                                     ?>
@@ -927,7 +927,7 @@
                         console.log(order_id);
                         time_init(order_id);
                     })
-                    
+
 
                     $('#write-message-form').on('init.field.fv', function(e, data) {
                         const $icon = data.element.data('fv.icon'),
@@ -1039,7 +1039,7 @@
                         $("#tran-order-id").val(order_id);
 
                     })
-                    
+
 
                     $('#write-transaction-form').on('init.field.fv', function(e, data) {
                         const $icon = data.element.data('fv.icon'),
@@ -1101,7 +1101,7 @@
             $("#"+tab+"-tab").addClass('active');
 
             $(".tab-pane").removeClass('show active');
-            $("#"+tab).addClass('show active');            
+            $("#"+tab).addClass('show active');
 
 
             $(".nav-link").on('click', function(){

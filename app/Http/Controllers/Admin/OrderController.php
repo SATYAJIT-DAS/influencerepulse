@@ -69,13 +69,13 @@ class OrderController extends Controller
          $order->status = $status;
         if ($status == 'vic_seller') {
             $camp = Campaign::find($order->camp_id);
-            
+
             $order->approved_date = date('yy-m-d h:i:s');
 
             $seller = User::Find($camp->user_id);
 
             $wallet_seller = new Wallet();
-            
+
             $wallet_seller->amount =  $camp->price_rebate_price + $rebate_fee;
             $wallet_seller->user_id = $seller->id;
             $wallet_seller->camp_id = $camp->id;
@@ -84,10 +84,10 @@ class OrderController extends Controller
             $wallet_seller->description = 'Win the Dispute';
             $wallet_seller->operation = 'Return in wallet';
             $wallet_seller->save();
-            
+
 
             $transaction = new Transaction();
-            
+
             $transaction->wallet_id = $wallet_seller->id;
             $transaction->order_id = $order_id;
             $transaction->user_id = $camp->user_id;
@@ -101,7 +101,7 @@ class OrderController extends Controller
             $transaction->save();
 
             $wallet_admin = new Wallet();
-            
+
             $wallet_admin->amount = 0 - ($camp->price_rebate_price+ $rebate_fee);
             $wallet_admin->user_id = 1;
             $wallet_admin->camp_id = $camp->id;
@@ -113,13 +113,13 @@ class OrderController extends Controller
         }
         else if ($status == 'vic_buyer') {
             $camp = Campaign::find($order->camp_id);
-            
+
             $order->approved_date = date('yy-m-d h:i:s');
 
             $buyer = User::Find($order->buyer_id);
 
             $wallet_buyer = new Wallet();
-            
+
             $wallet_buyer->amount =  $camp->price_rebate_price;
             $wallet_buyer->user_id = $buyer->id;
             $wallet_buyer->camp_id = $camp->id;
@@ -128,10 +128,10 @@ class OrderController extends Controller
             $wallet_buyer->description = 'Win the Dispute';
             $wallet_buyer->operation = 'Return in wallet';
             $wallet_buyer->save();
-            
+
 
             $transaction = new Transaction();
-            
+
             $transaction->wallet_id = $wallet_buyer->id;
             $transaction->order_id = $order_id;
             $transaction->user_id = $camp->user_id;
@@ -145,7 +145,7 @@ class OrderController extends Controller
             $transaction->save();
 
             $wallet_admin = new Wallet();
-            
+
             $wallet_admin->amount = 0 - ($camp->price_rebate_price);
             $wallet_admin->user_id = 1;
             $wallet_admin->camp_id = $camp->id;
@@ -156,7 +156,7 @@ class OrderController extends Controller
            // dd($wallet_admin);
             $wallet_admin->save();
         }
-        
+
         $order->save();
 
         return redirect()->back()->with('status', 'The dispute was resolved.');
@@ -186,7 +186,7 @@ class OrderController extends Controller
             ->orwhere('status','vic_seller')
             ->orderby('updated_at','DESC')
             ->get();
-            
+
         return view('backend.admin.order_manage',compact('preapps','declines','apps','paidouts','paid_com','disputes','resolves', 'search', 'tab'));
     }
 
@@ -201,7 +201,7 @@ class OrderController extends Controller
         $order=Order::Find($request->order_id);
 
         $order->status='Waiting for purchase';
-        //get new start time 
+        //get new start time
         $current=date('yy-m-d h:i:s');
         $new_time=strtotime($current)+($left_time-1)*3600;
         $new_time=date('yy-m-d h:i:s',$new_time);

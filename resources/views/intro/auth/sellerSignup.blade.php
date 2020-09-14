@@ -13,9 +13,15 @@ footer {
 .margin-top-80 {
     margin-top: -80px;
 }
-
+.app-header .navbar-brand{
+  position: initial!important;
+}
+@media (max-width: 992px){
+.navbar-brand {
+    margin-left: 0.25rem !important;
+}}
 .sign-up-bg {
-    background-image: url({{url('intro/img/signup.jpg')}});
+    /* background-image: url({{url('intro/img/signup.jpg')}}); */
     /* background-repeat: no-repeat;
     background-position: center top;
     background-size: 100%;
@@ -28,10 +34,11 @@ footer {
     width: 100%;
     display: flex;
     padding-left: 120px; */
+    position: inherit!important;
 }
 
 .img-text-color{
-    color: #c82dea !important;
+    /* color: #c82dea !important; */
 }
 
 @media (min-width: 1200px) {
@@ -44,7 +51,7 @@ footer {
 <header class="navbar navbar-expand-lg navbar-light app-header margin-top-80">
     <div class="container d-block">
         <div class="row">
-            <div class="col-xl-6 d-flex px-1-5 justify-content-between align-items-center">
+            <div class="col-xl-12 d-flex px-1-5 justify-content-between align-items-center">
                 <a class="navbar-brand" href="{{route('intro.home')}}">
                     <img src="{{asset('intro/img/logo.png')}}" alt="influencerpulse" class="img-fluid">
                 </a>
@@ -198,11 +205,11 @@ footer {
 
                     </div>
 
-                    <div class="col-xl-6 my-2 pr-0 mx-1-5 my-xl-0 mx-xl-0 sign-up-bg">
+                    <div class="col-xl-6  pr-0 mx-1-5 my-xl-0 mx-xl-0 sign-up-bg">
 
-                        <div class="col-xxl-10 col-lg-11 px-2 m-auto">
+                        <div class="col-xxl-10 col-lg-11 ">
 
-                            <p class="my-xxl-2-5 mt-5 mt-lg-2 mb-2-5 mb-lg-1 h1  text-center img-text-color">
+                            <p class=" mb-2-5 mb-lg-1 h1  text-center img-text-color">
                                 You Create!</p>
 
                             <p class="mb-xxl-6 mb-xl-2 h5 lato-medium img-text-color">
