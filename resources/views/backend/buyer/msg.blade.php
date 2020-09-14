@@ -60,7 +60,7 @@
                                         <tbody>
                                             <?php $count=0 ?>
                                             @foreach($msgs as $key => $msg)
-                                            @if($msg->user_id == Auth()->user()->id && ($msg->type ==1 || $msg->type ==2) && $msg->msg_status == 0)
+@if($msg->to_user == Auth()->user()->id && ($msg->type ==1 || $msg->type ==2) && $msg->msg_status == 0)
                                             <tr>
                                                 <?php $count++ ?>
                                                 <td>
@@ -133,7 +133,7 @@
                                         <tbody>
                                             <?php $count=0 ?>
                                             @foreach($msgs as $key => $msg)
-                                            @if($msg->user_id == Auth()->user()->id && ($msg->type ==1 || $msg->type ==2) && $msg->msg_status == 1)
+@if($msg->to_user == Auth()->user()->id && ($msg->type ==1 || $msg->type ==2) && $msg->msg_status == 1)
                                             <tr>
                                                 <?php $count++ ?>
                                                 <td>

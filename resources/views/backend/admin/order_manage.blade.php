@@ -514,12 +514,12 @@
                                                         
                                                         <a class="dropdown-item msg-class" data-toggle="modal"
                                                         data-target="#msg-modal"
-                                                        data-id="{{$order->id}}" data-to="{{$order->getCamp->user->name}}"
+                                                        data-id="{{$order->id}}" data-to="{{$order->getCamp->user->name}}"   data-toid="{{$order->getCamp->user->id}}" 
                                                         data-type="seller" href="">
                                                         Message Seller </a>
 
                                                         <a class="dropdown-item msg-class" data-toggle="modal"
-                                                        data-target="#msg-modal" data-type="buyer"
+                                                        data-target="#msg-modal" data-type="buyer" data-toid="{{$order->getBuyer->id}}"  
                                                         data-id="{{$order->id}}" data-to="{{$order->getBuyer->name}}"
                                                         href="">
                                                         Message Buyer </a>
@@ -773,8 +773,10 @@
                         <button
                             type="submit" class="fv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
 
-                        <input type="hidden" name="order_id" id="order_id" value="">
+                        <input type="hidden" name="msg_order_id" id="msg_order_id">
+                    <input type="hidden" name="msg_to_user" id="msg_to_user">
                         <input type="hidden" name="msg_type" id="msg_type">
+                        
 
                         <div class="form-group fv-has-feedback">
                             <label for="message" class="form-control-label">Message</label>
@@ -818,11 +820,15 @@
                     $(".msg-class").click(function(){
                         order_id=$(this).data('id');
                         to=$(this).data('to');
+                        to_id=$(this).data('toid');
                         type=$(this).data('type');
-                        console.log("sadf",order_id,to)
+                        console.log("sadf",order_id,to,type,to_id)
                         $("#modal_title").html(to);
-                        $("#order_id").val(order_id);
+                        $("#msg_order_id").val(order_id);
                         $("#msg_type").val(type);
+                        $("#msg_to_user").val(to_id);
+                        
+                        //$("#type").val(type);
                     })
                     
 

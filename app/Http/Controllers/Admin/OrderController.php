@@ -41,9 +41,12 @@ class OrderController extends Controller
     }
 
     public function disputeManage(Request $request){
-    	$order_id=$request->order_id;
+    	$order_id=$request->msg_order_id;
+    	$to_user =$request->msg_to_user;
+    	//($to_user);
         $msg= new Message();
-
+        $msg->to_user=$to_user;
+        $msg->user_id =1;
         $msg->order_id=$order_id;
         $msg->date=date('yy-m-d h-m-d');
         $msg->message=$request->message;
@@ -52,7 +55,7 @@ class OrderController extends Controller
         }else{
         	$msg->type=3;  //seller
         }
-        $msg->msg_status=0;
+        $msg->msg_status = 0;
         $msg->save();
 
         return redirect()->back()->with('status','The message was sent successfully.');

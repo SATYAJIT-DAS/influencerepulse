@@ -205,6 +205,30 @@
                             </div>
                         </div>
                     </li>
+                    @elseif($msg->type == 2)
+                    
+                    <li id="message-675882" class="clearfix timeline-inverted">
+                        <div class="timeline-badge" title="" data-placement="bottom" data-toggle="tooltip"
+                            data-original-title="admin"   style=" text-transform: uppercase;">
+                            A </div>
+                        <div class="timeline-panel">
+                            <div class="timeline-body">
+                                {{$msg->message}}
+                            </div>
+                            <div class="timeline-footer">
+                                <small class="text-muted">
+                                    <i class="fal fa-clock"></i>
+                                    {{ date('F j, Y  h:m ', strtotime($msg->date)) }}
+                                </small>
+                                @if($msg->file_path)
+                                <a href="" onclick="show_file_satya('{{$msg->file_path}}')" title="{{$msg->file_title}}">
+                                        <i class="fal fa-file-o"></i> Attachment
+                                </a>
+                                @endif
+                            </div>
+                        </div>
+                    </li>
+                    
                     @else
                     <li id="message-675882" class="clearfix timeline-inverted">
                         <div class="timeline-badge" title="" data-placement="bottom" data-toggle="tooltip"
