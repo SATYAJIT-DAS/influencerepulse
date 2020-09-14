@@ -56,7 +56,7 @@
                                 <tbody>
                                     @foreach($msgs as $key => $msg)
                                     <tr>
-                                        
+
                                         <td>{{$key+1}}</td>
                                         <td>{{$msg->date}}</td>
                                         <td> {{$msg->getFrom->name}}</td>
