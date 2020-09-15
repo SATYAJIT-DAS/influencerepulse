@@ -317,9 +317,15 @@
         marketplace = <?php echo $camp->marketplace ?> ;
         $("#category").val(category);
         $("#marketplace").val(marketplace);
+        $("#marketplace").on('change',function(){
+            console.log($("#marketplace").val());
+        })
+        
     })
     </script>
     @endif
+    
+    
     <script>
     $(function() {
 

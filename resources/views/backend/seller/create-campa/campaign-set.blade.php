@@ -238,7 +238,7 @@
 
                             <div class="row">
 
-                                <div class="col-xl-4">
+                                <div class="col-xl-6">
 
                                     <div class="form-group">
                                         <label class="form-control-label" for="max-intents-daily">
@@ -254,32 +254,32 @@
 
                                 </div>
 
-                                <div class="col-xl-4">
+                                <!--<div class="col-xl-4">-->
 
-                                    <label>
-                                        Running strategy <i class="fal fa-question-circle" data-toggle="tooltip"
-                                            data-placement="top"
-                                            title="By default, the campaign will not have a limit of deals offered. You can pause it at any moment."></i>
-                                    </label>
+                                <!--    <label>-->
+                                <!--        Running strategy <i class="fal fa-question-circle" data-toggle="tooltip"-->
+                                <!--            data-placement="top"-->
+                                <!--            title="By default, the campaign will not have a limit of deals offered. You can pause it at any moment."></i>-->
+                                <!--    </label>-->
 
-                                    <div class="form-group mt-1">
-                                        <div class="custom-control custom-checkbox">
+                                <!--    <div class="form-group mt-1">-->
+                                <!--        <div class="custom-control custom-checkbox">-->
 
-                                            @if($camp->total_rebates)
-                                            <input type="checkbox" class="custom-control-input" data-toggle="checkbox"
-                                                value="0" name="indefinite" id="indefinite">
-                                            @else
-                                            <input type="checkbox" class="custom-control-input" data-toggle="checkbox"
-                                                value="1" name="indefinite" id="indefinite" checked="checked">
-                                            @endif
-                                            <label class="custom-control-label" for="indefinite">
-                                                Unlimited deals </label>
-                                        </div>
-                                    </div>
+                                <!--            @if($camp->total_rebates)-->
+                                <!--            <input type="checkbox" class="custom-control-input" data-toggle="checkbox"-->
+                                <!--                value="0" name="indefinite" id="indefinite">-->
+                                <!--            @else-->
+                                <!--            <input type="checkbox" class="custom-control-input" data-toggle="checkbox"-->
+                                <!--                value="1" name="indefinite" id="indefinite" checked="checked">-->
+                                <!--            @endif-->
+                                <!--            <label class="custom-control-label" for="indefinite">-->
+                                <!--                Unlimited deals </label>-->
+                                <!--        </div>-->
+                                <!--    </div>-->
 
-                                </div>
+                                <!--</div>-->
 
-                                <div class="col-xl-4 none" id="total_rebates_show">
+                                <div class="col-xl-6 " id="total_rebates_show">
 
                                     <div class="form-group">
                                         <label class="form-control-label" for="max-intents-total">
@@ -520,10 +520,10 @@
     <script>
     $(document).ready(function() {
 
-        $indefinite = $("#indefinite").val();
-        if ($indefinite == 0) {
-            $("#total_rebates_show").removeClass('none');
-        }
+        // $indefinite = $("#indefinite").val();
+        // if ($indefinite == 0) {
+        //     $("#total_rebates_show").removeClass('none');
+        // }
 
         $("#private").on('change',function(){
             if($("#private").is(":checked")){

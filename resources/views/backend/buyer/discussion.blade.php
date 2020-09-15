@@ -169,13 +169,13 @@
 
                 </div>
 
-                <div class="alert alert-info mb-5">
-                    <i class="fal fa-info-circle"></i>
-                    Attention: if a seller pressures you to leave a review as a condition for rebate approval, please
-                    contact our support. You are not obligated to leave any review after the purchase. A seller may not
-                    pressure you to leave any review on any marketplace as a condition for rebate approval, its against
-                    our TOS and its against TOS of all major marketplaces, including Amazon, Walmart, etc. You can leave
-                    an unbiased product review only willingly and only if you wish to do so. </div>
+                <!--<div class="alert alert-info mb-5">-->
+                <!--    <i class="fal fa-info-circle"></i>-->
+                <!--    Attention: if a seller pressures you to leave a review as a condition for rebate approval, please-->
+                <!--    contact our support. You are not obligated to leave any review after the purchase. A seller may not-->
+                <!--    pressure you to leave any review on any marketplace as a condition for rebate approval, its against-->
+                <!--    our TOS and its against TOS of all major marketplaces, including Amazon, Walmart, etc. You can leave-->
+                <!--    an unbiased product review only willingly and only if you wish to do so. </div>-->
 
 
 
