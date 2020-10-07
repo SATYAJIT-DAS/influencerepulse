@@ -62,36 +62,9 @@ class HomeController extends Controller
         }
 
         $orders=Order::all();
-        foreach($orders as $key => $order){
-            $late_time_app =(strtotime(date('yy-m-d h:i:s'))-strtotime($order->start_time))/3600;
-            if(($late_time_app >= 16)  && ( $order->status == "pre_approved" )){
-                $order->status="approved";
-                $msg=new Message();
-                $msg->order_id=$order->id;
-                $msg->date=date('yy-m-d h:i:s');
-                $msg->message="Order #".$order->id." has been approved automatically.";
-                $msg->msg_status=0;
-                $msg->type=3;
-                $msg->save();
-                $order->save();
-            }
-
-            if($order->status == "disputed"){
-                $late_time_dis=(strtotime(date('yy-m-d h:i:s'))-strtotime($order->disputed_date))/3600/24;
-                if($late_time_dis >= 15){
-                    $order->status="paidout";
-                    $order->save();
-                }
-            }
-
-            if($order->status == "approved"){
-                $late_time_app=(strtotime(date('yy-m-d h:i:s'))-strtotime($order->approved_date))/3600/24;
-                if($late_time_app >= 15){
-                    $order->status="paidout";
-                    $order->save();
-                }
-            }
-        }
+        // foreach($orders as $key => $order){
+            
+        // }
 
         $camps=Campaign::where('permission','online')->get();
 

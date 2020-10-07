@@ -2,7 +2,9 @@
 
 namespace App\Model;
 
+use App\Http\Controllers\Seller\QueueController;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Http\Request;
 
 class Campaign extends Model
 {
@@ -33,7 +35,6 @@ class Campaign extends Model
         'permission',
         'favorite',
         'wallet',
-
     ];
 
     protected $appends = ['remaining_deals_for_the_day'];
@@ -71,21 +72,35 @@ class Campaign extends Model
             'pre_approved',
             'approved',
             'paidout',
+            'disputed',
             'paid completed'
         ])->count();
 
 
         $daily_deals = $this->getAttribute('daily_rebates') - $this->getAttribute('daily_count');
-        $total_remaining_deals = $this->getAttribute('total_rebates') - $get_total_no_of_rebates_already_processed_or_in_progress;
-        $remaining_deals_for_the_day = $daily_deals;
-        if ($total_remaining_deals < $daily_deals) {
-            $remaining_deals_for_the_day = $total_remaining_deals;
-        }
+        $total_remaining_deals = $this->getAttribute('total_rebates') - $get_total_no_of_rebates_already_processed_or_in_progress ;
+        $remaining_deals_for_the_day = $total_remaining_deals < $daily_deals ? $total_remaining_deals:$daily_deals;
+        // if () {
+        //     $remaining_deals_for_the_day = ;
+        // }
 
         $this->setAttribute('remaining_deals_for_the_day', (int)$remaining_deals_for_the_day);
 
         return (int)$remaining_deals_for_the_day;
 
+    }
+
+    public function approveWaitingOrders() {
+        $orders = Order::where('camp_id', $this->getAttribute('id'))->whereIn('status', [
+            'pre_approved',
+        ])->get();
+        if (count($orders)) {
+            foreach ($orders as $order) {
+                $request = Request::create('seller/order_change/' . $order->id . '/approved', 'GET');
+                $response = app()->handle($request);
+                $responseBody = $response->getContent();
+            }
+        }
     }
 }
 

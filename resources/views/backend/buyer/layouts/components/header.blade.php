@@ -14,11 +14,11 @@
             <a class="nav-link" href="{{route('buyer.activity')}}">
                 Activity
             </a></li>
-        <li class="nav-item d-md-down-none">
-            <a class="nav-link disabled" href="{{route('buyer.faq')}}">
-                FAQ
-            </a>
-        </li>
+        <!--<li class="nav-item d-md-down-none">-->
+        <!--    <a class="nav-link disabled" href="{{route('buyer.faq')}}">-->
+        <!--        FAQ-->
+        <!--    </a>-->
+        <!--</li>-->
         <li class="nav-item d-md-down-none">
             <a class="nav-link" href="{{route('buyer.contact-us')}}">
                 Contact Us

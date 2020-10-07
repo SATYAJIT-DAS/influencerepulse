@@ -14,6 +14,7 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         //
+        Commands\ExpireOrders::class,
     ];
 
     /**
@@ -26,6 +27,10 @@ class Kernel extends ConsoleKernel
     {
         // $schedule->command('inspire')
         //          ->hourly();
+        $schedule->command('order:automatation')
+                  ->everyMinute();
+        $schedule->command('campaign:refresh')
+                  ->dailyAt('00:01');;
     }
 
     /**

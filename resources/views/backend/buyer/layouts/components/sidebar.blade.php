@@ -38,11 +38,11 @@
                     <span class="badge badge-danger">New</span>
                 </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{route('buyer.favorites')}}">
-                    <i class="fal fa-fw fa-heart"></i> Favorites
-                </a>
-            </li>
+            <!--<li class="nav-item">-->
+            <!--    <a class="nav-link" href="{{route('buyer.favorites')}}">-->
+            <!--        <i class="fal fa-fw fa-heart"></i> Favorites-->
+            <!--    </a>-->
+            <!--</li>-->
             <li class="nav-item">
                 <a class="nav-link" href="{{route('buyer.wallet')}}">
                     <i class="fal fa-fw fa-suitcase"></i> Wallet

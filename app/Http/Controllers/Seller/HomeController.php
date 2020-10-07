@@ -65,6 +65,13 @@ class HomeController extends Controller
 				FROM orders
 				LEFT JOIN campaigns ON campaigns.id=orders.camp_id
 				WHERE campaigns.user_id=:id", ['id' => $user_id]);
+		 $orders_pending = DB::select("
+        	SELECT campaigns.id
+        		FROM orders
+        		LEFT JOIN campaigns ON campaigns.id=orders.camp_id
+        		WHERE orders.status = 'pre_approved' AND 
+        	    campaigns.user_id=:id", ['id' => $user_id]);
+        		//dd($orders_pending);
 
 
         $disputes = DB::select("
@@ -185,6 +192,6 @@ class HomeController extends Controller
         $notif = $this->notif;
 
 
-        return view('backend.seller.dashboard', compact('mail_verify', 'camps', 'orders', 'disputes', 'msgs', 'campChart', 'ordersChart', 'disputesChart', 'msgsChart', 'notif'));
+        return view('backend.seller.dashboard', compact('mail_verify', 'camps', 'orders', 'disputes','orders_pending', 'msgs', 'campChart', 'ordersChart', 'disputesChart', 'msgsChart', 'notif'));
     }
 }

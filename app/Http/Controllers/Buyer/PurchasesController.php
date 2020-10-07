@@ -17,16 +17,10 @@ class PurchasesController extends Controller
 
         $orders=Order::where('buyer_id', $buyer_id)->orderby('updated_at','DESC')->get();
         $current=date('yy-m-d h:i:s');
+        $left_time =0;
         foreach ($orders as $key => $order) {
-
-            
             $left_time=strtotime($current)-strtotime($order->start_time);
-            $left_time=3599-$left_time;
-
-            if($left_time <=0 && $order->status == 'Waiting for purchase'){
-                $order->status='Expired';
-                $order->save();
-            }
+            $left_time=600-$left_time;
         }
 
         $unclaimed=Order::where('status','Waiting for purchase')->where('buyer_id', $buyer_id)->count();
@@ -36,10 +30,13 @@ class PurchasesController extends Controller
         $payout=Order::where('status','paidout')->where('buyer_id', $buyer_id)->count();
         $paid_com=Order::where('status', 'paid completed')->where('buyer_id', $buyer_id)->count();
         $declined=Order::where('status','declined')->where('buyer_id', $buyer_id)->count();
-        $cancelled=Order::where('status','Expired')->orwhere('status','Cancelled')->where('buyer_id', $buyer_id)->count();
+        $cancelled=Order::where('status','Expired')->where('status','Cancelled')->where('buyer_id', $buyer_id)->count();
 
         $resolves=Order::where('buyer_id', $buyer_id)->where('status','vic_buyer')
-            ->orwhere('status','vic_seller')
+            ->orwhere(function($query){
+                $query->where('status','vic_seller')
+                ->where('buyer_id', auth()->user()->id);
+            })
             ->get();
 
 

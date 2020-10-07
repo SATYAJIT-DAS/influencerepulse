@@ -123,8 +123,18 @@
                                             </td>
                                             <td id="time_out">
                                                 <?php 
-                                                $second=3599-strtotime($current)+strtotime($order->start_time);
-                                                echo date('H:i:s',$second); 
+                                                $current=date('yy-m-d h:i:s');
+                                                //$current = new DateTime('yy-m-d h:i:s');
+                                               // $second = $order->start_time;
+                                                
+                                               // $diff = $current->diff( $second );
+                                                
+                                                //echo $diff->format( '%H:%I:%S' );
+                                                $diff= strtotime($current) - strtotime($order->start_time);
+                                                 $remaining_time= $diff/60 ;
+                                                 $remaining_time =10 -$remaining_time;
+                                                 echo  $remaining_time ." min left";
+                                                //echo date('H:i:s'); 
                                                 ?>
                                                
                                             </td>

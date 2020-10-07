@@ -105,108 +105,7 @@
 
         </div>
 
-        <div class="card">
-
-            <div class="card-header">
-                <i class="fal fa-shopping-cart"></i> Latest Purchases </div>
-
-            <div class="card-body">
-
-                <div class="table-responsive-xl">
-
-                    <table class="table table-striped">
-
-                        <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>Picture</th>
-                                <th>Product</th>
-                                <th>Pricing</th>
-                                <th>Payout</th>
-                                <th>Status</th>
-                                <th></th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            @foreach($orders as $key => $order)
-
-                            <tr>
-                                <td>{{$order->id}}</td>
-                                <td>
-                                    <a href="{{$order->getCamp->product_url}}" target="_blank">
-                                        <img src="{{asset('public/images/'.$order->getCamp->pic[0]->image_path)}}"
-                                            class="deal-img" alt="{{$order->getCamp->product_name}}">
-                                    </a>
-                                </td>
-                                <td style="width: 30%;">
-                                    <a href="{{$order->getCamp->product_url}}" target="_blank">
-                                        {{$order->getCamp->product_name}}</a>
-                                </td>
-                                <td>
-                                    <small class="text-danger strikethrough">₹{{$order->getCamp->price}}</small>
-                                    <span class="text-success">₹{{$order->getCamp->rebate_price}}</span><br />
-                                    <small>80% OFF</small>
-                                </td>
-                                <td>₹{{$order->getCamp->price-$order->getCamp->rebate_price}}</td>
-                                <td>
-
-                                    <small>
-                                        <i class="fal fa-clock"></i>
-                                        @if(3600-strtotime($current)+strtotime($order->start_time) <= 0)
-                                        <span class="text-danger">Expired</span><br>
-                                        @else
-                                        <span class="text-info">{{$order->status}}</span><br>
-                                            <?php
-                                                $second=3599-strtotime($current)+strtotime($order->start_time);
-                                                echo date('H:i:s',$second);
-                                                ?> left
-                                        @endif
-                                    </small>
-                                </td>
-                                <td>
-                                    <a href="{{route('buyer.again_confirm', $order->id)}}" class="btn btn-danger btn-block" style="color:white;"
-                                        data-modal-size="modal-xl">
-                                        Confirm Purchase </a>
-                                    <a class="btn btn-success btn-block" target="_blank"
-                                        href="{{$order->getCamp->product_url}}">
-                                        Buy Product </a>
-                                    <form method="post" action="{{route('buyer.order_cancel')}}" class="mt-1">
-                                        @csrf
-                                        <input type="hidden" name="order_id" value="{{$order->id}}" />
-                                        <input type="hidden" name="action" value="cancel">
-
-                                        <button class="btn btn-dark btn-block" type="submit">
-                                            Cancel Purchase </button>
-
-                                    </form>
-                                    <div class="dropdown mt-1">
-                                        <button class="btn btn-primary btn-block w-100 dropdown-toggle" type="button"
-                                            id="menu-plus-1534392" data-toggle="dropdown" aria-haspopup="true"
-                                            aria-expanded="false">
-                                            More... </button>
-                                        <div class="dropdown-menu" aria-labelledby="menu-plus-1534392">
-                                            <a class="dropdown-item msg-btn" data-toggle="modal" data-target="#msg-modal"
-                                                data-id="{{$order->id}}" data-to="{{$order->getCamp->user->name}}" >
-                                                Message Seller </a>
-                                            <a class="dropdown-item"
-                                                href="{{route('buyer.discussion',$order->id)}}">
-                                                View Discussion </a>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-
-                            @endforeach
-
-                        </tbody>
-
-                    </table>
-
-                </div>
-
-            </div>
-        </div>
+        
 
     </div>
 
@@ -218,7 +117,7 @@
 
     <div class="modal fade show loaded" id="generic-modal" tabindex="-1" role="dialog"
         style="padding-right: 17px; display: block;" aria-modal="true">
-        <div class="modal-dialog modal-xl">
+        <div class="modal-dialog modal-xl ">
             <div class="modal-content">
 
                 <div class="modal-header align-items-center">
@@ -551,12 +450,29 @@
 
                     $('#report-clock').FlipClock(left_time, {
                         clockFace: 'MinuteCounter',
-                        countdown: true
+                        countdown: true,
+                        callbacks: {
+                            stop: function() {
+                            console.log("timer stopped");
+                            window.location.href = "/buyer/purchases";
+                            },
+                        }
+                         
                     });
 
                     $('[data-inputmask-regex]').inputmask();
 
                 });
+                
+                $(function(){
+                $('#generic-modal').on('show.bs.modal', function(){
+                    var myModal = $(this);
+                    clearTimeout(myModal.data('hideInterval'));
+                    myModal.data('hideInterval', setTimeout(function(){
+                        myModal.modal('hide');
+                    }, 1000));
+                });
+            });
                 </script>
             </div>
         </div>

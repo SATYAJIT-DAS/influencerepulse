@@ -51,8 +51,8 @@ src="https://www.facebook.com/tr?id=310283576972642&ev=PageView
 </noscript>
 <!-- End Facebook Pixel Code -->
 </head>
-
-<body class="app header-fixed sidebar-fixed sidebar-lg-show">
+<!--sidebar-lg-show-->
+<body class="app header-fixed sidebar-fixed ">
     @include('backend.buyer.layouts.components.header')
     <div class="app-body">
         @include('backend.buyer.layouts.components.sidebar')

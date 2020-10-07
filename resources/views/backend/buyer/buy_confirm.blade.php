@@ -80,13 +80,13 @@
 
                                 <div class="col-5 pl-0">
                                     <div class="deal-actions">
-                                        <div class="favorite">
-                                        @if($camp->favorite ==1)
-                                        <i class="text-danger fa-fw fa-heart fas"></i>
-                                        @else
-                                        <i class="text-danger fa-fw fa-heart fal"></i>
-                                        @endif
-                                        </div>
+                                        <!--<div class="favorite">-->
+                                        <!--@if($camp->favorite ==1)-->
+                                        <!--<i class="text-danger fa-fw fa-heart fas"></i>-->
+                                        <!--@else-->
+                                        <!--<i class="text-danger fa-fw fa-heart fal"></i>-->
+                                        <!--@endif-->
+                                        <!--</div>-->
                                         <div class="share">
                                             <i class="fal fa-share-alt fa-fw" data-toggle="collapse"
                                                 data-target="#share-59578" aria-expanded="false"

@@ -46,7 +46,7 @@
                         <div class="card-body p-1 p-xl-2">
                             <h3>
                                 <a href="{{route('seller.queue')}}">
-                                    {{count($orders)}} </a>
+                                    {{count($orders_pending)}} </a>
                             </h3>
                             <small class="text-muted text-uppercase font-weight-bold">
                                 Pending Approval </small>

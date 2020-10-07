@@ -28,6 +28,14 @@
                 </div>
             </section>
         @endif
+        @if($errors->any())
+        <section class="section section-flash aos-init aos-animate" data-aos="flip-up">
+                <div class="container-fluid">
+                    <div class="alert alert-danger" role="alert">
+                        <i class="fal fa-times"></i> {{$errors->first()}}</div>
+                </div>
+            </section>
+        @endif
         <div class="container-fluid mt-2">
 
 
@@ -288,15 +296,15 @@
 
                                         <div class="col-5 pl-0">
                                             <div class="deal-actions">
-                                                <div class="favorite">
-                                                    @if($camp->favorite ==1)
-                                                        <i class="text-danger fa-fw fa-heart fas favo-{{$camp->id}}"
-                                                           data-id="{{$camp->id}}"></i>
-                                                    @else
-                                                        <i class="text-danger fa-fw fa-heart fal favo-{{$camp->id}}"
-                                                           data-id="{{$camp->id}}"></i>
-                                                    @endif
-                                                </div>
+                                                <!--<div class="favorite">-->
+                                                <!--    @if($camp->favorite ==1)-->
+                                                <!--        <i class="text-danger fa-fw fa-heart fas favo-{{$camp->id}}"-->
+                                                <!--           data-id="{{$camp->id}}"></i>-->
+                                                <!--    @else-->
+                                                <!--        <i class="text-danger fa-fw fa-heart fal favo-{{$camp->id}}"-->
+                                                <!--           data-id="{{$camp->id}}"></i>-->
+                                                <!--    @endif-->
+                                                <!--</div>-->
                                                 <div class="share">
                                                     <i class="fal fa-share-alt fa-fw" data-toggle="collapse"
                                                        data-target="#share-67248" aria-expanded="false"
@@ -406,14 +414,14 @@
 
                             <div class="mt-1-5 mr-6 mb-0 social d-flex align-items-md-center">
 
-                                <div>
-                                    <div class="favorite">
+                                <!--<div>-->
+                                <!--    <div class="favorite">-->
 
-                                        <i class="text-danger fa-fw fa-heart fas" id="favo_true">
-                                        </i>
+                                <!--        <i class="text-danger fa-fw fa-heart fas" id="favo_true">-->
+                                <!--        </i>-->
 
-                                    </div>
-                                </div>
+                                <!--    </div>-->
+                                <!--</div>-->
 
                                 <div class="addthis_inline_share_toolbox"
                                      data-url=""
@@ -1180,6 +1188,7 @@
 
                 $(".deal-item").click(function () {
                     camp = $(this).data('camp');
+                    console.log(camp);
                     $("#product_name").html("<label style='width:100%'>" + camp.product_name + "</label>");
                     per_data = Math.round((100 - camp.rebate_price / camp.price * 100) * 100) / 100;
                     $("#per_data").html(per_data);

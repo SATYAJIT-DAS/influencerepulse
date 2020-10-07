@@ -11,7 +11,9 @@ use App\Model\Order;
 use App\User;
 use App\Model\Service;
 use App\Model\Coupon;
-
+use App\Model\Message;
+use App\Model\Wallet;
+use App\Model\Transaction;
 use App\Charts\CalcChart;
 use App\Model\Fee;
 

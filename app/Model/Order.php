@@ -22,6 +22,7 @@ class Order extends Model
     public function getCamp(){
         return $this->belongsTo('App\Model\Campaign','camp_id','id');
     }
+    
 
     
 }

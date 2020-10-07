@@ -32,59 +32,6 @@ class HomeController extends Controller
     {
         $today = strtotime(date('yy-m-d'));
         $camps = Campaign::all();
-
-        foreach ($camps as $key => $camp) {
-
-            $updateCampaign = false;
-
-            if (($today >= strtotime($camp->start_date)) && ($camp->permission == "ready")) {
-                $camp->permission = "pending";
-           	$updateCampaign = true;
-            }
-
-            if (($today > strtotime($camp->count_time)) && $camp->permission == "offline") {
-
-            	 if ($camp->total_count < $camp->total_rebates) {
-                    $camp->count_time = date('yy-m-d');
-                    $camp->daily_count = 0;
-                    $updateCampaign = true;
-                }
-
-                if ($camp->permission == "offline" && $camp->wallet <= 0 && $camp->total_count < $camp->total_rebates) {
-                	$amount_to_be_considered_for_deduction_from_general_wallet = QueueController::getCalcAmountConsideredTobeDeductedFromGeneralWallet($camp->id);
-                	$general_amount = Wallet::where('user_id', $camp->user_id)->where('operation', 'general charge')->sum('amount');
-                	if ($amount_to_be_considered_for_deduction_from_general_wallet > 0 && $amount_to_be_considered_for_deduction_from_general_wallet <= $general_amount) {
-                   		$wallet = new Wallet();
-                    		$wallet->user_id = $camp->user_id;
-                    		$wallet->camp_id = $camp->id;
-                   		$wallet->date = date('yy-m-d h:i:s');
-                    		$wallet->description = 'Charge for campaign with General wallet - Buyer login';
-                    		$wallet->operation = 'general charge';
-                    		$wallet->amount = 0 - $amount_to_be_considered_for_deduction_from_general_wallet;
-                    		$wallet->save();
-
-                    		$wallet_camp = new Wallet();
-                    		$wallet_camp->user_id = $camp->user_id;
-                    		$wallet_camp->camp_id = $camp->id;
-                    		$wallet_camp->date = date('yy-m-d h:i:s');
-                    		$wallet_camp->description = 'Charge for campaign with General wallet - Buyer login';
-                    		$wallet_camp->operation = 'Pay for campaign';
-                    		$wallet_camp->amount = $amount_to_be_considered_for_deduction_from_general_wallet;
-                    		$wallet_camp->save();
-
-                    		$camp->permission = "online";
-                    		$camp->wallet += $amount_to_be_considered_for_deduction_from_general_wallet;
-                    		$updateCampaign = true;
-                	}
-                }
-
-            }
-
-           if ($updateCampaign) {
-           	$camp->save();
-           }
-        }
-
         $categories = Category::all();
         $markets = Marketplace::all();
 
@@ -141,11 +88,13 @@ class HomeController extends Controller
             return redirect()->back()->with('status', 'Sorry, deals are closed for the day, please try to avail deal tomorrow.');
         }
 
-        $camp->daily_count += 1;
-        $camp->total_count += 1;
-        $camp->save();
+       
 
         $new_order = Order::Find($request->order_id);
+        if(empty( $new_order)){
+               // var_dump();
+                 return redirect()->route('buyer.index')->withErrors(['The Deal been expired']);;
+            }
         $buyer_id = auth()->user()->id;
 
         $new_order->buyer_id = auth()->user()->id;
@@ -155,6 +104,9 @@ class HomeController extends Controller
 
         if (!$new_order->start_time) {
             $new_order->start_time = $current;
+             $camp->daily_count += 1;
+            $camp->total_count += 1;
+            $camp->save();
         }
 
 
@@ -165,13 +117,9 @@ class HomeController extends Controller
         // left time count
         $left_time = strtotime($current) - strtotime($new_order->start_time);
 
-        $left_time = 3599 - $left_time;
+        $left_time = 600 - $left_time;
 
-        if($left_time <=0 ){
-            $left_time=0;
-            $new_order->status='Expired';
-            $new_order->save();
-        }
+        
 
 
         $orders = Order::where('buyer_id', $buyer_id)->where('status', 'Waiting for purchase')
@@ -187,27 +135,25 @@ class HomeController extends Controller
             LEFT JOIN orders ON orders.id=messages.order_id
             WHERE orders.buyer_id=:id", ['id' => $buyer_id]);
         return view('backend.buyer.confirm_redirect',
-            compact('camp', 'orders', 'new_order', 'current', 'left_time', 'purcha_count', 'dispute_count', 'msg_count'));
+            compact('camp', 'orders', 'new_order', 'current', 'left_time', 'purcha_count', 'dispute_count', 'msg_count'))->with(['message' => "Please confirm the order id"]);;
     }
 
     public function againConfirm($order_id)
     {
         $buyer_id = auth()->user()->id;
 
-        $new_order = Order::FindOrFail($order_id);
+        $new_order = Order::find($order_id);
+        if(empty( $new_order)){
+               // var_dump();
+                 return redirect()->route('buyer.index')->withErrors(['The Deal been expired']);;
+            }
         $camp = Campaign::FindOrFail($new_order->camp_id);
         $orders = Order::where('buyer_id', $buyer_id)->orderby('updated_at', 'DESC')->get();
+       // dd($orders);
         $current = date('yy-m-d h:i:s');
-        $left_time = 3600 - strtotime($current) + strtotime($new_order->start_time);
+        $left_time = 600 - strtotime($current) + strtotime($new_order->start_time);
 
-        if ($left_time <= 0) {
-            $left_time = 0;
-            $camp->daily_count -= 1;
-            $camp->total_count -= 1;
-            $camp->save();
-            $new_order->status = 'Expired';
-            $new_order->save();
-        }
+      
 
         $purcha_count = Order::where('buyer_id', $buyer_id)->where('status', 'Waiting for purchase')->count();
         $dispute_count = Order::where('buyer_id', $buyer_id)->where('status', 'disputes')->count();
@@ -216,6 +162,8 @@ class HomeController extends Controller
             FROM messages
             LEFT JOIN orders ON orders.id=messages.order_id
             WHERE orders.buyer_id=:id", ['id' => $buyer_id]);
+            //dd($new_order);
+            
         return view('backend.buyer.confirm_redirect',
             compact('camp', 'orders', 'new_order', 'left_time', 'current', 'left_time', 'purcha_count', 'dispute_count', 'msg_count'));
     }
@@ -488,3 +436,4 @@ class HomeController extends Controller
         //
     }
 }
+

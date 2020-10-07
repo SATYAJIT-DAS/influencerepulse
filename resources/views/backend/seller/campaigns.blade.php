@@ -178,9 +178,9 @@
                                                     Actions
                                                 </button>
                                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="actions-menu" style="">
-                                                    <a class="dropdown-item" href="{{route('camp_clone', $camp->id)}}">
-                                                        Clone
-                                                    </a>
+                                                    <!--<a class="dropdown-item" href="{{route('camp_clone', $camp->id)}}">-->
+                                                    <!--    Clone-->
+                                                    <!--</a>-->
                                                     <a class="dropdown-item complete" href="{{route('camp_complete',$camp->id)}}">
                                                         Complete
                                                     </a>
@@ -278,16 +278,16 @@
 
                                         <td class="text-center">
                                             @switch($camp->permission)
-                                                @case('online'):
+                                                @case('online')
                                                 <div class="dropdown">
                                                     <button data-e2e="btn-actions" class="btn btn-primary btn-block dropdown-toggle" type="button" id="actions-menu"
                                                         data-toggle="dropdown" aria-expanded="false">
                                                         Actions
                                                     </button>
                                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="actions-menu" style="">
-                                                        <a class="dropdown-item" href="{{route('camp_clone', $camp->id)}}">
-                                                            Clone
-                                                        </a>
+                                                        <!--<a class="dropdown-item" href="{{route('camp_clone', $camp->id)}}">-->
+                                                        <!--    Clone-->
+                                                        <!--</a>-->
                                                         <a class="dropdown-item complete" href="{{route('camp_complete',$camp->id)}}">
                                                             Complete
                                                         </a>
@@ -298,16 +298,16 @@
                                                 </div>
                                                 @break;
 
-                                                @case('completed'):
+                                                @case('completed')
                                                 <div class="dropdown">
                                                     <button data-e2e="btn-actions" class="btn btn-primary btn-block dropdown-toggle" type="button" id="actions-menu"
                                                         data-toggle="dropdown" aria-expanded="false">
                                                         Actions
                                                     </button>
                                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="actions-menu" style="">
-                                                        <a class="dropdown-item" href="{{route('camp_clone', $camp->id)}}">
-                                                            Clone
-                                                        </a>
+                                                        <!--<a class="dropdown-item" href="{{route('camp_clone', $camp->id)}}">-->
+                                                        <!--    Clone-->
+                                                        <!--</a>-->
                                                         <a class="dropdown-item" href="">
                                                             Export Rebates
                                                         </a>
@@ -346,10 +346,10 @@
                                                     <div class="dropdown-menu dropdown-menu-right"
                                                         aria-labelledby="actions-menu">
                                                        
-                                                        <a class="dropdown-item"
-                                                            href="{{route('camp_clone', $camp->id)}}">
-                                                            Clone
-                                                        </a>
+                                                        <!--<a class="dropdown-item"-->
+                                                        <!--    href="{{route('camp_clone', $camp->id)}}">-->
+                                                        <!--    Clone-->
+                                                        <!--</a>-->
                                                         <a class="dropdown-item"
                                                             href="{{route('camp_delete', $camp->id)}}">
                                                             Delete
@@ -445,10 +445,10 @@
                                                         href="{{route('camp_edit', $camp->id)}}">
                                                         Edit
                                                     </a> -->
-                                                    <a class="dropdown-item"
-                                                        href="{{route('camp_clone', $camp->id)}}">
-                                                        Clone
-                                                    </a>
+                                                    <!--<a class="dropdown-item"-->
+                                                    <!--    href="{{route('camp_clone', $camp->id)}}">-->
+                                                    <!--    Clone-->
+                                                    <!--</a>-->
                                                    
                                                     <a class="dropdown-item"
                                                         href="{{route('camp_delete', $camp->id)}}">
@@ -548,10 +548,10 @@
                                                         href="{{route('camp_edit', $camp->id)}}">
                                                         Edit
                                                     </a> -->
-                                                    <a class="dropdown-item"
-                                                        href="{{route('camp_clone', $camp->id)}}">
-                                                        Clone
-                                                    </a>
+                                                    <!--<a class="dropdown-item"-->
+                                                    <!--    href="{{route('camp_clone', $camp->id)}}">-->
+                                                    <!--    Clone-->
+                                                    <!--</a>-->
                                                     <a class="dropdown-item complete" href="{{route('camp_cancel',$camp->id)}}">
                                                         Cancel
                                                     </a>
@@ -651,10 +651,10 @@
                                                         href="{{route('camp_edit', $camp->id)}}">
                                                         Edit
                                                     </a> -->
-                                                    <a class="dropdown-item"
-                                                        href="{{route('camp_clone', $camp->id)}}">
-                                                        Clone
-                                                    </a>
+                                                    <!--<a class="dropdown-item"-->
+                                                    <!--    href="{{route('camp_clone', $camp->id)}}">-->
+                                                    <!--    Clone-->
+                                                    <!--</a>-->
                                                     <a class="dropdown-item complete" href="{{route('camp_cancel',$camp->id)}}">
                                                         Cancel
                                                     </a>
@@ -763,10 +763,10 @@
                                                     aria-labelledby="actions-menu"><a class="dropdown-item"
                                                         href="{{route('camp_edit', $camp->id)}}">
                                                         Edit
-                                                    </a><a class="dropdown-item"
-                                                        href="{{route('camp_clone', $camp->id)}}">
-                                                        Clone
-                                                    </a>
+                                                    <!--</a><a class="dropdown-item"-->
+                                                    <!--    href="{{route('camp_clone', $camp->id)}}">-->
+                                                    <!--    Clone-->
+                                                    <!--</a>-->
                                                     <a class="dropdown-item"
                                                         href="{{route('camp_delete', $camp->id)}}">
                                                         Delete
@@ -857,9 +857,9 @@
                                                     Actions
                                                 </button>
                                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="actions-menu" style="">
-                                                    <a class="dropdown-item" href="{{route('camp_clone', $camp->id)}}">
-                                                        Clone
-                                                    </a>
+                                                    <!--<a class="dropdown-item" href="{{route('camp_clone', $camp->id)}}">-->
+                                                    <!--    Clone-->
+                                                    <!--</a>-->
                                                     <a class="dropdown-item" href="">
                                                         Export Rebates
                                                     </a>
@@ -972,10 +972,10 @@
                                                         href="{{route('camp_edit', $camp->id)}}">
                                                         Edit
                                                     </a> -->
-                                                    <a class="dropdown-item"
-                                                        href="{{route('camp_clone', $camp->id)}}">
-                                                        Clone
-                                                    </a>
+                                                    <!--<a class="dropdown-item"-->
+                                                    <!--    href="{{route('camp_clone', $camp->id)}}">-->
+                                                    <!--    Clone-->
+                                                    <!--</a>-->
                                                     <a class="dropdown-item"
                                                         href="{{route('camp_delete', $camp->id)}}">
                                                         Delete
