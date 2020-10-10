@@ -30,7 +30,9 @@ class Kernel extends ConsoleKernel
         $schedule->command('order:automatation')
                   ->everyMinute();
         $schedule->command('campaign:refresh')
-                  ->dailyAt('00:01');;
+        ->dailyAt('00:01');
+        // ->everyMinute();
+
     }
 
     /**

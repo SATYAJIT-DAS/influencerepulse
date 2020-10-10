@@ -12,7 +12,7 @@ use App\Model\Transaction;
 use App\Model\Wallet;
 
 use Illuminate\Support\Facades\Hash;
-
+use App\Http\Controllers\Seller\QueueController;
 use CountryState;
 use DateTimeZone;
 
@@ -63,13 +63,20 @@ class HomeController extends Controller
 
         $orders=Order::all();
         // foreach($orders as $key => $order){
-            
+
         // }
 
         $camps=Campaign::where('permission','online')->get();
 
 
         return view('intro.home',compact('camps'));
+    }
+
+    public function testt(){
+      $test =QueueController::getCalcAmountConsideredTobeDeductedFromGeneralWallet(92);
+      $camp = Campaign::find(92);
+      $general_amount = Wallet::where('user_id', $camp->user_id)->where('operation', 'general charge')->sum('amount');
+      dd($general_amount);
     }
 
     public function dashboard()

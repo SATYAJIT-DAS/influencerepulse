@@ -48,15 +48,15 @@ class CampaignReseting extends Command
         //dd($today);
 
         foreach ($camps as $key => $camp) {
-
+          //$this->info('test');
             $updateCampaign = false;
-
+            $start_date = strtotime($camp->start_date);
             if (($today >= strtotime($camp->start_date)) && ($camp->permission == "ready")) {
-                $camp->permission = "pending";
+                $camp->permission = "online";
            	    $updateCampaign = true;
             }
 
-            if ($today > strtotime($camp->count_time)) {
+            if ($today > strtotime($camp->count_time) && $camp->permission == "offline") {
 
                 $camp->approveWaitingOrders();
 
@@ -67,7 +67,8 @@ class CampaignReseting extends Command
                     $updateCampaign = true;
                 }
 
-                if ($camp->permission == "offline" && $camp->wallet <= 0 && $camp->total_count < $camp->total_rebates) {
+                if ($camp->wallet <= 0 && $camp->total_count < $camp->total_rebates) {
+                  $this->info('test11');
                 	$amount_to_be_considered_for_deduction_from_general_wallet = QueueController::getCalcAmountConsideredTobeDeductedFromGeneralWallet($camp->id);
                 	$general_amount = Wallet::where('user_id', $camp->user_id)->where('operation', 'general charge')->sum('amount');
                 	if ($amount_to_be_considered_for_deduction_from_general_wallet > 0 && $amount_to_be_considered_for_deduction_from_general_wallet <= $general_amount) {
@@ -75,7 +76,7 @@ class CampaignReseting extends Command
                     		$wallet->user_id = $camp->user_id;
                     		$wallet->camp_id = $camp->id;
                    		    $wallet->date = date('yy-m-d h:i:s');
-                    		$wallet->description = 'Charge for campaign with General wallet - Buyer login';
+                    		$wallet->description = 'Charge for campaign with General wallet';
                     		$wallet->operation = 'general charge';
                     		$wallet->amount = 0 - $amount_to_be_considered_for_deduction_from_general_wallet;
                     		$wallet->save();
@@ -84,7 +85,7 @@ class CampaignReseting extends Command
                     		$wallet_camp->user_id = $camp->user_id;
                     		$wallet_camp->camp_id = $camp->id;
                     		$wallet_camp->date = date('yy-m-d h:i:s');
-                    		$wallet_camp->description = 'Charge for campaign with General wallet - Buyer login';
+                    		$wallet_camp->description = 'Charge for campaign with General wallet';
                     		$wallet_camp->operation = 'Pay for campaign';
                     		$wallet_camp->amount = $amount_to_be_considered_for_deduction_from_general_wallet;
                     		$wallet_camp->save();
@@ -104,4 +105,3 @@ class CampaignReseting extends Command
          $this->info('Successfully Refresh Campaign.');
     }
 }
-

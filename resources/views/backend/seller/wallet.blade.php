@@ -410,10 +410,12 @@
                                         <th>Status</th>
                                         <th>Start Date</th>
                                         <th>Wallet</th>
+                                        <th>Action</th>
                                     </tr>
                                 </thead>
 
                                 <tbody>
+                                  <?php $today = strtotime(date('yy-m-d'));?>
                                     @if(count($offline))
                                     @foreach($offline as $key=>$camp)
                                     <tr>
@@ -454,10 +456,13 @@
                                         <td class="text-danger">₹{{ number_format($camp->Wallet, 2, '.', ',') }}
                                         </td>
                                         <td class="text-center">
+                                            @if($today > strtotime($camp->count_time) && $camp->permission == "offline"))
                                             <a class="btn btn-primary btn-block"
                                             href="{{route('camp.activate', $camp->id)}}">
+
                                                 Activate the campaign now
                                             </a>
+                                            @endif
                                            <!--  <a class="btn btn-dark btn-block  width-60" data-toggle="modal"
                                             data-target="#charge-modal" data-key='stripe' data-camp_id="{{$camp->id}}"
                                             href="">

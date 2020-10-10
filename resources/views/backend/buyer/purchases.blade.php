@@ -111,7 +111,7 @@
                                                 <img src="{{asset('public/images/'.$order->getCamp->pic[0]->image_path)}}" class="deal-img">
                                             </td>
                                             <td style="width: 45%;">{{$order->getCamp->product_name}}</td>
-                                            
+
                                              <td>
                                                 ₹{{$order->getCamp->price}}
                                             </td>
@@ -122,21 +122,21 @@
                                                 <span class="text-info">{{$order->status}}</span>
                                             </td>
                                             <td id="time_out">
-                                                <?php 
+                                                <?php
                                                 $current=date('yy-m-d h:i:s');
                                                 //$current = new DateTime('yy-m-d h:i:s');
                                                // $second = $order->start_time;
-                                                
+
                                                // $diff = $current->diff( $second );
-                                                
+
                                                 //echo $diff->format( '%H:%I:%S' );
                                                 $diff= strtotime($current) - strtotime($order->start_time);
                                                  $remaining_time= $diff/60 ;
-                                                 $remaining_time =10 -$remaining_time;
-                                                 echo  $remaining_time ." min left";
-                                                //echo date('H:i:s'); 
+                                                 $remaining_time =30 -$remaining_time;
+                                                 echo  round($remaining_time,2) ." min left";
+                                                //echo date('H:i:s');
                                                 ?>
-                                               
+
                                             </td>
                                             <td>
                                                 <a href="{{route('buyer.again_confirm', $order->id)}}" class="btn btn-danger btn-block" style="color:white;"
@@ -157,7 +157,7 @@
                                     @else
                                         <tr>
                                             <td colspan="8" class="text-center">
-                                                No unclaimed purchases yet. 
+                                                No unclaimed purchases yet.
                                             </td>
                                         </tr>
                                     @endif
@@ -206,7 +206,7 @@
                                                 <span class="text-danger">{{$order->status}}</span>
                                             </td>
                                             <td>
-                                                
+
 
                                                 <a class="btn btn-primary btn-block msg-class" data-toggle="modal"
                                                     data-target="#msg-modal"
@@ -544,7 +544,7 @@
                                                     data-toggle="modal"
                                                     data-target="#dispute-modal"
                                                     data-id="{{$order->id}}" data-to="{{$order->getCamp->user->name}}"
-                                                    href="" 
+                                                    href=""
                                                         >
                                                         <!-- href="{{route('order.change',
                                                         array('id' =>  $order->id, 'state' => 'disputes' ))}}" -->
@@ -684,7 +684,7 @@
                                                     </button>
                                                     <div class="dropdown-menu dropdown-menu-right"
                                                         aria-labelledby="actions-menu">
-                                                        
+
                                                         <a class="dropdown-item msg-class" data-toggle="modal"
                                                         data-target="#msg-modal"
                                                         data-id="{{$order->id}}" data-to="{{$order->getCamp->user->name}}"
@@ -697,11 +697,11 @@
                                                         href="">
                                                         Message Buyer </a>
 
-                                                                                           
 
-                                                       
+
+
                                                     </div>
-                                                           
+
                                                 </div>
 
 
@@ -713,7 +713,7 @@
                                                     </button>
                                                     <div class="dropdown-menu dropdown-menu-right"
                                                         aria-labelledby="actions-menu">
-                                                        
+
                                                         <a class="dropdown-item"
                                                         data-id="{{$order->id}}"
                                                         data-type="seller" href="">
@@ -724,9 +724,9 @@
                                                         href="">
                                                         Victory Buyer </a>
                                                     </div>
-                                                           
+
                                                 </div>
-                                                
+
                                             </td> -->
                                         </tr>
                                         @endforeach
@@ -784,7 +784,7 @@
                             <label for="message" class="form-control-label">Message</label>
                             <div class="controls">
                                 <textarea data-e2e="message" name="message" id="message" class="form-control md-textarea" autofocus="" data-fv-field="message">
-                                        
+
                                 </textarea>
                                 <i style=""
                                 class="fv-control-feedback fal fa-asterisk" data-fv-icon-for="message"></i>
@@ -826,7 +826,7 @@
                         $("#modal_title").html(to);
                         $("#order_id").val(order_id);
                     })
-                    
+
 
                     $('#write-message-form').on('init.field.fv', function(e, data) {
                         const $icon = data.element.data('fv.icon'),
@@ -885,7 +885,7 @@
 
                 <div class="modal-body">
 
-                    <form id="write-message-form" method="post" 
+                    <form id="write-message-form" method="post"
                         action="{{route('buyer.dispute')}}"
                         enctype="multipart/form-data" novalidate="novalidate" class="fv-form fv-form-bootstrap4">
                         @csrf
@@ -899,7 +899,7 @@
                             <label for="message" class="form-control-label">Reason</label>
                             <div class="controls">
                                 <textarea data-e2e="message" name="reason" id="reason" class="form-control md-textarea" autofocus="" data-fv-field="message">
-                                        
+
                                 </textarea>
                                 <i style=""
                                 class="fv-control-feedback fal fa-asterisk" data-fv-icon-for="message"></i>

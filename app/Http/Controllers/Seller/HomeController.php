@@ -42,18 +42,7 @@ class HomeController extends Controller
 
         $camps = Campaign::all();
         $today = date('yy-m-d');
-        foreach ($camps as $key => $camp) {
-            $start_date = strtotime($camp->start_date);
-            if (($today >= $start_date) && ($camp->permission == "ready")) {
-                $camp->permission = "pending";
-                $camp->save();
-            }
 
-            if (($camp->count_time < $start_date) && ($camp->permission == "offline")) {
-                $camp->daily_count = 0;
-                $camp->save();
-            }
-        }
 
         $mail_verify = auth()->user()->mail_verify;
         $user_id = Auth()->user()->id;
@@ -69,7 +58,7 @@ class HomeController extends Controller
         	SELECT campaigns.id
         		FROM orders
         		LEFT JOIN campaigns ON campaigns.id=orders.camp_id
-        		WHERE orders.status = 'pre_approved' AND 
+        		WHERE orders.status = 'pre_approved' AND
         	    campaigns.user_id=:id", ['id' => $user_id]);
         		//dd($orders_pending);
 

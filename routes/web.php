@@ -16,7 +16,7 @@ Route::get('/seller-signup', function () {
 })->name('intro.seller-signup');
 
 //test
-Route::get('/test', 'HomeController@test')->name('test');
+Route::get('/test', 'HomeController@testt')->name('test');
 // Route::post('dopayment', 'CamController@dopayment')->name('dopayment');
 
 
