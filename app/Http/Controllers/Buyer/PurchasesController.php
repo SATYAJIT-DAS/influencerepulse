@@ -20,7 +20,7 @@ class PurchasesController extends Controller
         $left_time =0;
         foreach ($orders as $key => $order) {
             $left_time=strtotime($current)-strtotime($order->start_time);
-            $left_time=600-$left_time;
+            $left_time=(60*60)-$left_time;
         }
 
         $unclaimed=Order::where('status','Waiting for purchase')->where('buyer_id', $buyer_id)->count();

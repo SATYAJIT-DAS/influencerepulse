@@ -187,14 +187,12 @@
                             <li class="active warning">
                                 <a href="#!">
                                     <span class="circle">!</span>
-                                    <span class="label">15 Days Hold</span>
+                                    <span class="label">Hold Until Delivered.</span>
                                 </a>
                                 <div class="step-content py-0 px-0-5">
-                                    Why 15 days? Most online
-                                    stores allow return of the items within 10 days. To avoid situations when you are
-                                    given a Deal plus you get a refund for a
-                                    returned item, we have to hold the funds for 35 days.
-                                    Also, the seller can dispute the Deal within the last 5 days.
+
+
+WHY HOLD? Most online stores allow returns after purchase, To avoid situations when you are given a deal plus you get a refund for a returned item, we have to hold until the return period expires.
                                 </div>
                             </li>
 

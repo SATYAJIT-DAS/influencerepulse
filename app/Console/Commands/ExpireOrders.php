@@ -49,11 +49,11 @@ class ExpireOrders extends Command
 
            $left_time = strtotime($current) - strtotime($order->start_time);
            // $this->info($left_time);
-            $left_time = $left_time/60;
-            //$this->info($left_time);
+            $left_time = abs($left_time/60);
+            $this->info($left_time);
           //  $this->info($order->id);
             $camp = Campaign::Find($order->camp_id);
-            if($left_time > 29 ){
+            if($left_time > 59 ){
                 if($order->status == 'Waiting for purchase' && $camp->daily_count > 0 && !is_null($order->camp_id)){
                    $camp->daily_count -= 1;
                    $camp->total_count -= 1;

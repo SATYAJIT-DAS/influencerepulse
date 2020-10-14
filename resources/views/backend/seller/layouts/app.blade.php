@@ -9,7 +9,7 @@
 
     <!-- <link rel="manifest" href="/manifest.json" crossorigin="use-credentials"> -->
     <title>Influencer Pulse</title>
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="intro/img/favicon.ico" type="image/x-icon" />
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <link href="{{asset('backend/css/e5a339db27258413bd6f.css')}}" rel="stylesheet" />
     <script src="{{asset('backend/js/e5a339db27258413bd6f.js')}}"></script>
@@ -40,11 +40,11 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window,document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
- fbq('init', '310283576972642'); 
+ fbq('init', '310283576972642');
 fbq('track', 'PageView');
 </script>
 <noscript>
- <img height="1" width="1" 
+ <img height="1" width="1"
 src="https://www.facebook.com/tr?id=310283576972642&ev=PageView
 &noscript=1"/>
 </noscript>

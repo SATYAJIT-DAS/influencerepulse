@@ -132,8 +132,8 @@
                                                 //echo $diff->format( '%H:%I:%S' );
                                                 $diff= strtotime($current) - strtotime($order->start_time);
                                                  $remaining_time= $diff/60 ;
-                                                 $remaining_time =30 -$remaining_time;
-                                                 echo  round($remaining_time,2) ." min left";
+                                                 $remaining_time =60 -$remaining_time;
+                                                 echo  (int)$remaining_time ." min left";
                                                 //echo date('H:i:s');
                                                 ?>
 

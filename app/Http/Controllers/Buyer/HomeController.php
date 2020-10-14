@@ -66,6 +66,9 @@ class HomeController extends Controller
             return redirect()->back()->with('status', 'You have already purchased this order.');
         }
         $order=new Order();
+        $order->camp_id = $camp_id;
+        $order->buyer_id = auth()->user()->id;
+        $order->status = 'before going marketplace';
         $order->save();
         return view('backend.buyer.buy_confirm', compact('camp', 'order'));
     }
@@ -98,7 +101,7 @@ class HomeController extends Controller
         $new_order->save();
         // left time count
         $left_time = strtotime($current) - strtotime($new_order->start_time);
-        $left_time = (60*30) - $left_time;
+        $left_time = (60*60) - $left_time;
         $orders = Order::where('buyer_id', $buyer_id)->where('status', 'Waiting for purchase')
             ->orwhere('status', 'Expired')
             ->orderby('updated_at', 'DESC')->get();
@@ -125,7 +128,7 @@ class HomeController extends Controller
         $orders = Order::where('buyer_id', $buyer_id)->orderby('updated_at', 'DESC')->get();
        // dd($orders);
         $current = date('yy-m-d h:i:s');
-        $left_time = (60*30)  - strtotime($current) + strtotime($new_order->start_time);
+        $left_time = (60*60)  - strtotime($current) + strtotime($new_order->start_time);
         $purcha_count = Order::where('buyer_id', $buyer_id)->where('status', 'Waiting for purchase')->count();
         $dispute_count = Order::where('buyer_id', $buyer_id)->where('status', 'disputes')->count();
         $msg_count = DB::select("
