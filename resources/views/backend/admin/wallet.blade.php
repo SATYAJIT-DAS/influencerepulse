@@ -24,7 +24,7 @@
                 <h5 class="my-5">Current Balance</h5>
 
                 <h1 class="my-4">
-                    <span class="text-info">₹{{$wallet_sum}}</span>
+                    <span class="text-info">{{ dynamicCurrency() }}{{$wallet_sum}}</span>
                 </h1>
 
             </div>
