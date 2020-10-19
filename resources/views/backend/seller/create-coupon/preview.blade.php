@@ -138,9 +138,9 @@
 
                                     <div class="col-7 d-flex align-items-center">
                                         <span
-                                            class="full-price strikethrough text-danger">₹{{ number_format($coupon->price, 2, '.', ',') }}</span>
+                                            class="full-price strikethrough text-danger">{{ dynamicCurrency() }}{{ number_format($coupon->price, 2, '.', ',') }}</span>
                                         <span
-                                            class="price text-green">₹{{ number_format($coupon->price*(100-$coupon->off_per)/100, 2, '.', ',') }}</span>
+                                            class="price text-green">{{ dynamicCurrency() }}{{ number_format($coupon->price*(100-$coupon->off_per)/100, 2, '.', ',') }}</span>
                                     </div>
 
                                     <div class="col-5 d-flex align-items-center justify-content-end discount">
@@ -244,15 +244,15 @@
                                                 </div>
                                                 <div class="d-flex align-items-center text-info font-weight-bold ml-3">
                                                     <i class="sprite-icon-piggy-bank mr-1"></i>
-                                                    YOU SAVE ₹{{number_format($coupon->price*$coupon->off_per/100, 2, '.', ',')}}
+                                                    YOU SAVE {{ dynamicCurrency() }}{{number_format($coupon->price*$coupon->off_per/100, 2, '.', ',')}}
                                                 </div>
                                             </div>
                                             <div class="d-flex align-items-center mb-2-5">
                                                 <h5 class="old-price lato-medium mb-0 mr-0-5">
-                                                    <del>₹{{ number_format($coupon->price, 2, '.', ',') }}</del>
+                                                    <del>{{ dynamicCurrency() }}{{ number_format($coupon->price, 2, '.', ',') }}</del>
                                                 </h5>
                                                 <h4 class="new-price text-green roboto-black mb-0">
-                                                    ₹<span>{{ number_format($coupon->price*(100-$coupon->off_per)/100, 2, '.', ',') }}</span>
+                                                    {{ dynamicCurrency() }}<span>{{ number_format($coupon->price*(100-$coupon->off_per)/100, 2, '.', ',') }}</span>
                                                 </h4><small class="d-inline-block ml-0-5" style="color: #989a9c;">+ Free
                                                     shipping</small>
                                             </div>

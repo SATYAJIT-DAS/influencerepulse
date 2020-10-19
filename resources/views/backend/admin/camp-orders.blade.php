@@ -54,7 +54,7 @@
 						            {{$order->order_id}} </td>
 						        <td>
 						            <span class="text-danger">
-						                ₹{{$camp->price}} <i class="fal fa-info-circle" data-toggle="tooltip" title=""
+						                {{ dynamicCurrency() }}{{$camp->price}} <i class="fal fa-info-circle" data-toggle="tooltip" title=""
 						                    data-original-title="+ $2.95 fee applied by influencerpulse"></i>
 						            </span>
 						        </td>

@@ -89,7 +89,7 @@
                     </div>
 
                     <div class="col-6 col-lg-5">
-                        ₹0.00 
+                        {{ dynamicCurrency() }}0.00
                     </div>
 
                 </div>
@@ -104,7 +104,7 @@
                     </div>
 
                     <div class="col-6 col-lg-5">
-                        ₹0.00 
+                        {{ dynamicCurrency() }}0.00
                     </div>
 
                 </div>
@@ -253,8 +253,8 @@
                                 </thead>
 
                                 <tbody>
-                                                                            
-                                            
+
+
                                             <tr>
                                                 <td>Bamboo .</td>
                                                 <td>Jan 21, 2020</td>
@@ -264,8 +264,8 @@
                                                                                                     </td>
                                                 <td>0</td>
                                             </tr>
-                                        
-                                            
+
+
                                             <tr>
                                                 <td>Superman .</td>
                                                 <td>Jan 21, 2020</td>
@@ -275,8 +275,8 @@
                                                                                                     </td>
                                                 <td>0</td>
                                             </tr>
-                                        
-                                            
+
+
                                             <tr>
                                                 <td>Sdfrty .</td>
                                                 <td>Jan 15, 2020</td>

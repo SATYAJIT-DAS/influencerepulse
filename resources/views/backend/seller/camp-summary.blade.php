@@ -86,8 +86,8 @@
                                 <div class="row">
 
                                     <div class="col-7 d-flex align-items-center">
-                                        <span class="full-price strikethrough text-danger">₹{{$camp->price}}</span>
-                                        <span class="price text-green">₹{{$camp->rebate_price}}</span>
+                                        <span class="full-price strikethrough text-danger">{{ dynamicCurrency() }}{{$camp->price}}</span>
+                                        <span class="price text-green">{{ dynamicCurrency() }}{{$camp->rebate_price}}</span>
                                     </div>
 
                                     <div class="col-5 d-flex align-items-center justify-content-end discount">
@@ -112,7 +112,7 @@
                                         <div class="card-body p-0 clearfix">
                                             <i
                                                 class="fal fa-fw fa-dollar-sign bg-danger p-1-5 font-2xl mr-2 float-left"></i>
-                                            <div class="text-danger mb-0 mt-0-5">₹{{$camp->price}}</div>
+                                            <div class="text-danger mb-0 mt-0-5">{{ dynamicCurrency() }}{{$camp->price}}</div>
                                             <div class="text-muted text-uppercase font-weight-bold font-xs">Price</div>
                                         </div>
                                     </div>
@@ -134,7 +134,7 @@
                                         <div class="card-body p-0 clearfix">
                                             <i
                                                 class="fal fa-fw fa-dollar-sign bg-success p-1-5 font-2xl mr-2 float-left"></i>
-                                            <div class="text-success mb-0 mt-0-5">₹{{$camp->rebate_price}}</div>
+                                            <div class="text-success mb-0 mt-0-5">{{ dynamicCurrency() }}{{$camp->rebate_price}}</div>
                                             <div class="text-muted text-uppercase font-weight-bold font-xs">Discounted
                                                 Price</div>
                                         </div>
@@ -265,7 +265,7 @@
                                             <i
                                                 class="fal fa-fw fa-dollar-sign bg-dark p-1-5 font-2xl mr-2 float-left"></i>
                                             <div class="mb-0 mt-0-5">
-                                                ₹{{$camp->price*$camp->daily_rebates}} </div>
+                                                {{ dynamicCurrency() }}{{$camp->price*$camp->daily_rebates}} </div>
                                             <div class="text-muted text-uppercase font-weight-bold font-xs">
                                                 MAX Daily Cost </div>
                                         </div>
@@ -355,7 +355,7 @@
                                 {{round($total_rebate/((strtotime($camp->complete_date)-strtotime($camp->start_date))/3600/24+1)*100)/100}}
                                 @else
                                 0
-                                @endif  
+                                @endif
                                 </span>
                             </div>
 
@@ -430,10 +430,10 @@
                         </div>
 
                         {!! $campChart->container() !!}
-                          
+
                         @if($campChart)
                         {!! $campChart->script() !!}
-                        @endif 
+                        @endif
 
                     </div>
 

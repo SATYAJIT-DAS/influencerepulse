@@ -12,7 +12,7 @@
             <li class="breadcrumb-item active">Pictures</li>
         </ol>
         <div class="container-fluid">
-    
+
             <ul class="stepper stepper-horizontal">
 
             <li>
@@ -161,8 +161,8 @@
                             <div class="row">
 
                                 <div class="col-7 d-flex align-items-center">
-                                    <span class="full-price strikethrough text-danger">₹{{ number_format($coupon->price, 2, '.', ',') }}</span>
-                                    <span class="price text-green">₹{{ number_format($coupon->price*(100-$coupon->off_per)/100, 2, '.', ',') }}</span>
+                                    <span class="full-price strikethrough text-danger">{{ dynamicCurrency() }}{{ number_format($coupon->price, 2, '.', ',') }}</span>
+                                    <span class="price text-green">{{ dynamicCurrency() }}{{ number_format($coupon->price*(100-$coupon->off_per)/100, 2, '.', ',') }}</span>
                                 </div>
 
                                 <div class="col-5 d-flex align-items-center justify-content-end discount">

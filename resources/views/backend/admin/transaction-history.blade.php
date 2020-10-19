@@ -26,7 +26,7 @@
                 <!-- <a href="{{route('seller.upload-start')}}" class="btn btn-primary">
                     <i class="fal fa-plus"></i> Start Bulk Upload </a> -->
                 <select>
-                    
+
                 </select>
 
             </div>
@@ -81,7 +81,7 @@
                                             {{$transaction->date}}
                                         </td>
                                         <td>
-                                            ₹{{$transaction->amount}}
+                                            {{ dynamicCurrency() }}{{$transaction->amount}}
                                         </td>
                                         <td>{{$transaction->status}}</td>
                                         <td>
@@ -102,7 +102,7 @@
 
 
                     </div>
-      
+
 
                 </div>
 

@@ -186,7 +186,7 @@
                                         <div class="controls">
                                             <input class="form-control" id="amazon_id" name="amazon_id" maxlength="255"
                                                 value="{{$camp->amazon_id}}" placeholder="ASIN of your listing" />
-                                           
+
                                         </div>
                                     </div>
 
@@ -222,7 +222,7 @@
                                         <div class="controls">
                                             <div class="input-group">
                                                 <div class="input-group-prepend">
-                                                    <span class="input-group-text">₹</span>
+                                                    <span class="input-group-text">{{ dynamicCurrency() }}</span>
                                                 </div>
                                                 <input class="form-control" id="price" name="price" type="number"
                                                     min="0" step="0.01" placeholder="Price" value="{{$camp->price}}">
@@ -243,7 +243,7 @@
                                         <div class="controls">
                                             <div class="input-group">
                                                 <div class="input-group-prepend">
-                                                    <span class="input-group-text">₹</span>
+                                                    <span class="input-group-text">{{ dynamicCurrency() }}</span>
                                                 </div>
                                                 <input class="form-control" id="discounted-price" name="rebate_price"
                                                     type="number" min="0" step="0.01" placeholder="Price"
@@ -502,7 +502,7 @@
                         <i class="fal fa-arrow-left"></i> Back </a>
                     <button class="btn btn-primary" type="submit">
                         <i class="fal fa-arrow-right"></i> Update </button>
-                    
+
                         <input type="hidden" id="status_per" value="{{$camp->permission}}">
 
                 </div>

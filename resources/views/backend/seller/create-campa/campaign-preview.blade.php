@@ -165,9 +165,9 @@
 
                                     <div class="col-7 d-flex align-items-center">
                                         <span
-                                            class="full-price strikethrough text-danger">₹{{ number_format($camp->price, 2, '.', ',') }}</span>
+                                            class="full-price strikethrough text-danger">{{ dynamicCurrency() }}{{ number_format($camp->price, 2, '.', ',') }}</span>
                                         <span
-                                            class="price text-green">₹{{ number_format($camp->rebate_price, 2, '.', ',') }}</span>
+                                            class="price text-green">{{ dynamicCurrency() }}{{ number_format($camp->rebate_price, 2, '.', ',') }}</span>
                                     </div>
 
                                     <div class="col-5 d-flex align-items-center justify-content-end discount">
@@ -277,11 +277,11 @@
                                                             <span class="discount text-white">{{round(100-($camp->rebate_price)/($camp->price)*100)}}%</span>
                                                         </div>
                                                         <h4 class="old-price lato-medium">
-                                                            <del>₹{{ number_format($camp->price, 2, '.', ',') }}</del>
+                                                            <del>{{ dynamicCurrency() }}{{ number_format($camp->price, 2, '.', ',') }}</del>
                                                         </h4>
                                                     </div>
                                                     <h3 class="new-price text-green roboto-black h1 mb-0">
-                                                        <span>₹{{ number_format($camp->rebate_price, 2, '.', ',') }}</span>
+                                                        <span>{{ dynamicCurrency() }}{{ number_format($camp->rebate_price, 2, '.', ',') }}</span>
                                                     </h3>
                                                 </div>
 
@@ -289,7 +289,7 @@
                                                     <p class="mb-0 text-dark d-flex justify-content-between">
                                                         <i class="sprite-icon-piggy-bank mr-0-5 mr-md-1-5"></i>
                                                         Savings
-                                                        ₹{{ number_format(($camp->price-$camp->rebate_price), 2, '.', ',') }}
+                                                        {{ dynamicCurrency() }}{{ number_format(($camp->price-$camp->rebate_price), 2, '.', ',') }}
                                                     </p>
                                                 </div>
                                             </div>

@@ -28,7 +28,7 @@
                 <a href="{{route('camp-forms', array('camp_id' => $camp->id, 'page' => 'pic'))}}">
                     <span class="circle">2</span>
                     <span class="label">Pictures</span>
-                   
+
                 </a>
             </li>
 
@@ -75,7 +75,7 @@
 
                     <div class="alert alert-info">
                         <i class="fal fa-info-circle"></i>
-                        The daily amount of deals distributed is reset at your scheduled start time as well as the daily charges made to your credit card or wallet balance. 
+                        The daily amount of deals distributed is reset at your scheduled start time as well as the daily charges made to your credit card or wallet balance.
                     </div>
 
                     <div class="row align-items-center">
@@ -95,7 +95,7 @@
                                         <div class="controls">
                                             <div class="input-group">
                                                 <div class="input-group-prepend">
-                                                    <span class="input-group-text">₹</span>
+                                                    <span class="input-group-text">{{ dynamicCurrency() }}</span>
                                                 </div>
                                                 <input class="form-control" id="price" name="price" type="number"
                                                     min="0" step="0.01" placeholder="Price" value="{{$camp->price}}">
@@ -116,7 +116,7 @@
                                         <div class="controls">
                                             <div class="input-group">
                                                 <div class="input-group-prepend">
-                                                    <span class="input-group-text">₹</span>
+                                                    <span class="input-group-text">{{ dynamicCurrency() }}</span>
                                                 </div>
                                                 <input class="form-control" id="discounted-price" name="rebate_price"
                                                     type="number" min="0" step="0.01" placeholder="Price"
@@ -139,8 +139,8 @@
                                                         <div class="controls">
                                                             <select name="percent" id="percent" class="form-control">
                                                                 <option value="">% OFF</option>
-                                                                <?php 
-                                                                for ($i=1; $i < 101; $i++) { 
+                                                                <?php
+                                                                for ($i=1; $i < 101; $i++) {
                                                                     echo "<option value=".$i.">".$i."</option>";
                                                                 }
                                                                ?>
@@ -194,7 +194,7 @@
                                                 name="start_date">
                                             @endif
 
-                                                
+
                                         </div>
                                     </div>
 
@@ -409,13 +409,13 @@
                                     @if($camp->private_status == 1)
                                     <input type="checkbox" class="custom-control-input" data-toggle="checkbox"
                                         value="1" id="private" checked>
-                                    <input type="hidden" class="custom-control-input hide" 
+                                    <input type="hidden" class="custom-control-input hide"
                                         value="1" name="private_status" id="pri_value">
                                     @else
                                     <input type="checkbox" class="custom-control-input" data-toggle="checkbox"
                                         value="0" name="private_status" id="private">
-                                    <input type="hidden" class="custom-control-input hide" 
-                                        value="0" name="private_status" id="pri_value"> 
+                                    <input type="hidden" class="custom-control-input hide"
+                                        value="0" name="private_status" id="pri_value">
                                     @endif
                                     <label class="custom-control-label" for="private">
                                         Private campaign<br>
@@ -514,13 +514,13 @@
             edit_action();
             $("#price").keyup(function(){
                 edit_action();
-            })   
+            })
             $("#discounted-price").keyup(function(){
                 edit_action();
-            })   
+            })
             $("#max-intents-daily").keyup(function(){
                 edit_action();
-            })          
+            })
         })
     </script>
     @endif
@@ -554,7 +554,7 @@
     <script>
     $(function() {
         document.getElementById("start-time").defaultValue = "12:00 AM";
-        
+
 
 
         // now date set

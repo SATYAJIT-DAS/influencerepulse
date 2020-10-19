@@ -158,7 +158,7 @@
                                                     Amount</label>
                                                 <div class="input-group">
                                                     <div class="input-group-prepend">
-                                                        <span class="input-group-text">₹</span>
+                                                        <span class="input-group-text">{{ dynamicCurrency() }}</span>
                                                     </div>
                                                     <div class="controls">
                                                         <input class="form-control" id="wallet-amount"
@@ -311,9 +311,9 @@
                                                 <td>
                                                     @if($camp->price && $camp->rebate_price)
                                                     <small class="text-danger strikethrough">
-                                                        ₹{{$camp->price}} </small>
+                                                        {{ dynamicCurrency() }}{{$camp->price}} </small>
                                                     <span class="text-success">
-                                                        ₹{{$camp->rebate_price}} </span><br>
+                                                        {{ dynamicCurrency() }}{{$camp->rebate_price}} </span><br>
                                                     <small>
                                                         {{round((100-$camp->rebate_price/$camp->price*100)*100)/100}}%
                                                         OFF </small>
@@ -326,7 +326,7 @@
                                                 <td>
                                                     {{$camp->start_date}}<br>
                                                     {{$camp->start_time}} </td>
-                                                <td>₹{{ number_format($camp->wallet, 2, '.', ',') }}</td>
+                                                <td>{{ dynamicCurrency() }}{{ number_format($camp->wallet, 2, '.', ',') }}</td>
 
                                             </tr>
                                             @endforeach
@@ -382,7 +382,7 @@
                                                     <td>
                                                         {{$order->order_id}}</td>
                                                      <td>
-                                                        ₹{{$order->getCamp->price-$order->getCamp->rebate_price}}
+                                                        {{ dynamicCurrency() }}{{$order->getCamp->price-$order->getCamp->rebate_price}}
                                                     </td>
                                                     <td>
                                                         <span class="text-danger">{{$order->status}}</span>
@@ -392,7 +392,7 @@
                                                     <td>
                                                         <img src="{{asset('public/images/'.$order->image)}}" class="deal-img">
                                                     </td>
-                                                   
+
                                                     <td style="width: 30%;">{{$order->product_name}}</td>
                                                     <td>
                                                         {{$user->name}}
@@ -402,17 +402,17 @@
                                                     <td>
                                                         {{$order->order_id}}</td>
                                                      <td>
-                                                        ₹{{$order->price-$order->rebate_price}}
+                                                        {{ dynamicCurrency() }}{{$order->price-$order->rebate_price}}
                                                     </td>
                                                     <td>
                                                         <span class="text-danger">{{$order->status}}</span>
                                                     </td>
-                                                    
+
 
                                                     @endif
-                                                    
+
                                                 </tr>
-                                                
+
                                                 @endforeach
                                             @else
                                             <tr>
@@ -470,11 +470,11 @@
                                                     {{$msg->message}}
                                                 </td>
                                             </tr>
-                                  
+
                                             @endforeach
-                                            <?php 
+                                            <?php
                                             if ($count == 0) {?>
-                                               
+
                                                 <tr>
                                                     <td colspan="5" class="text-center">
                                                         No messages yet. </td>
@@ -482,7 +482,7 @@
                                             <?php
                                                 }
                                             ?>
-                                          
+
                                         </tbody>
 
                                     </table>

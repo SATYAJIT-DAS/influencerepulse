@@ -94,19 +94,19 @@
 
                             <div class="d-flex align-items-center mb-1">
                                 <div class="percent bg-danger text-white">
-                                    Rebate: ₹{{round((1-$order->getCamp->rebate_price/$order->getCamp->price)*10000)/100}}%
+                                    Rebate: {{ dynamicCurrency() }}{{round((1-$order->getCamp->rebate_price/$order->getCamp->price)*10000)/100}}%
                                 </div>
                                 <div class="d-flex align-items-center text-info font-weight-bold ml-3">
                                     <i class="sprite-icon-piggy-bank mr-1"></i>
-                                    YOU SAVE ₹{{$order->getCamp->price-$order->getCamp->rebate_price}}
+                                    YOU SAVE {{ dynamicCurrency() }}{{$order->getCamp->price-$order->getCamp->rebate_price}}
                                 </div>
                             </div>
                             <div class="d-flex align-items-center mb-2-5">
                                 <h5 class="old-price lato-medium mb-0 mr-0-5">
-                                    <del>₹{{$order->getCamp->price}}</del>
+                                    <del>{{ dynamicCurrency() }}{{$order->getCamp->price}}</del>
                                 </h5>
                                 <h4 class="new-price text-green roboto-black mb-0">
-                                    ₹<span>{{$order->getCamp->rebate_price}}</span>
+                                    {{ dynamicCurrency() }}<span>{{$order->getCamp->rebate_price}}</span>
                                 </h4>
                             </div>
                             <div class="row">
@@ -206,7 +206,7 @@
                         </div>
                     </li>
                     @elseif($msg->type == 2)
-                    
+
                     <li id="message-675882" class="clearfix timeline-inverted">
                         <div class="timeline-badge" title="" data-placement="bottom" data-toggle="tooltip"
                             data-original-title="admin"   style=" text-transform: uppercase;">
@@ -228,7 +228,7 @@
                             </div>
                         </div>
                     </li>
-                    
+
                     @else
                     <li id="message-675882" class="clearfix timeline-inverted">
                         <div class="timeline-badge" title="" data-placement="bottom" data-toggle="tooltip"

@@ -113,10 +113,10 @@
                                             <td style="width: 45%;">{{$order->getCamp->product_name}}</td>
 
                                              <td>
-                                                ₹{{$order->getCamp->price}}
+                                                {{ dynamicCurrency() }}{{$order->getCamp->price}}
                                             </td>
                                             <td>
-                                                ₹{{$order->getCamp->price-$order->getCamp->rebate_price}}
+                                                {{ dynamicCurrency() }}{{$order->getCamp->price-$order->getCamp->rebate_price}}
                                             </td>
                                             <td>
                                                 <span class="text-info">{{$order->status}}</span>
@@ -200,7 +200,7 @@
                                             <td>
                                                 {{$order->order_id}}</td>
                                              <td>
-                                                ₹{{$order->getCamp->price-$order->getCamp->rebate_price}}
+                                                {{ dynamicCurrency() }}{{$order->getCamp->price-$order->getCamp->rebate_price}}
                                             </td>
                                             <td>
                                                 <span class="text-danger">{{$order->status}}</span>
@@ -265,7 +265,7 @@
                                             <td>
                                                 {{$order->order_id}}</td>
                                              <td>
-                                                ₹{{$order->getCamp->price-$order->getCamp->rebate_price}}
+                                                {{ dynamicCurrency() }}{{$order->getCamp->price-$order->getCamp->rebate_price}}
                                             </td>
                                             <td>
                                                 <span class="text-danger">{{$order->status}}</span>
@@ -328,7 +328,7 @@
                                             <td>
                                                 {{$order->order_id}}</td>
                                              <td>
-                                                ₹{{$order->getCamp->price-$order->getCamp->rebate_price}}
+                                                {{ dynamicCurrency() }}{{$order->getCamp->price-$order->getCamp->rebate_price}}
                                             </td>
                                             <td>
                                                 <span class="text-danger">{{$order->dis_reason}}</span>
@@ -390,9 +390,9 @@
                                             </td>
                                             <td style="width: 50%;">{{$order->getCamp->product_name}}</td>
                                             <td>
-                                                ₹{{$order->getCamp->price}}</td>
+                                                {{ dynamicCurrency() }}{{$order->getCamp->price}}</td>
                                              <td>
-                                                ₹{{$order->getCamp->price-$order->getCamp->rebate_price}}
+                                                {{ dynamicCurrency() }}{{$order->getCamp->price-$order->getCamp->rebate_price}}
                                             </td>
                                             <td>
                                                 {{$order->getCamp->user->name}}
@@ -458,9 +458,9 @@
                                             </td>
                                             <td style="width: 50%;">{{$order->getCamp->product_name}}</td>
                                             <td>
-                                                ₹{{$order->getCamp->price}}</td>
+                                                {{ dynamicCurrency() }}{{$order->getCamp->price}}</td>
                                              <td>
-                                                ₹{{$order->getCamp->price-$order->getCamp->rebate_price}}
+                                                {{ dynamicCurrency() }}{{$order->getCamp->price-$order->getCamp->rebate_price}}
                                             </td>
                                             <td>
                                                 {{$order->getCamp->user->name}}
@@ -524,9 +524,9 @@
                                             </td>
                                             <td style="width: 50%;">{{$order->getCamp->product_name}}</td>
                                             <td>
-                                                ₹{{$order->getCamp->price}}</td>
+                                                {{ dynamicCurrency() }}{{$order->getCamp->price}}</td>
                                              <td>
-                                                ₹{{$order->getCamp->price-$order->getCamp->rebate_price}}
+                                                {{ dynamicCurrency() }}{{$order->getCamp->price-$order->getCamp->rebate_price}}
                                             </td>
                                             <td>
                                                 <span class="text-danger">{{$order->status}}</span>
@@ -595,9 +595,9 @@
                                             </td>
                                             <td style="width: 50%;">{{$order->getCamp->product_name}}</td>
                                             <td>
-                                                <small class="text-danger strikethrough">₹{{$order->getCamp->price}}</small>
-                                                <span class="text-success">₹{{$order->getCamp->rebate_price}}</span><br>
-                                                <small>₹{{round((1-$order->getCamp->rebate_price/$order->getCamp->price)*10000)/100}}% OFF</small>
+                                                <small class="text-danger strikethrough">{{ dynamicCurrency() }}{{$order->getCamp->price}}</small>
+                                                <span class="text-success">{{ dynamicCurrency() }}{{$order->getCamp->rebate_price}}</span><br>
+                                                <small>{{ dynamicCurrency() }}{{round((1-$order->getCamp->rebate_price/$order->getCamp->price)*10000)/100}}% OFF</small>
                                             </td>
                                             <td>
                                                 <span class="text-danger">{{$order->status}}</span>
@@ -663,7 +663,7 @@
                                             <td>
                                                 {{$order->order_id}}</td>
                                              <td>
-                                                ₹{{$order->getCamp->price-$order->getCamp->rebate_price}}
+                                                {{ dynamicCurrency() }}{{$order->getCamp->price-$order->getCamp->rebate_price}}
                                             </td>
                                             <td>
                                                 <span class="text-danger">Resolved</span>

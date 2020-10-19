@@ -20,7 +20,7 @@
     </section>
     @endisset
         <div class="container-fluid">
-    
+
             <ul class="stepper stepper-horizontal">
 
             <li>
@@ -37,7 +37,7 @@
 
                     <span class="circle">2</span>
                     <span class="label">Pictures</span>
-                   
+
                 </a>
             </li>
 
@@ -47,7 +47,7 @@
 
                     <span class="circle">3</span>
                     <span class="label">Settings</span>
-                    
+
                 </a>
             </li>
 
@@ -63,7 +63,7 @@
             <li>
                 <a href="{{route('camp-forms', array('camp_id' => $camp->id, 'page' => 'payment'))}}">
                 <!-- <a href=""> -->
-                    
+
                     <span class="circle">5</span>
                     <span class="label">Payment</span>
                 </a>
@@ -218,8 +218,8 @@
                             <div class="row">
 
                                 <div class="col-7 d-flex align-items-center">
-                                    <span class="full-price strikethrough text-danger">₹{{ number_format($camp->price, 2, '.', ',') }}</span>
-                                    <span class="price text-green">₹{{ number_format($camp->rebate_price, 2, '.', ',') }}</span>
+                                    <span class="full-price strikethrough text-danger">{{ dynamicCurrency() }}{{ number_format($camp->price, 2, '.', ',') }}</span>
+                                    <span class="price text-green">{{ dynamicCurrency() }}{{ number_format($camp->rebate_price, 2, '.', ',') }}</span>
                                 </div>
 
                                 <div class="col-5 d-flex align-items-center justify-content-end discount">
@@ -255,7 +255,7 @@
 
                 </form>
 
-              
+
 
                 <script>
                 $(function() {

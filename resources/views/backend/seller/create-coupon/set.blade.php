@@ -79,7 +79,7 @@
                                         <div class="controls">
                                             <div class="input-group">
                                                 <div class="input-group-prepend">
-                                                    <span class="input-group-text">₹</span>
+                                                    <span class="input-group-text">{{ dynamicCurrency() }}</span>
                                                 </div>
                                                 <input class="form-control" id="price" name="price" type="number"
                                                     min="0" step="0.01" placeholder="Price" value="{{$coupon->price}}">
@@ -102,8 +102,8 @@
                                                 <select name="off_per" id="discount-value" class="form-control"
                                                     value="{{$coupon->off_per}}">
                                                     <option value="">% OFF</option>
-                                                    <?php 
-                                                        for ($i=10; $i < 100; $i++) { 
+                                                    <?php
+                                                        for ($i=10; $i < 100; $i++) {
                                                            echo "<option value=".$i.">".$i."</option>";
                                                         }
                                                     ?>
@@ -363,7 +363,7 @@
         now_date = new Date().toUTCString().slice(5, 16);
         $("#start-date").val(now_date);
 
-        
+
         var n_date= new Date();
         end_date= n_date.addMonths(1).toUTCString().slice(5, 16);
         $("#end-date").val(end_date);

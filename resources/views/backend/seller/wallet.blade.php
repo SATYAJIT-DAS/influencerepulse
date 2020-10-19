@@ -37,7 +37,7 @@
             @if(session('status') == 'Failed')
             <div class="alert alert-danger" role="alert">
                 <i class="fal fa-exclamation-triangle"></i>
-                Please Refill Your General Wallet With Campaign Amount of ₹ {{ session('amount_to_be_considered_for_deduction_from_general_wallet') }} or more to Activate! <br />
+                Please Refill Your General Wallet With Campaign Amount of {{ dynamicCurrency() }} {{ session('amount_to_be_considered_for_deduction_from_general_wallet') }} or more to Activate! <br />
                 <i>Note: To Run Campaign Continuously Please Add Total Campaign Amount.</i>
             </div>
             @else
@@ -58,7 +58,7 @@
                     <h5 class="my-5">Total Wallet</h5>
 
                     <h1 class="my-4">
-                        <span class="text-info">₹{{$wallet_sum}}</span>
+                        <span class="text-info">{{ dynamicCurrency() }}{{$wallet_sum}}</span>
                     </h1>
                 </div> -->
 
@@ -74,7 +74,7 @@
                     <h5 class="my-5">General Wallet</h5>
 
                     <h1 class="my-4">
-                        <span class="text-info">₹{{round($general_amount, 2)}}</span>
+                        <span class="text-info">{{ dynamicCurrency() }}{{round($general_amount, 2)}}</span>
                     </h1>
                     <!-- <a class="btn btn-dark btn-block transaction-class" data-toggle="modal"
                         data-target="#general-modal" href="">
@@ -91,7 +91,7 @@
                                 data-key="{{config('services.razor.key')}}"
                                 data-order_id="{{$order_100['id']}}"
                                 data-currency="INR"
-                                data-buttontext="₹100"
+                                data-buttontext="{{ dynamicCurrency() }}100"
                                 data-name="Influencer Pulse"
                                 data-description="Campaign"
                                 data-image="https://i.imgur.com/n5tjHFD.png"
@@ -112,7 +112,7 @@
                                 data-key="{{config('services.razor.key')}}"
                                 data-order_id="{{$order_250['id']}}"
                                 data-currency="INR"
-                                data-buttontext="₹250"
+                                data-buttontext="{{ dynamicCurrency() }}250"
                                 data-name="Influencer Pulse"
                                 data-description="Campaign"
                                 data-image="https://i.imgur.com/n5tjHFD.png"
@@ -133,7 +133,7 @@
                                 data-key="{{config('services.razor.key')}}"
                                 data-order_id="{{$order_500['id']}}"
                                 data-currency="INR"
-                                data-buttontext="₹500"
+                                data-buttontext="{{ dynamicCurrency() }}500"
                                 data-name="Influencer Pulse"
                                 data-description="Campaign"
                                 data-image="https://i.imgur.com/n5tjHFD.png"
@@ -154,7 +154,7 @@
                                 data-key="{{config('services.razor.key')}}"
                                 data-order_id="{{$order_1000['id']}}"
                                 data-currency="INR"
-                                data-buttontext="₹1000"
+                                data-buttontext="{{ dynamicCurrency() }}1000"
                                 data-name="Influencer Pulse"
                                 data-description="Campaign"
                                 data-image="https://i.imgur.com/n5tjHFD.png"
@@ -175,7 +175,7 @@
                                 data-key="{{config('services.razor.key')}}"
                                 data-order_id="{{$order_3000['id']}}"
                                 data-currency="INR"
-                                data-buttontext="₹3000"
+                                data-buttontext="{{ dynamicCurrency() }}3000"
                                 data-name="Influencer Pulse"
                                 data-description="Campaign"
                                 data-image="https://i.imgur.com/n5tjHFD.png"
@@ -196,7 +196,7 @@
                                 data-key="{{config('services.razor.key')}}"
                                 data-order_id="{{$order_5000['id']}}"
                                 data-currency="INR"
-                                data-buttontext="₹5000"
+                                data-buttontext="{{ dynamicCurrency() }}5000"
                                 data-name="Influencer Pulse"
                                 data-description="Campaign"
                                 data-image="https://i.imgur.com/n5tjHFD.png"
@@ -217,7 +217,7 @@
                                 data-key="{{config('services.razor.key')}}"
                                 data-order_id="{{$order_10000['id']}}"
                                 data-currency="INR"
-                                data-buttontext="₹10000"
+                                data-buttontext="{{ dynamicCurrency() }}10000"
                                 data-name="Influencer Pulse"
                                 data-description="Campaign"
                                 data-image="https://i.imgur.com/n5tjHFD.png"
@@ -374,9 +374,9 @@
                                         <td class="w-50" style="max-width: 500px !important;">{{$wallet->description}}</td>
                                         <td>{{$wallet->operation}}</td>
                                         <td>
-                                            ₹{{$wallet->amount}} <br>
+                                            {{ dynamicCurrency() }}{{$wallet->amount}} <br>
                                             <small class="text-muted">
-                                                + ₹{{$wallet->fee_amount}} fee </small>
+                                                + {{ dynamicCurrency() }}{{$wallet->fee_amount}} fee </small>
                                         </td>
                                          <td> {{$wallet->payment_method}} </td>
                                     </tr>
@@ -439,9 +439,9 @@
                                         <td>
                                             @if($camp->price && $camp->rebate_price)
                                             <small class="text-danger strikethrough">
-                                                ₹{{$camp->price}} </small>
+                                                {{ dynamicCurrency() }}{{$camp->price}} </small>
                                             <span class="text-success">
-                                                ₹{{$camp->rebate_price}} </span><br>
+                                                {{ dynamicCurrency() }}{{$camp->rebate_price}} </span><br>
                                             <small>
                                                 {{round((100-$camp->rebate_price/$camp->price*100)*100)/100}}% OFF </small>
                                             @endif
@@ -453,7 +453,7 @@
                                         <td>
                                             {{$camp->start_date}}<br>
                                             {{$camp->start_time}} </td>
-                                        <td class="text-danger">₹{{ number_format($camp->Wallet, 2, '.', ',') }}
+                                        <td class="text-danger">{{ dynamicCurrency() }}{{ number_format($camp->Wallet, 2, '.', ',') }}
                                         </td>
                                         <td class="text-center">
                                             @if($today > strtotime($camp->count_time) && $camp->permission == "offline"))
@@ -527,9 +527,9 @@
                                         <td>
                                             @if($camp->price && $camp->rebate_price)
                                             <small class="text-danger strikethrough">
-                                                ₹{{$camp->price}} </small>
+                                                {{ dynamicCurrency() }}{{$camp->price}} </small>
                                             <span class="text-success">
-                                                ₹{{$camp->rebate_price}} </span><br>
+                                                {{ dynamicCurrency() }}{{$camp->rebate_price}} </span><br>
                                             <small>
                                                 {{round((100-$camp->rebate_price/$camp->price*100)*100)/100}}% OFF </small>
                                             @endif
@@ -541,7 +541,7 @@
                                         <td>
                                             {{$camp->start_date}}<br>
                                             {{$camp->start_time}} </td>
-                                        <td>₹{{ number_format($camp->wallet, 2, '.', ',') }}</td>
+                                        <td>{{ dynamicCurrency() }}{{ number_format($camp->wallet, 2, '.', ',') }}</td>
                                     </tr>
                                     @endforeach
                                     @else
@@ -578,7 +578,7 @@
                         {{$fee->paypal_fee}} % fee
                     </h6>
                     <h6 class="modal-title text-center" id="modal-general">
-                        ₹ {{$general_amount}}
+                        {{ dynamicCurrency() }} {{$general_amount}}
                     </h6>
 
                     <h5 class="modal-title text-center"> Charge <span class="text-danger">Campaign</span> </h5>
@@ -611,15 +611,15 @@
                             <label for="message" class="form-control-label">Amount</label>
                             <div class="controls">
                                 <select class="form-control" name="amount" id="charge-amount">
-                                    <option value="200">₹ 200</option>
-                                    <option value="500">₹ 500</option>
-                                    <option value="1000">₹ 1000</option>
-                                    <option value="2500">₹ 2500</option>
-                                    <option value="5000">₹ 5000</option>
-                                    <option value="10000">₹ 10000</option>
-                                    <option value="25000">₹ 25000</option>
-                                    <option value="50000">₹ 50000</option>
-                                    <option value="100000">₹ 100000</option>
+                                    <option value="200">{{ dynamicCurrency() }} 200</option>
+                                    <option value="500">{{ dynamicCurrency() }} 500</option>
+                                    <option value="1000">{{ dynamicCurrency() }} 1000</option>
+                                    <option value="2500">{{ dynamicCurrency() }} 2500</option>
+                                    <option value="5000">{{ dynamicCurrency() }} 5000</option>
+                                    <option value="10000">{{ dynamicCurrency() }} 10000</option>
+                                    <option value="25000">{{ dynamicCurrency() }} 25000</option>
+                                    <option value="50000">{{ dynamicCurrency() }} 50000</option>
+                                    <option value="100000">{{ dynamicCurrency() }} 100000</option>
                                 </select>
                                 <i style=""
                                 class="fv-control-feedback fal fa-asterisk" data-fv-icon-for="message"></i>
@@ -664,7 +664,7 @@
                                 data-email="`+ email +`"
                                 data-image="https://influencerpulse.com/assets/img/logo_stripe.png"
                                 data-locale="auto"
-                                data-label="Charge wallet ₹`+ Math.round(amount*(1+fee/100)*100)/100 +` with Stripe">`;
+                                data-label="Charge wallet {{ dynamicCurrency() }}`+ Math.round(amount*(1+fee/100)*100)/100 +` with Stripe">`;
                         $("#camp-charge").html('');
                         $("#camp-charge").html(stripe_modal);
                     }
@@ -677,7 +677,7 @@
                         $("#stripe-amount").val(amount);
                         $("#wallet-description").val('Charge campaign with Wallet');
 
-                        stripe_modal=`<button type="submit" class="btn btn-primary" style="visibility: visible; width:100%"><span style="display: block; min-height: 30px;">Charge wallet ₹ `+amount+` with Wallet</span></button>`;
+                        stripe_modal=`<button type="submit" class="btn btn-primary" style="visibility: visible; width:100%"><span style="display: block; min-height: 30px;">Charge wallet {{ dynamicCurrency() }} `+amount+` with Wallet</span></button>`;
                         $("#camp-charge").html('');
                         $("#camp-charge").html(stripe_modal);
                     }
@@ -777,15 +777,15 @@
                             <div class="controls">
                                 <select class="form-control" name="amount" id="general-charge-amount" required>
                                     <option >Select Amount</option>
-                                    <option value="200">₹ 200</option>
-                                    <option value="500">₹ 500</option>
-                                    <option value="1000">₹ 1000</option>
-                                    <option value="2500">₹ 2500</option>
-                                    <option value="5000">₹ 5000</option>
-                                    <option value="10000">₹ 10000</option>
-                                    <option value="25000">₹ 25000</option>
-                                    <option value="50000">₹ 50000</option>
-                                    <option value="100000">₹ 100000</option>
+                                    <option value="200">{{ dynamicCurrency() }} 200</option>
+                                    <option value="500">{{ dynamicCurrency() }} 500</option>
+                                    <option value="1000">{{ dynamicCurrency() }} 1000</option>
+                                    <option value="2500">{{ dynamicCurrency() }} 2500</option>
+                                    <option value="5000">{{ dynamicCurrency() }} 5000</option>
+                                    <option value="10000">{{ dynamicCurrency() }} 10000</option>
+                                    <option value="25000">{{ dynamicCurrency() }} 25000</option>
+                                    <option value="50000">{{ dynamicCurrency() }} 50000</option>
+                                    <option value="100000">{{ dynamicCurrency() }} 100000</option>
                                 </select>
                                 <i style=""
                                 class="fv-control-feedback fal fa-asterisk" data-fv-icon-for="message"></i>

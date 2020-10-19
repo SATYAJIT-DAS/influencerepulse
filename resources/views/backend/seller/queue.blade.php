@@ -220,16 +220,16 @@
                                         <td>{{$order->dis_reason}} </td>
                                         <td>
                                             <a class="btn btn-primary btn-block msg-btn" data-toggle="modal"
-                                                    data-target="#msg-modal" data-id="{{$order->id}}" style="color: white;" 
+                                                    data-target="#msg-modal" data-id="{{$order->id}}" style="color: white;"
                                                     data-to="{{$order->getBuyer->name}}">
                                                     Message Buyer </a>
                                             <a class="btn btn-dark btn-block"
                                                 href="{{route('seller.discussion',$order->id)}}">
                                                 View Discussion </a>
 
-                                            
 
-                                                                         
+
+
                                         </td>
                                     </tr>
                                     @endif
@@ -335,7 +335,7 @@
                                         <td>{{$order->order_id}} </td>
                                         <td><small>
                                                 {{round((100-$order->getCamp->rebate_price/$order->getCamp->price*100)*100)/100}}% OFF </small> </td>
-                                        <td>₹{{$order->status}} </td>
+                                        <td>{{ dynamicCurrency() }}{{$order->status}} </td>
                                         <td>
                                             <button data-e2e="btn-actions"
                                                 class="btn btn-primary btn-block dropdown-toggle" type="button"
@@ -353,7 +353,7 @@
                                                 <!--<a class="dropdown-item"
                                                     href="{{route('order.change',
                                                         array('id' =>  $order->id, 'state' => 'Declined' ))}}">
-                                                    Decline 
+                                                    Decline
                                                 </a>-->
 
                                                 <a class="btn btn-danger btn-block  dispute-modal"
@@ -365,15 +365,15 @@
                                                 </a>
                                             </div>
                                             <a class="btn btn-primary btn-block msg-btn" data-toggle="modal"
-                                                data-target="#msg-modal" data-id="{{$order->id}}" style="color: white; margin-top: 10px;" 
+                                                data-target="#msg-modal" data-id="{{$order->id}}" style="color: white; margin-top: 10px;"
                                                 data-to="{{$order->getBuyer->name}}">
                                                 Message Buyer </a>
                                     </td>
-                                        
+
                                     </tr>
                                     @endif
                                     @endforeach
-                                   
+
                                     @else
                                     <tr>
                                         <td colspan="7" class="text-center">
@@ -431,8 +431,8 @@
                                         <td><small>
                                                 {{round((100-$order->getCamp->rebate_price/$order->getCamp->price*100)*100)/100}}% OFF </small> </td>
                                         <td class="text-primary">{{$order->status}} </td>
-                                        
-                                        
+
+
                                     </tr>
                                     @endif
                                     @endforeach
@@ -501,20 +501,20 @@
                                             </button>
                                             <div class="dropdown-menu dropdown-menu-right"
                                                 aria-labelledby="actions-menu">
-                                                
+
 
                                                 <a class="btn btn-danger btn-block  dispute-modal"
                                                     data-toggle="modal"
                                                     data-target="#dispute-modal"
                                                     data-id="{{$order->id}}" data-to="{{$order->getBuyer->name}}"
-                                                    href="" 
+                                                    href=""
                                                         >
-                                                       
+
                                                     Rise Dispute </a>
                                                 </a>
                                             </div>
                                         </td>
-                                        
+
                                     </tr>
                                     @endif
                                     @endforeach
@@ -579,7 +579,7 @@
                                             Seller Victory
                                             @endif
                                         </td>
-                                        
+
                                     </tr>
                                     @endif
                                     @endforeach
@@ -685,7 +685,7 @@
 
                     <div class="modal-body">
 
-                        <form id="write-message-form" method="post" 
+                        <form id="write-message-form" method="post"
                             action="{{route('seller.dispute')}}"
                             enctype="multipart/form-data" novalidate="novalidate" class="fv-form fv-form-bootstrap4">
                             @csrf
@@ -699,7 +699,7 @@
                                 <label for="message" class="form-control-label">Reason</label>
                                 <div class="controls">
                                     <textarea data-e2e="message" name="reason" id="reason" class="form-control md-textarea" autofocus="" data-fv-field="message">
-                                            
+
                                     </textarea>
                                     <i style=""
                                     class="fv-control-feedback fal fa-asterisk" data-fv-icon-for="message"></i>
@@ -824,7 +824,7 @@
                                 <div class="controls">
                                     <textarea data-e2e="message" name="message" id="message" class="form-control md-textarea"
                                         autofocus="" data-fv-field="message">
-                                            
+
                                         </textarea>
                                         <i style=""
                                         class="fv-control-feedback fal fa-asterisk" data-fv-icon-for="message"></i>

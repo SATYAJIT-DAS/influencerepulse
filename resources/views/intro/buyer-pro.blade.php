@@ -37,7 +37,7 @@
             <div class="mb-6 text-center">
                 <h3 class="mb-2-5">Join now!</h3>
                 <p class="mb-0">
-                    Earn up to <b>₹20</b> per referral that have signed up. </p>
+                    Earn up to <b>{{ dynamicCurrency() }}20</b> per referral that have signed up. </p>
             </div>
         </div>
 
@@ -84,32 +84,32 @@
 
                                     <tr>
                                         <td>1+</td>
-                                        <td>₹1</td>
-                                        <td>₹1</td>
+                                        <td>{{ dynamicCurrency() }}1</td>
+                                        <td>{{ dynamicCurrency() }}1</td>
                                     </tr>
 
                                     <tr>
                                         <td>5+</td>
-                                        <td>₹2</td>
-                                        <td>₹3</td>
+                                        <td>{{ dynamicCurrency() }}2</td>
+                                        <td>{{ dynamicCurrency() }}3</td>
                                     </tr>
 
                                     <tr>
                                         <td>10+</td>
-                                        <td>₹3</td>
-                                        <td>₹6</td>
+                                        <td>{{ dynamicCurrency() }}3</td>
+                                        <td>{{ dynamicCurrency() }}6</td>
                                     </tr>
 
                                     <tr>
                                         <td>25+</td>
-                                        <td>₹5</td>
-                                        <td>₹11</td>
+                                        <td>{{ dynamicCurrency() }}5</td>
+                                        <td>{{ dynamicCurrency() }}11</td>
                                     </tr>
 
                                     <tr>
                                         <td>50+</td>
-                                        <td>₹9</td>
-                                        <td>₹20</td>
+                                        <td>{{ dynamicCurrency() }}9</td>
+                                        <td>{{ dynamicCurrency() }}20</td>
                                     </tr>
                                 </tbody>
 

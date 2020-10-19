@@ -139,8 +139,8 @@
                             <div class="row">
 
                                 <div class="col-7 d-flex align-items-center">
-                                    <span class="full-price strikethrough text-danger">₹{{$camp->price}}</span>
-                                    <span class="price text-green">₹{{$camp->rebate_price}}</span>
+                                    <span class="full-price strikethrough text-danger">{{ dynamicCurrency() }}{{$camp->price}}</span>
+                                    <span class="price text-green">{{ dynamicCurrency() }}{{$camp->rebate_price}}</span>
                                 </div>
 
                                 <div class="col-5 d-flex align-items-center justify-content-end discount">

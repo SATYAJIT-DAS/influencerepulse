@@ -71,7 +71,7 @@
                 <a href="{{route('camp-forms', array('camp_id' => $camp->id, 'page' => 'pic'))}}">
                     <span class="circle">2</span>
                     <span class="label">Pictures</span>
-                   
+
                 </a>
             </li>
 
@@ -79,7 +79,7 @@
                 <a href="{{route('camp-forms', array('camp_id' => $camp->id, 'page' => 'set'))}}" >
                     <span class="circle">3</span>
                     <span class="label">Settings</span>
-                    
+
                 </a>
             </li>
 
@@ -185,9 +185,9 @@
                                             src="https://checkout.razorpay.com/v1/checkout.js"
                                             data-key="{{config('services.razor.key')}}"
                                             data-order_id="{{$order_id}}"
-                                            data-amount="{{$amount }}" 
+                                            data-amount="{{$amount }}"
                                             data-currency="INR"
-                                            data-buttontext="Pay ₹{{ round(($camp->price-$camp->rebate_price+$fee->rebate_fee)*($camp->daily_rebates) * (100+$fee->paypal_fee))/100 }} with Razorpay"
+                                            data-buttontext="Pay {{ dynamicCurrency() }}{{ round(($camp->price-$camp->rebate_price+$fee->rebate_fee)*($camp->daily_rebates) * (100+$fee->paypal_fee))/100 }} with Razorpay"
                                             data-name="Influencer Pulse"
                                             data-description="Campaign
                                             {{$camp->product_name}}"
@@ -196,7 +196,7 @@
                                             data-prefill.email="{{Auth()->user()->email}}"
                                             data-prefill.contact="{{Auth()->user()->phone}}"
                                             data-theme.color="#F37254" >
-                                            
+
                                         </script>
                                         <input type="hidden" custom="Hidden Element" name="hidden">
                                         </form>
@@ -205,7 +205,7 @@
 
 
 
-                                       <!-- <form role="form" action="{{route('stripe.post')}}" method="post" class="require-validation" id="payment-form">                                       
+                                       <!-- <form role="form" action="{{route('stripe.post')}}" method="post" class="require-validation" id="payment-form">
                                         @csrf
                                         <input type="hidden" name="pay_type" value="stripe">
                                         <input type="hidden" name="camp_id" value="{{$camp->id}}">
@@ -219,10 +219,10 @@
 									            data-amount="{{ round(($camp->price-$camp->rebate_price+$fee->rebate_fee)*($camp->daily_rebates) * (100+$fee->paypal_fee)) }}"
 									            data-name="influencerpulse"
 									            data-description="Campaign {{$camp->product_name}}"
-									            data-email="{{Auth()->user()->email}}" 
+									            data-email="{{Auth()->user()->email}}"
 									            data-image="https://influencerpulse.com/assets/img/logo_stripe.png"
 									            data-locale="auto"
-									            data-label="Pay ₹{{ round(($camp->price-$camp->rebate_price+$fee->rebate_fee)*($camp->daily_rebates) * (100+$fee->paypal_fee))/100 }} with Stripe">
+									            data-label="Pay {{ dynamicCurrency() }}{{ round(($camp->price-$camp->rebate_price+$fee->rebate_fee)*($camp->daily_rebates) * (100+$fee->paypal_fee))/100 }} with Stripe">
 										        </script>
 		                                    </div>
 		                                </form> -->
@@ -230,7 +230,7 @@
 
                                 </div>
 
-                               
+
 
                             </div>
 
@@ -255,7 +255,7 @@
                                             </h5>
                                         </div>
 
-                                        
+
 
                                     </div>
 
@@ -268,14 +268,14 @@
                                         <div class="d-md-flex align-items-center justify-content-between">
                                             <p>You can pay through the wallet. </p>
 
-                                            <p><h5 style="margin-right: -135px">Current Wallet Balance : </h5><h1 class="text-info"> ₹{{$wallet_amount}} </h1></p>
+                                            <p><h5 style="margin-right: -135px">Current Wallet Balance : </h5><h1 class="text-info"> {{ dynamicCurrency() }}{{$wallet_amount}} </h1></p>
                                         </div>
 
-                                       <form role="form" action="{{route('stripe.post')}}" method="post" class="require-validation" id="payment-form">                                       
+                                       <form role="form" action="{{route('stripe.post')}}" method="post" class="require-validation" id="payment-form">
                                         @csrf
                                         <input type="hidden" name="pay_type" value="wallet">
                                         <input type="hidden" name="camp_id" value="{{$camp->id}}">
-                                        <input type="hidden" name="amount" 
+                                        <input type="hidden" name="amount"
     value="{{ round(($camp->price-$camp->rebate_price+$fee->rebate_fee)*($camp->daily_rebates) * 100)/100 }}">
                                         <!-- <input type="hidden" name="payment_method" value=""> -->
 
@@ -283,7 +283,7 @@
 
                                             <div class="stripe-button-lg stripe-button-block">
                                                 <button type="submit" class="btn btn-block btn-dark" style="visibility: visible;">
-                                                    <span style="display: block; min-height: 30px;">Pay ₹{{ round(($camp->price-$camp->rebate_price+$fee->rebate_fee)*($camp->daily_rebates) * 100)/100 }} using wallet balance</span>
+                                                    <span style="display: block; min-height: 30px;">Pay {{ dynamicCurrency() }}{{ round(($camp->price-$camp->rebate_price+$fee->rebate_fee)*($camp->daily_rebates) * 100)/100 }} using wallet balance</span>
                                                 </button>
                                             </div>
                                         </form>
@@ -291,7 +291,7 @@
 
                                 </div>
 
-                               
+
 
                             </div>
 
@@ -317,7 +317,7 @@
                                             </h5>
                                         </div>
 
-                                        
+
 
                                     </div>
 
@@ -341,15 +341,15 @@
                                         <a class="btn btn-primary btn-block transaction-class" data-toggle="modal"
                                             data-target="#charge-modal"
                                             href="">
-                                            Charge Wallet 
+                                            Charge Wallet
                                         </a>
 
-                                       
+
                                     </div>
 
                                 </div>
 
-                               
+
 
                             </div>
 
@@ -365,7 +365,7 @@
 
                             <div class="card-header border-bottom-0 bg-light">
                                 Why
-                                <b>₹{{ number_format(($camp->price-$camp->rebate_price+$fee->rebate_fee)*$camp->daily_rebates, 2, '.', ',') }}</b>
+                                <b>{{ dynamicCurrency() }}{{ number_format(($camp->price-$camp->rebate_price+$fee->rebate_fee)*$camp->daily_rebates, 2, '.', ',') }}</b>
                                 / day? </div>
 
                             <div class="card-body border border-light">
@@ -373,7 +373,7 @@
                                 <p>
                                     <i class="fal fa-info-circle"></i>
                                     Confused on why you are being charged
-                                    <b>₹{{ number_format(($camp->price-$camp->rebate_price+$fee->rebate_fee)*$camp->daily_rebates, 2, '.', ',') }}</b>
+                                    <b>{{ dynamicCurrency() }}{{ number_format(($camp->price-$camp->rebate_price+$fee->rebate_fee)*$camp->daily_rebates, 2, '.', ',') }}</b>
                                     / day? </p>
 
                                 <a class="btn btn-block btn-dark" data-toggle="modal" data-modal-size="modal-lg" href=""
@@ -414,7 +414,7 @@
 
                     <h5 class="modal-title">
                         Why are you being charged
-                        ₹{{ number_format(($camp->price-$camp->rebate_price+$fee->rebate_fee)*$camp->daily_rebates, 2, '.', ',') }}
+                        {{ dynamicCurrency() }}{{ number_format(($camp->price-$camp->rebate_price+$fee->rebate_fee)*$camp->daily_rebates, 2, '.', ',') }}
                         / day for your campaign? </h5>
 
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -451,18 +451,18 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-3">
-                                        ₹{{ number_format(($camp->price), 2, '.', ',') }} </div>
+                                        {{ dynamicCurrency() }}{{ number_format(($camp->price), 2, '.', ',') }} </div>
                                     <div class="col-1">
                                         -
                                     </div>
                                     <div class="col-4">
-                                        ₹{{ number_format(($camp->rebate_price), 2, '.', ',') }} </div>
+                                        {{ dynamicCurrency() }}{{ number_format(($camp->rebate_price), 2, '.', ',') }} </div>
                                     <div class="col-1">
                                         =
                                     </div>
                                     <div class="col-3">
                                         <b
-                                            class="text-info">₹{{ number_format(($camp->price-$camp->rebate_price), 2, '.', ',') }}</b>
+                                            class="text-info">{{ dynamicCurrency() }}{{ number_format(($camp->price-$camp->rebate_price), 2, '.', ',') }}</b>
                                     </div>
                                 </div>
 
@@ -477,7 +477,7 @@
 
                                 <div class="alert alert-info">
                                     <i class="fal fa-info-circle"></i>
-                                    A fee of <b>₹{{$fee->rebate_fee}}</b> is applied per sale by InfluencerPulse. </div>
+                                    A fee of <b>{{ dynamicCurrency() }}{{$fee->rebate_fee}}</b> is applied per sale by InfluencerPulse. </div>
 
                                 <div class="row">
                                     <div class="col-3">
@@ -498,19 +498,19 @@
                                 <div class="row">
                                     <div class="col-3">
                                         <b class="text-info">
-                                            ₹{{ number_format(($camp->price-$camp->rebate_price), 2, '.', ',') }} </b>
+                                            {{ dynamicCurrency() }}{{ number_format(($camp->price-$camp->rebate_price), 2, '.', ',') }} </b>
                                     </div>
                                     <div class="col-1">
                                         +
                                     </div>
                                     <div class="col-4">
-                                        ₹{{$fee->rebate_fee}} </div>
+                                        {{ dynamicCurrency() }}{{$fee->rebate_fee}} </div>
                                     <div class="col-1">
                                         =
                                     </div>
                                     <div class="col-3">
                                         <b
-                                            class="text-warning">₹{{ number_format(($camp->price-$camp->rebate_price+$fee->rebate_fee), 2, '.', ',') }}</b>
+                                            class="text-warning">{{ dynamicCurrency() }}{{ number_format(($camp->price-$camp->rebate_price+$fee->rebate_fee), 2, '.', ',') }}</b>
                                     </div>
                                 </div>
 
@@ -543,7 +543,7 @@
                                 <div class="row">
                                     <div class="col-3">
                                         <b
-                                            class="text-warning">₹{{ number_format(($camp->price-$camp->rebate_price+$fee->rebate_fee), 2, '.', ',') }}</b>
+                                            class="text-warning">{{ dynamicCurrency() }}{{ number_format(($camp->price-$camp->rebate_price+$fee->rebate_fee), 2, '.', ',') }}</b>
                                     </div>
                                     <div class="col-1">
                                         ×
@@ -555,7 +555,7 @@
                                     </div>
                                     <div class="col-3">
                                         <b class="text-danger">
-                                            ₹{{ number_format(($camp->price-$camp->rebate_price+$fee->rebate_fee)*$camp->daily_rebates, 2, '.', ',') }}</b>
+                                            {{ dynamicCurrency() }}{{ number_format(($camp->price-$camp->rebate_price+$fee->rebate_fee)*$camp->daily_rebates, 2, '.', ',') }}</b>
                                     </div>
                                 </div>
 
@@ -584,7 +584,7 @@
                         Choose the amount to recharge your account.
                     </h6>
                     <h5 class="modal-title text-center"> Upgrade Your <span class="text-danger">Wallet</span> Limit</h5>
-                    
+
 
 
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -604,20 +604,20 @@
                         <input type="hidden" name="desription" id="wallet-description">
                         <input type="hidden" name="camp_id" value="{{$camp->id}}">
 
-                    
+
                         <div class="form-group fv-has-feedback">
                             <label for="message" class="form-control-label">Amount</label>
                             <div class="controls">
                                 <select class="form-control" name="amount" id="charge-amount">
-                                    <option value="200">₹ 200</option>
-                                    <option value="500">₹ 500</option>
-                                    <option value="1000">₹ 1000</option>
-                                    <option value="2500">₹ 2500</option>
-                                    <option value="5000">₹ 5000</option>
-                                    <option value="10000">₹ 10000</option>
-                                    <option value="25000">₹ 25000</option>
-                                    <option value="50000">₹ 50000</option>
-                                    <option value="100000">₹ 100000</option>
+                                    <option value="200">{{ dynamicCurrency() }} 200</option>
+                                    <option value="500">{{ dynamicCurrency() }} 500</option>
+                                    <option value="1000">{{ dynamicCurrency() }} 1000</option>
+                                    <option value="2500">{{ dynamicCurrency() }} 2500</option>
+                                    <option value="5000">{{ dynamicCurrency() }} 5000</option>
+                                    <option value="10000">{{ dynamicCurrency() }} 10000</option>
+                                    <option value="25000">{{ dynamicCurrency() }} 25000</option>
+                                    <option value="50000">{{ dynamicCurrency() }} 50000</option>
+                                    <option value="100000">{{ dynamicCurrency() }} 100000</option>
                                 </select>
                                 <i style=""
                                 class="fv-control-feedback fal fa-asterisk" data-fv-icon-for="message"></i>
@@ -627,7 +627,7 @@
                         </div>
 
                         <div class="stripe-button-lg stripe-button-block" id="wallet-charge">
-                           
+
                         </div>
                     </form>
 
@@ -652,14 +652,14 @@
 
 
                     stripe_modal=` <script
-                            src="https://checkout.stripe.com/checkout.js" class="stripe-button" 
+                            src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                             data-key="pk_test_ypYAqYGU91QcBzRjrJcCkTvX00N4QXGYwu"
                             data-amount="`+ Math.round(amount*(1+fee/100)*100*100)/100 +`"
                             data-description="For wallet charge"
-                            data-email="`+ email +`" 
+                            data-email="`+ email +`"
                             data-image="https://influencerpulse.com/assets/img/logo_stripe.png"
                             data-locale="auto"
-                            data-label="Charge wallet ₹`+ Math.round(amount*(1+fee/100)*100)/100 +` with Stripe">`;
+                            data-label="Charge wallet {{ dynamicCurrency() }}`+ Math.round(amount*(1+fee/100)*100)/100 +` with Stripe">`;
 
                     $("#wallet-charge").html(stripe_modal)
                 }
@@ -684,8 +684,8 @@
                         charge_wallet();
                     })
 
-                    
-                    
+
+
 
                     $('#write-message-form').on('init.field.fv', function(e, data) {
                         const $icon = data.element.data('fv.icon'),

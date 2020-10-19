@@ -26,7 +26,7 @@
                 <!-- <a href="{{route('seller.upload-start')}}" class="btn btn-primary">
                     <i class="fal fa-plus"></i> Start Bulk Upload </a> -->
                 <select>
-                    
+
                 </select>
 
             </div>
@@ -78,9 +78,9 @@
                                             {{$coupon->product_name}} </td>
                                         <td>
                                             <small class="text-danger strikethrough">
-                                                ₹{{ number_format($coupon->price, 2, '.', ',') }} </small>
+                                                {{ dynamicCurrency() }}{{ number_format($coupon->price, 2, '.', ',') }} </small>
                                             <span class="text-success">
-                                                ₹{{ number_format($coupon->price*(100-$coupon->off_per)/100, 2, '.', ',') }}
+                                                {{ dynamicCurrency() }}{{ number_format($coupon->price*(100-$coupon->off_per)/100, 2, '.', ',') }}
                                             </span><br />
                                             <small>
                                                 {{$coupon->off_per}}% OFF </small>
@@ -129,18 +129,18 @@
                                                             array('id' =>  $coupon->id, 'state' => 'completed' ))}}">
                                                         Completed
                                                     </a> -->
-                                                    
 
-                                                    <a class="dropdown-item" style="background: #f86c6b; color:white;" 
+
+                                                    <a class="dropdown-item" style="background: #f86c6b; color:white;"
                                                         href="{{route('coupon_delete', $coupon->id)}}">
                                                         Delete
                                                     </a>
                                                 </div>
-                                                       
+
                                             </div>
 
-                                                
-                                            
+
+
                                         </td>
                                         <td>
                                             <a class="btn btn-info" href="{{route('coupon_manage.show',$coupon->id)}}">

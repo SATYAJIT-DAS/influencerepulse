@@ -25,7 +25,7 @@
             			<h5 class="my-5">Current Balance</h5>
 
 		                <h1 class="my-4">
-		                    <span class="text-info">₹{{$wallet_sum}}</span>
+		                    <span class="text-info">{{ dynamicCurrency() }}{{$wallet_sum}}</span>
 		                </h1>
             		</div>
 
@@ -47,7 +47,7 @@
                                             </h5>
                                         </div>
 
-                                        
+
 
                                     </div>
 
@@ -76,19 +76,19 @@
                         					<input type="hidden" name="desription" id="wallet-description">
 					                        <button
 					                            type="submit" class="fv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
-					                    
+
 					                        <div class="form-group fv-has-feedback">
 					                            <div class="controls">
 					                                <select class="form-control" name="amount" id="charge-amount">
-					                                    <option value="200">₹ 200</option>
-					                                    <option value="500">₹ 500</option>
-					                                    <option value="1000">₹ 1000</option>
-					                                    <option value="2500">₹ 2500</option>
-					                                    <option value="5000">₹ 5000</option>
-					                                    <option value="10000">₹ 10000</option>
-					                                    <option value="25000">₹ 25000</option>
-					                                    <option value="50000">₹ 50000</option>
-					                                    <option value="100000">₹ 100000</option>
+					                                    <option value="200">{{ dynamicCurrency() }} 200</option>
+					                                    <option value="500">{{ dynamicCurrency() }} 500</option>
+					                                    <option value="1000">{{ dynamicCurrency() }} 1000</option>
+					                                    <option value="2500">{{ dynamicCurrency() }} 2500</option>
+					                                    <option value="5000">{{ dynamicCurrency() }} 5000</option>
+					                                    <option value="10000">{{ dynamicCurrency() }} 10000</option>
+					                                    <option value="25000">{{ dynamicCurrency() }} 25000</option>
+					                                    <option value="50000">{{ dynamicCurrency() }} 50000</option>
+					                                    <option value="100000">{{ dynamicCurrency() }} 100000</option>
 					                                </select>
 					                                <i style=""
 					                                class="fv-control-feedback fal fa-asterisk" data-fv-icon-for="message"></i>
@@ -98,14 +98,14 @@
 					                        </div>
 
 					                        <div class="stripe-button-lg stripe-button-block" id="wallet-charge">
-					                           
+
 					                        </div>
 					                    </form>
                                     </div>
 
                                 </div>
 
-                               
+
 
                             </div>
 
@@ -113,7 +113,7 @@
             		</div>
             	</div>
 
-                
+
 
             </div>
 
@@ -129,7 +129,7 @@
                 <!-- <a href="{{route('seller.upload-start')}}" class="btn btn-primary">
                     <i class="fal fa-plus"></i> Start Bulk Upload </a> -->
                 <select>
-                    
+
                 </select>
 
             </div>
@@ -157,13 +157,13 @@
                                     @foreach($wallets as $key=>$wallet)
                                     <tr>
                                         <td>{{ date('j F, Y ', strtotime($wallet->date)) }}<br>
-                                            {{ date('h:m ', strtotime($wallet->date)) }} EST 
+                                            {{ date('h:m ', strtotime($wallet->date)) }} EST
                                         </td>
                                         <td class="w-50" style="max-width: 500px !important;">{{$wallet->description}}</td>
                                         <td>
-                                            ₹{{$wallet->amount}} <br>
+                                            {{ dynamicCurrency() }}{{$wallet->amount}} <br>
                                             <small class="text-muted">
-                                                + ₹{{$wallet->fee_amount}} fee </small>
+                                                + {{ dynamicCurrency() }}{{$wallet->fee_amount}} fee </small>
                                         </td>
                                     </tr>
                                     @endforeach
@@ -182,7 +182,7 @@
 
 
                     </div>
-      
+
 
                 </div>
 
@@ -209,14 +209,14 @@
 
 
             stripe_modal=` <script
-                    src="https://checkout.stripe.com/checkout.js" class="stripe-button" 
+                    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                     data-key="pk_test_ypYAqYGU91QcBzRjrJcCkTvX00N4QXGYwu"
                     data-amount="`+ Math.round(amount*(1+fee/100)*100*100)/100 +`"
                     data-description="For wallet charge"
-                    data-email="`+ email +`" 
+                    data-email="`+ email +`"
                     data-image="https://influencerpulse.com/assets/img/logo_stripe.png"
                     data-locale="auto"
-                    data-label="Charge wallet ₹`+ Math.round(amount*(1+fee/100)*100)/100 +` with Stripe">`;
+                    data-label="Charge wallet {{ dynamicCurrency() }}`+ Math.round(amount*(1+fee/100)*100)/100 +` with Stripe">`;
 
             $("#wallet-charge").html(stripe_modal)
         }

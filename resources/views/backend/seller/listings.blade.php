@@ -137,9 +137,9 @@
                                             {{$coupon->product_name}} </td>
                                         <td>
                                             <small class="text-danger strikethrough">
-                                                ₹{{ number_format($coupon->price, 2, '.', ',') }} </small>
+                                                {{ dynamicCurrency() }}{{ number_format($coupon->price, 2, '.', ',') }} </small>
                                             <span class="text-success">
-                                                ₹{{ number_format($coupon->price*(100-$coupon->off_per)/100, 2, '.', ',') }}
+                                                {{ dynamicCurrency() }}{{ number_format($coupon->price*(100-$coupon->off_per)/100, 2, '.', ',') }}
                                             </span><br />
                                             <small>
                                                 {{$coupon->off_per}}% OFF </small>
@@ -234,9 +234,9 @@
                                             {{$coupon->product_name}} </td>
                                         <td>
                                             <small class="text-danger strikethrough">
-                                                ₹{{ number_format($coupon->price, 2, '.', ',') }} </small>
+                                                {{ dynamicCurrency() }}{{ number_format($coupon->price, 2, '.', ',') }} </small>
                                             <span class="text-success">
-                                                ₹{{ number_format($coupon->price*(100-$coupon->off_per)/100, 2, '.', ',') }}
+                                                {{ dynamicCurrency() }}{{ number_format($coupon->price*(100-$coupon->off_per)/100, 2, '.', ',') }}
                                             </span><br />
                                             <small>
                                                 {{$coupon->off_per}}% OFF </small>
@@ -286,7 +286,7 @@
 
                         </div>
 
-                        
+
 
                     </div>
 
@@ -324,9 +324,9 @@
                                             {{$coupon->product_name}} </td>
                                         <td>
                                             <small class="text-danger strikethrough">
-                                                ₹{{ number_format($coupon->price, 2, '.', ',') }} </small>
+                                                {{ dynamicCurrency() }}{{ number_format($coupon->price, 2, '.', ',') }} </small>
                                             <span class="text-success">
-                                                ₹{{ number_format($coupon->price*(100-$coupon->off_per)/100, 2, '.', ',') }}
+                                                {{ dynamicCurrency() }}{{ number_format($coupon->price*(100-$coupon->off_per)/100, 2, '.', ',') }}
                                             </span><br />
                                             <small>
                                                 {{$coupon->off_per}}% OFF </small>
@@ -370,7 +370,7 @@
                                             No offline coupons. </td>
                                     </tr>
                                     @endif
-                                    
+
                                 </tbody>
 
                             </table>
@@ -414,9 +414,9 @@
                                             {{$coupon->product_name}} </td>
                                         <td>
                                             <small class="text-danger strikethrough">
-                                                ₹{{ number_format($coupon->price, 2, '.', ',') }} </small>
+                                                {{ dynamicCurrency() }}{{ number_format($coupon->price, 2, '.', ',') }} </small>
                                             <span class="text-success">
-                                                ₹{{ number_format($coupon->price*(100-$coupon->off_per)/100, 2, '.', ',') }}
+                                                {{ dynamicCurrency() }}{{ number_format($coupon->price*(100-$coupon->off_per)/100, 2, '.', ',') }}
                                             </span><br />
                                             <small>
                                                 {{$coupon->off_per}}% OFF </small>
@@ -460,7 +460,7 @@
                                             No ready coupons. </td>
                                     </tr>
                                     @endif
-                                    
+
                                 </tbody>
 
                             </table>
@@ -504,9 +504,9 @@
                                             {{$coupon->product_name}} </td>
                                         <td>
                                             <small class="text-danger strikethrough">
-                                                ₹{{ number_format($coupon->price, 2, '.', ',') }} </small>
+                                                {{ dynamicCurrency() }}{{ number_format($coupon->price, 2, '.', ',') }} </small>
                                             <span class="text-success">
-                                                ₹{{ number_format($coupon->price*(100-$coupon->off_per)/100, 2, '.', ',') }}
+                                                {{ dynamicCurrency() }}{{ number_format($coupon->price*(100-$coupon->off_per)/100, 2, '.', ',') }}
                                             </span><br />
                                             <small>
                                                 {{$coupon->off_per}}% OFF </small>
@@ -550,7 +550,7 @@
                                             No pending approval coupons. </td>
                                     </tr>
                                     @endif
-                                    
+
                                 </tbody>
 
                             </table>
@@ -602,9 +602,9 @@
                                             {{$coupon->product_name}} </td>
                                         <td>
                                             <small class="text-danger strikethrough">
-                                                ₹{{ number_format($coupon->price, 2, '.', ',') }} </small>
+                                                {{ dynamicCurrency() }}{{ number_format($coupon->price, 2, '.', ',') }} </small>
                                             <span class="text-success">
-                                                ₹{{ number_format($coupon->price*(100-$coupon->off_per)/100, 2, '.', ',') }}
+                                                {{ dynamicCurrency() }}{{ number_format($coupon->price*(100-$coupon->off_per)/100, 2, '.', ',') }}
                                             </span><br />
                                             <small>
                                                 {{$coupon->off_per}}% OFF </small>
@@ -654,7 +654,7 @@
 
                         </div>
 
-                      
+
 
                     </div>
 
@@ -691,9 +691,9 @@
                                             {{$coupon->product_name}} </td>
                                         <td>
                                             <small class="text-danger strikethrough">
-                                                ₹{{ number_format($coupon->price, 2, '.', ',') }} </small>
+                                                {{ dynamicCurrency() }}{{ number_format($coupon->price, 2, '.', ',') }} </small>
                                             <span class="text-success">
-                                                ₹{{ number_format($coupon->price*(100-$coupon->off_per)/100, 2, '.', ',') }}
+                                                {{ dynamicCurrency() }}{{ number_format($coupon->price*(100-$coupon->off_per)/100, 2, '.', ',') }}
                                             </span><br />
                                             <small>
                                                 {{$coupon->off_per}}% OFF </small>
@@ -737,7 +737,7 @@
                                             No completed coupons. </td>
                                     </tr>
                                     @endif
-                                    
+
                                 </tbody>
 
                             </table>
@@ -781,9 +781,9 @@
                                             {{$coupon->product_name}} </td>
                                         <td>
                                             <small class="text-danger strikethrough">
-                                                ₹{{ number_format($coupon->price, 2, '.', ',') }} </small>
+                                                {{ dynamicCurrency() }}{{ number_format($coupon->price, 2, '.', ',') }} </small>
                                             <span class="text-success">
-                                                ₹{{ number_format($coupon->price*(100-$coupon->off_per)/100, 2, '.', ',') }}
+                                                {{ dynamicCurrency() }}{{ number_format($coupon->price*(100-$coupon->off_per)/100, 2, '.', ',') }}
                                             </span><br />
                                             <small>
                                                 {{$coupon->off_per}}% OFF </small>

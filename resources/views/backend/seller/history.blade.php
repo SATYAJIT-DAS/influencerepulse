@@ -20,7 +20,7 @@
                     <div class="card-body">
                         <!-- <h3 id="popover-total-charged" data-toggle="popover-html" title="Details"> -->
                         <h3 id="popover-total-charged">
-                            ₹{{$total_charge}} 
+                            {{ dynamicCurrency() }}{{$total_charge}}
                            <!--  <small>
                                 <i class="fal fa-info-circle"></i>
                             </small> -->
@@ -31,7 +31,7 @@
                                         Deals </div>
 
                                     <div class="col-6 text-right">
-                                        ₹0.00 </div>
+                                        {{ dynamicCurrency() }}0.00 </div>
 
                                 </div>
 
@@ -43,7 +43,7 @@
                                         Influencer Pulse fees </div>
 
                                     <div class="col-6 text-right">
-                                        + ₹0.00 </div>
+                                        + {{ dynamicCurrency() }}0.00 </div>
 
                                 </div>
 
@@ -55,7 +55,7 @@
                                         Credit card fees </div>
 
                                     <div class="col-6 text-right">
-                                        + ₹0.00 </div>
+                                        + {{ dynamicCurrency() }}0.00 </div>
 
                                 </div>
 
@@ -67,7 +67,7 @@
                                         Total charged </div>
 
                                     <div class="col-6 text-right">
-                                        = ₹0.00 </div>
+                                        = {{ dynamicCurrency() }}0.00 </div>
 
                                 </div>
                             </div> -->
@@ -87,7 +87,7 @@
                     </div>
                     <div class="card-body">
                         <h3>
-                            ₹{{-1*$total_refund}} </h3>
+                            {{ dynamicCurrency() }}{{-1*$total_refund}} </h3>
                         <small class="text-muted text-uppercase font-weight-bold text-xs">
                             Total Amount Refunded </small>
                     </div>
@@ -103,7 +103,7 @@
                     </div>
                     <div class="card-body">
                         <h3>
-                            ₹{{$total_refund+$total_charge}} </h3>
+                            {{ dynamicCurrency() }}{{$total_refund+$total_charge}} </h3>
                         <small class="text-muted text-uppercase font-weight-bold text-xs">
                             Total Amount In </small>
                     </div>
@@ -123,7 +123,7 @@
                     </div>
                     <div class="card-body">
                         <h3>
-                            ₹{{$camp_amount}} </h3>
+                            {{ dynamicCurrency() }}{{$camp_amount}} </h3>
                         <small class="text-muted text-uppercase font-weight-bold text-xs">
                             Total Amount in Campaign Wallets </small>
                     </div>
@@ -140,7 +140,7 @@
                     <div class="card-body">
                         <!-- <h3 id="popover-total-rebates" data-toggle="popover-html" title="Details"> -->
                         <h3 id="popover-total-rebates">
-                            ₹{{$deal_amount}}
+                            {{ dynamicCurrency() }}{{$deal_amount}}
                             <!-- <small>
                                 <i class="fal fa-info-circle"></i>
                             </small>
@@ -151,7 +151,7 @@
                                         Deals paid out </div>
 
                                     <div class="col-6 text-right">
-                                       ₹0.00 </div>
+                                       {{ dynamicCurrency() }}0.00 </div>
 
                                 </div>
 
@@ -163,7 +163,7 @@
                                         Influencer Pulse fees </div>
 
                                     <div class="col-6 text-right">
-                                        + ₹0.00 </div>
+                                        + {{ dynamicCurrency() }}0.00 </div>
 
                                 </div>
 
@@ -175,7 +175,7 @@
                                         Credit card fees </div>
 
                                     <div class="col-6 text-right">
-                                        +₹0.00 </div>
+                                        +{{ dynamicCurrency() }}0.00 </div>
 
                                 </div>
 
@@ -187,7 +187,7 @@
                                         Total charged </div>
 
                                     <div class="col-6 text-right">
-                                        = ₹0.00 </div>
+                                        = {{ dynamicCurrency() }}0.00 </div>
 
                                 </div>
                             </div> -->
@@ -207,7 +207,7 @@
                     </div>
                     <div class="card-body">
                         <h3>
-                            ₹{{$wallet_amount}} </h3>
+                            {{ dynamicCurrency() }}{{$wallet_amount}} </h3>
                         <small class="text-muted text-uppercase font-weight-bold text-xs">
                             Total Amount in the Wallet </small>
                     </div>
@@ -223,7 +223,7 @@
                     </div>
                     <div class="card-body">
                         <h3>
-                            ₹{{$camp_amount+$wallet_amount-$deal_amount}} </h3>
+                            {{ dynamicCurrency() }}{{$camp_amount+$wallet_amount-$deal_amount}} </h3>
                         <small class="text-muted text-uppercase font-weight-bold text-xs">
                             Total Costs Amount </small>
                     </div>

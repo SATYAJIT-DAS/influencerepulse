@@ -24,7 +24,7 @@
                 <h5 class="my-5">Current Balance</h5>
 
                 <h1 class="my-4">
-                    <span class="text-info">{{ dynamicCurrency() }}{{$wallet_sum}}</span>
+                    <span class="text-info">{{ dynamicCurrency() }}{ dynamicCurrency() }}{{$wallet_sum}}</span>
                 </h1>
 
             </div>
@@ -41,7 +41,7 @@
                 <!-- <a href="{{route('seller.upload-start')}}" class="btn btn-primary">
                     <i class="fal fa-plus"></i> Start Bulk Upload </a> -->
                 <select>
-                    
+
                 </select>
 
             </div>
@@ -69,13 +69,13 @@
                                     @foreach($wallets as $key=>$wallet)
                                     <tr>
                                         <td>{{ date('j F, Y ', strtotime($wallet->date)) }}<br>
-                                            {{ date('h:m ', strtotime($wallet->date)) }} EST 
+                                            {{ date('h:m ', strtotime($wallet->date)) }} EST
                                         </td>
                                         <td class="w-50" style="max-width: 500px !important;">{{$wallet->description}}</td>
                                         <td>
-                                            ₹{{$wallet->amount}} <br>
+                                            {{ dynamicCurrency() }}{{$wallet->amount}} <br>
                                             <!--<small class="text-muted">-->
-                                            <!--    + ₹{{$wallet->fee_amount}} fee </small>-->
+                                            <!--    + {{ dynamicCurrency() }}{{$wallet->fee_amount}} fee </small>-->
                                         </td>
                                     </tr>
                                     @endforeach
@@ -94,7 +94,7 @@
 
 
                     </div>
-      
+
 
                 </div>
 

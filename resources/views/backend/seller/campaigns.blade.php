@@ -137,12 +137,12 @@
                                     @if($camp->permission == 'online')
                                     <tr>
                                         <td>
-                                            {{$camp->id}} 
+                                            {{$camp->id}}
                                             <i class="fal fa-shield-check" data-toggle="tooltip" title=""
                                                 data-original-title="Protection against repeat buyers enabled: {{$camp->product_id}}"></i>
                                             @if($camp->private_status == 1)
                                             <i class="fal fa-eye-slash" data-toggle="tooltip" title=""
-                                                data-original-title="Private campaign"></i> 
+                                                data-original-title="Private campaign"></i>
                                             @endif   </td>
                                         <td>
                                             @if(count($camp->pic)>0)
@@ -156,9 +156,9 @@
                                         <td>
                                             @if($camp->price && $camp->rebate_price)
                                             <small class="text-danger strikethrough">
-                                                ₹{{$camp->price}} </small>
+                                                {{ dynamicCurrency() }}{{$camp->price}} </small>
                                             <span class="text-success">
-                                                ₹{{$camp->rebate_price}} </span><br>
+                                                {{ dynamicCurrency() }}{{$camp->rebate_price}} </span><br>
                                             <small>
                                                 {{round((100-$camp->rebate_price/$camp->price*100)*100)/100}}% OFF </small>
                                             @endif
@@ -170,7 +170,7 @@
                                         <td>
                                             {{$camp->start_date}}<br>
                                             {{$camp->start_time}} </td>
-                                        <td>₹{{ number_format($camp->wallet, 2, '.', ',') }}</td>
+                                        <td>{{ dynamicCurrency() }}{{ number_format($camp->wallet, 2, '.', ',') }}</td>
                                         <td class="text-center">
                                             <div class="dropdown">
                                                 <button data-e2e="btn-actions" class="btn btn-primary btn-block dropdown-toggle" type="button" id="actions-menu"
@@ -190,7 +190,7 @@
                                                 </div>
                                             </div>
                                         </td>
-                                        
+
                                     </tr>
                                     @endif
                                     @endforeach
@@ -245,8 +245,8 @@
                                                 data-original-title="Protection against repeat buyers enabled: {{$camp->product_id}}"></i>
                                             @if($camp->private_status == 1)
                                             <i class="fal fa-eye-slash" data-toggle="tooltip" title=""
-                                                data-original-title="Private campaign"></i> 
-                                            @endif  
+                                                data-original-title="Private campaign"></i>
+                                            @endif
                                         </td>
                                         <td>
                                             @if(count($camp->pic)>0)
@@ -260,9 +260,9 @@
                                         <td>
                                             @if($camp->price && $camp->rebate_price)
                                             <small class="text-danger strikethrough">
-                                                ₹{{$camp->price}} </small>
+                                                {{ dynamicCurrency() }}{{$camp->price}} </small>
                                             <span class="text-success">
-                                                ₹{{$camp->rebate_price}} </span><br>
+                                                {{ dynamicCurrency() }}{{$camp->rebate_price}} </span><br>
                                             <small>
                                                 {{round((100-$camp->rebate_price/$camp->price*100)*100)/100}}% OFF </small>
                                             @endif
@@ -274,7 +274,7 @@
                                         <td>
                                             {{$camp->start_date}}<br>
                                             {{$camp->start_time}} </td>
-                                        <td>₹{{ number_format($camp->wallet, 2, '.', ',') }}</td>
+                                        <td>{{ dynamicCurrency() }}{{ number_format($camp->wallet, 2, '.', ',') }}</td>
 
                                         <td class="text-center">
                                             @switch($camp->permission)
@@ -345,7 +345,7 @@
                                                     </button>
                                                     <div class="dropdown-menu dropdown-menu-right"
                                                         aria-labelledby="actions-menu">
-                                                       
+
                                                         <!--<a class="dropdown-item"-->
                                                         <!--    href="{{route('camp_clone', $camp->id)}}">-->
                                                         <!--    Clone-->
@@ -403,7 +403,7 @@
                                                 data-original-title="Protection against repeat buyers enabled: {{$camp->product_id}}"></i>
                                             @if($camp->private_status == 1)
                                             <i class="fal fa-eye-slash" data-toggle="tooltip" title=""
-                                                data-original-title="Private campaign"></i> 
+                                                data-original-title="Private campaign"></i>
                                             @endif   </td>
                                         <td>
                                             @if(count($camp->pic)>0)
@@ -417,9 +417,9 @@
                                         <td>
                                             @if($camp->price && $camp->rebate_price)
                                             <small class="text-danger strikethrough">
-                                                ₹{{$camp->price}} </small>
+                                                {{ dynamicCurrency() }}{{$camp->price}} </small>
                                             <span class="text-success">
-                                                ₹{{$camp->rebate_price}} </span><br>
+                                                {{ dynamicCurrency() }}{{$camp->rebate_price}} </span><br>
                                             <small>
                                                 {{round((100-$camp->rebate_price/$camp->price*100)*100)/100}}% OFF </small>
                                             @endif
@@ -431,7 +431,7 @@
                                         <td>
                                             {{$camp->start_date}}<br>
                                             {{$camp->start_time}} </td>
-                                        <td>₹{{ number_format($camp->wallet, 2, '.', ',') }}</td>
+                                        <td>{{ dynamicCurrency() }}{{ number_format($camp->wallet, 2, '.', ',') }}</td>
                                         <td class="text-center">
                                             <div class="dropdown">
                                                 <button data-e2e="btn-actions"
@@ -449,7 +449,7 @@
                                                     <!--    href="{{route('camp_clone', $camp->id)}}">-->
                                                     <!--    Clone-->
                                                     <!--</a>-->
-                                                   
+
                                                     <a class="dropdown-item"
                                                         href="{{route('camp_delete', $camp->id)}}">
                                                         Delete
@@ -506,7 +506,7 @@
                                                 data-original-title="Protection against repeat buyers enabled: {{$camp->product_id}}"></i>
                                             @if($camp->private_status == 1)
                                             <i class="fal fa-eye-slash" data-toggle="tooltip" title=""
-                                                data-original-title="Private campaign"></i> 
+                                                data-original-title="Private campaign"></i>
                                             @endif   </td>
                                         <td>
                                             @if(count($camp->pic)>0)
@@ -520,9 +520,9 @@
                                         <td>
                                             @if($camp->price && $camp->rebate_price)
                                             <small class="text-danger strikethrough">
-                                                ₹{{$camp->price}} </small>
+                                                {{ dynamicCurrency() }}{{$camp->price}} </small>
                                             <span class="text-success">
-                                                ₹{{$camp->rebate_price}} </span><br>
+                                                {{ dynamicCurrency() }}{{$camp->rebate_price}} </span><br>
                                             <small>
                                                 {{round((100-$camp->rebate_price/$camp->price*100)*100)/100}}% OFF </small>
                                             @endif
@@ -534,7 +534,7 @@
                                         <td>
                                             {{$camp->start_date}}<br>
                                             {{$camp->start_time}} </td>
-                                        <td>₹{{ number_format($camp->wallet, 2, '.', ',') }}</td>
+                                        <td>{{ dynamicCurrency() }}{{ number_format($camp->wallet, 2, '.', ',') }}</td>
                                         <td class="text-center">
                                             <div class="dropdown">
                                                 <button data-e2e="btn-actions"
@@ -609,7 +609,7 @@
                                                 data-original-title="Protection against repeat buyers enabled: {{$camp->product_id}}"></i>
                                             @if($camp->private_status == 1)
                                             <i class="fal fa-eye-slash" data-toggle="tooltip" title=""
-                                                data-original-title="Private campaign"></i> 
+                                                data-original-title="Private campaign"></i>
                                             @endif   </td>
                                         <td>
                                             @if(count($camp->pic)>0)
@@ -623,9 +623,9 @@
                                         <td>
                                             @if($camp->price && $camp->rebate_price)
                                             <small class="text-danger strikethrough">
-                                                ₹{{$camp->price}} </small>
+                                                {{ dynamicCurrency() }}{{$camp->price}} </small>
                                             <span class="text-success">
-                                                ₹{{$camp->rebate_price}} </span><br>
+                                                {{ dynamicCurrency() }}{{$camp->rebate_price}} </span><br>
                                             <small>
                                                 {{round((100-$camp->rebate_price/$camp->price*100)*100)/100}}% OFF</small>
                                             @endif
@@ -637,7 +637,7 @@
                                         <td>
                                             {{$camp->start_date}}<br>
                                             {{$camp->start_time}} </td>
-                                        <td>₹{{ number_format($camp->wallet, 2, '.', ',') }}</td>
+                                        <td>{{ dynamicCurrency() }}{{ number_format($camp->wallet, 2, '.', ',') }}</td>
                                         <td class="text-center">
                                             <div class="dropdown">
                                                 <button data-e2e="btn-actions"
@@ -673,7 +673,7 @@
                                             No pending approval campaigns. </td>
                                     </tr>
                                     @endif
-                                    
+
                                 </tbody>
 
                             </table>
@@ -723,7 +723,7 @@
                                                 data-original-title="Protection against repeat buyers enabled: {{$camp->product_id}}"></i>
                                             @if($camp->private_status == 1)
                                             <i class="fal fa-eye-slash" data-toggle="tooltip" title=""
-                                                data-original-title="Private campaign"></i> 
+                                                data-original-title="Private campaign"></i>
                                             @endif  </td>
                                         <td>
                                             @if(count($camp->pic)>0)
@@ -737,9 +737,9 @@
                                         <td>
                                             @if($camp->price && $camp->rebate_price)
                                             <small class="text-danger strikethrough">
-                                                ₹{{$camp->price}} </small>
+                                                {{ dynamicCurrency() }}{{$camp->price}} </small>
                                             <span class="text-success">
-                                                ₹{{$camp->rebate_price}} </span><br>
+                                                {{ dynamicCurrency() }}{{$camp->rebate_price}} </span><br>
                                             <small>
                                                {{round((100-$camp->rebate_price/$camp->price*100)*100)/100}}% OFF</small>
                                             @endif
@@ -751,7 +751,7 @@
                                         <td>
                                             {{$camp->start_date}}<br>
                                             {{$camp->start_time}} </td>
-                                        <td>₹{{ number_format($camp->wallet, 2, '.', ',') }}</td>
+                                        <td>{{ dynamicCurrency() }}{{ number_format($camp->wallet, 2, '.', ',') }}</td>
                                         <td class="text-center">
                                             <div class="dropdown">
                                                 <button data-e2e="btn-actions"
@@ -779,7 +779,7 @@
                                     @if($incomplete == 0)
                                     <tr>
                                         <td colspan="8" class="text-center">
-                                            No incomplete campaigns. 
+                                            No incomplete campaigns.
                                         </td>
                                     </tr>
                                     @endif
@@ -821,7 +821,7 @@
                                                 data-original-title="Protection against repeat buyers enabled: {{$camp->product_id}}"></i>
                                             @if($camp->private_status == 1)
                                             <i class="fal fa-eye-slash" data-toggle="tooltip" title=""
-                                                data-original-title="Private campaign"></i> 
+                                                data-original-title="Private campaign"></i>
                                             @endif   </td>
                                         <td>
                                             @if(count($camp->pic)>0)
@@ -835,9 +835,9 @@
                                         <td>
                                             @if($camp->price && $camp->rebate_price)
                                             <small class="text-danger strikethrough">
-                                                ₹{{$camp->price}} </small>
+                                                {{ dynamicCurrency() }}{{$camp->price}} </small>
                                             <span class="text-success">
-                                                ₹{{$camp->rebate_price}} </span><br>
+                                                {{ dynamicCurrency() }}{{$camp->rebate_price}} </span><br>
                                             <small>
                                                {{round((100-$camp->rebate_price/$camp->price*100)*100)/100}}% OFF </small>
                                             @endif
@@ -849,7 +849,7 @@
                                         <td>
                                             {{$camp->start_date}}<br>
                                             {{$camp->start_time}} </td>
-                                        <td>₹{{ number_format($camp->wallet, 2, '.', ',') }}</td>
+                                        <td>{{ dynamicCurrency() }}{{ number_format($camp->wallet, 2, '.', ',') }}</td>
                                         <td class="text-center">
                                             <div class="dropdown">
                                                 <button data-e2e="btn-actions" class="btn btn-primary btn-block dropdown-toggle" type="button" id="actions-menu"
@@ -930,7 +930,7 @@
                                                 data-original-title="Protection against repeat buyers enabled: {{$camp->product_id}}"></i>
                                             @if($camp->private_status == 1)
                                             <i class="fal fa-eye-slash" data-toggle="tooltip" title=""
-                                                data-original-title="Private campaign"></i> 
+                                                data-original-title="Private campaign"></i>
                                             @endif   </td>
                                         <td>
                                             @if(count($camp->pic)>0)
@@ -944,9 +944,9 @@
                                         <td>
                                             @if($camp->price && $camp->rebate_price)
                                             <small class="text-danger strikethrough">
-                                                ₹{{$camp->price}} </small>
+                                                {{ dynamicCurrency() }}{{$camp->price}} </small>
                                             <span class="text-success">
-                                                ₹{{$camp->rebate_price}} </span><br>
+                                                {{ dynamicCurrency() }}{{$camp->rebate_price}} </span><br>
                                             <small>
                                                {{round((100-$camp->rebate_price/$camp->price*100)*100)/100}}% OFF </small>
                                             @endif
@@ -958,7 +958,7 @@
                                         <td>
                                             {{$camp->start_date}}<br>
                                             {{$camp->start_time}} </td>
-                                        <td>₹{{ number_format($camp->wallet, 2, '.', ',') }}</td>
+                                        <td>{{ dynamicCurrency() }}{{ number_format($camp->wallet, 2, '.', ',') }}</td>
                                         <td class="text-center">
                                             <div class="dropdown">
                                                 <button data-e2e="btn-actions"
@@ -1008,7 +1008,7 @@
 
     </div>
 
-    
+
 
 </main>
 

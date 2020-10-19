@@ -91,9 +91,9 @@
 
                         <div class="col-7 d-flex align-items-center">
                             <span
-                                class="full-price strikethrough text-danger">₹{{ number_format($coupon->price, 2, '.', ',') }}</span>
+                                class="full-price strikethrough text-danger">{{ dynamicCurrency() }}{{ number_format($coupon->price, 2, '.', ',') }}</span>
                             <span
-                                class="price text-green">₹{{ number_format($coupon->price*(100-$coupon->off_per)/100, 2, '.', ',') }}</span>
+                                class="price text-green">{{ dynamicCurrency() }}{{ number_format($coupon->price*(100-$coupon->off_per)/100, 2, '.', ',') }}</span>
                         </div>
 
                         <div class="col-5 d-flex align-items-center justify-content-end discount">
@@ -164,7 +164,7 @@
                                                 <div class="slick-list draggable" style="height: 330px;">
                                                     <div class="slick-track" id="sub_images"
                                                         style="opacity: 1; height: 198px;">
-                                                        
+
                                                     </div>
                                                 </div>
                                             </div>
@@ -197,15 +197,15 @@
                                             </div>
                                             <div class="d-flex align-items-center text-info font-weight-bold ml-3">
                                                 <i class="sprite-icon-piggy-bank mr-1"></i>
-                                                YOU SAVE ₹<span id="rebate_price"></span>
+                                                YOU SAVE {{ dynamicCurrency() }}<span id="rebate_price"></span>
                                             </div>
                                         </div>
                                         <div class="d-flex align-items-center mb-2-5">
                                             <h5 class="old-price lato-medium mb-0 mr-0-5">
-                                                <del>₹<span id="price"></span></del></del>
+                                                <del>{{ dynamicCurrency() }}<span id="price"></span></del></del>
                                             </h5>
                                             <h4 class="new-price text-green roboto-black mb-0">
-                                                ₹<span id="save_price"></span>
+                                                {{ dynamicCurrency() }}<span id="save_price"></span>
                                             </h4><small class="d-inline-block ml-0-5" style="color: #989a9c;">+ Free
                                                 shipping</small>
                                         </div>
@@ -284,12 +284,12 @@
 
                             </div>
 
-                            
+
                             <noscript>
                                 <img src='//trc.taboola.com/1174786/log/3/unip?en=view_content' width='0' height='0'
                                     style='display:none' />
                             </noscript>
-                            
+
                         </div>
 
                     </div>
@@ -367,7 +367,7 @@
 
 
                     // modal favorite
-                    $("#favo_true").attr('data-id',coupon.id);   
+                    $("#favo_true").attr('data-id',coupon.id);
 
                     $("#favo_true").removeClass("fas");
                     $("#favo_true").removeClass("fal");

@@ -41,9 +41,9 @@
                                     {{ date('j F, Y  h:m ', strtotime($wallet->date)) }}<br>
                                     {{ date('h:m ', strtotime($wallet->date)) }} EST </td>
                                 <td>
-                                    ₹{{$wallet->amount}} <br>
+                                    {{ dynamicCurrency() }}{{$wallet->amount}} <br>
                                     <small class="text-muted">
-                                        + ₹{{$wallet->fee_amount}} fee </small>
+                                        + {{ dynamicCurrency() }}{{$wallet->fee_amount}} fee </small>
                                 </td>
                                 <td>
                                    {{$wallet->payment_method}} </td>
@@ -67,7 +67,7 @@
             </div>
 
             <div class="card-footer">
-                Total amount in the campaign wallet: <b>₹{{$wallet_sum}}</b> </div>
+                Total amount in the campaign wallet: <b>{{ dynamicCurrency() }}{{$wallet_sum}}</b> </div>
 
         </div>
 

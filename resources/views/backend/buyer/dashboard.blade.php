@@ -106,7 +106,7 @@
                                                     <label class="sr-only" for="min-price">Min Price</label>
                                                     <div class="input-group">
                                                         <div class="input-group-prepend">
-                                                            <span class="input-group-text">₹</span>
+                                                            <span class="input-group-text">{{ dynamicCurrency() }}</span>
                                                         </div>
                                                         @isset($min_price)
                                                             <input data-e2e="min-price" type="number" step="0.01"
@@ -130,7 +130,7 @@
                                                     <label class="sr-only" for="max-price">Max Price</label>
                                                     <div class="input-group">
                                                         <div class="input-group-prepend">
-                                                            <span class="input-group-text">₹</span>
+                                                            <span class="input-group-text">{{ dynamicCurrency() }}</span>
                                                         </div>
                                                         @isset($max_price)
                                                             <input data-e2e="max-price" type="number" step="0.01"
@@ -362,8 +362,8 @@
                                     <div class="row">
 
                                         <div class="col-7 d-flex align-items-center">
-                                            <span class="full-price strikethrough text-danger">₹{{$camp->price}}</span>
-                                            <span class="price text-green">₹{{$camp->rebate_price}}</span>
+                                            <span class="full-price strikethrough text-danger">{{ dynamicCurrency() }}{{$camp->price}}</span>
+                                            <span class="price text-green">{{ dynamicCurrency() }}{{$camp->rebate_price}}</span>
                                         </div>
 
                                         <div class="col-5 d-flex align-items-center justify-content-end discount">
@@ -491,17 +491,17 @@
                                     </h2>
                                     <div class="d-flex align-items-center mb-1 justify-content-center">
                                         <div>
-                                            <h3>₹<span id="save_price"></span> After Discount</h3>
+                                            <h3>{{ dynamicCurrency() }}<span id="save_price"></span> After Discount</h3>
                                         </div>
                                     </div>
                                     <div class="d-flex align-items-center mb-1 justify-content-center">
                                         <div>
-                                            <p>You will purchase for ₹<span id="price"></span> </p>
+                                            <p>You will purchase for {{ dynamicCurrency() }}<span id="price"></span> </p>
                                         </div>
                                     </div>
                                     <div class="d-flex align-items-center mb-1 justify-content-center">
                                         <div>
-                                            <p>You will recive cashback for ₹<span id="rebate_price"> </p>
+                                            <p>You will recive cashback for {{ dynamicCurrency() }}<span id="rebate_price"> </p>
                                         </div>
                                     </div>
                                     <div class="d-flex align-items-center mb-1 justify-content-center">
@@ -516,15 +516,15 @@
                                         </div>
                                         <div class="d-flex align-items-center text-info font-weight-bold ml-3">
                                             <i class="sprite-icon-piggy-bank mr-1"></i>
-                                            YOU SAVE ₹<span id="rebate_price"></span>
+                                            YOU SAVE {{ dynamicCurrency() }}<span id="rebate_price"></span>
                                         </div>
                                     </div>
                                     <div class="d-flex align-items-center mb-2-5">
                                         <h5 class="old-price lato-medium mb-0 mr-0-5">
-                                            <del>₹<span id="price"></span></del>
+                                            <del>{{ dynamicCurrency() }}<span id="price"></span></del>
                                         </h5>
                                         <h4 class="new-price text-green roboto-black mb-0">
-                                            ₹<span id="save_price"></span>
+                                            {{ dynamicCurrency() }}<span id="save_price"></span>
                                         </h4><small class="d-inline-block ml-0-5" style="color: #989a9c;">+ Free
                                             shipping</small>
                                     </div> --}}

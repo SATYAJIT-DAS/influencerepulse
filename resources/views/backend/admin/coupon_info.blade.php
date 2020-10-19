@@ -189,7 +189,7 @@
                                         <div class="controls">
                                             <input class="form-control" id="amazon_id" name="amazon_id" maxlength="255"
                                                 value="{{$coupon->amazon_id}}" placeholder="ASIN of your listing" />
-                                           
+
                                         </div>
                                     </div>
 
@@ -222,7 +222,7 @@
                                         <div class="controls">
                                             <div class="input-group">
                                                 <div class="input-group-prepend">
-                                                    <span class="input-group-text">₹</span>
+                                                    <span class="input-group-text">{{ dynamicCurrency() }}</span>
                                                 </div>
                                                 <input class="form-control" id="price" name="price" type="number"
                                                     min="0" step="0.01" placeholder="Price" value="{{$coupon->price}}">
@@ -245,8 +245,8 @@
                                                 <select name="off_per" id="discount-value" class="form-control"
                                                     value="{{$coupon->off_per}}">
                                                     <option value="">% OFF</option>
-                                                    <?php 
-                                                        for ($i=10; $i < 100; $i++) { 
+                                                    <?php
+                                                        for ($i=10; $i < 100; $i++) {
                                                            echo "<option value=".$i.">".$i."</option>";
                                                         }
                                                     ?>
@@ -297,7 +297,7 @@
                             </div>
                         </div>
 
-                     
+
 
                     </div>
 
@@ -351,7 +351,7 @@
 
                             </div>
 
-                        
+
                             <div class="row">
 
                                 <div class="col-xl-4">
@@ -395,7 +395,7 @@
 
                             </div>
 
-                        
+
 
                             <div class="form-group">
                                 <div class="custom-control custom-checkbox">

@@ -38,7 +38,7 @@
 
                         <h1 class="my-3 display-4">
                             <span data-e2e="pending-balance" class="text-info">
-                                ₹{{$wallet_sum}} </span>
+                                {{ dynamicCurrency() }}{{$wallet_sum}} </span>
                         </h1>
 
                         <small class="text-muted d-inline-block text-center">
@@ -66,7 +66,7 @@
         <div class="card">
 
             <div class="card-header">
-                ₹ Payout Payment Method </div>
+                {{ dynamicCurrency() }} Payout Payment Method </div>
 
             <div class="card-body">
 
@@ -86,7 +86,7 @@
 
                             <h6 class="mt-3 mb-0 pb-3">
                                 <span class="text-success">FREE for weekly / monthly payout</span>
-                                
+
                             </h6>
 
                             <div class="custom-control custom-radio custom-radio-no-label my-1-5" data-toggle="tooltip"
@@ -118,7 +118,7 @@
                                 <span class="text-success">FREE for weekly / monthly payout</span>
                                 <br>
                                 <small class="text-muted">
-                                    Otherwise <b>₹0.30</b> fee / payout </small>
+                                    Otherwise <b>{{ dynamicCurrency() }}0.30</b> fee / payout </small>
                             </h6>
 
                             <div class="custom-control custom-radio custom-radio-no-label my-1-5" data-toggle="tooltip"

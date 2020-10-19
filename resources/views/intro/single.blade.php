@@ -72,29 +72,29 @@
 
                             {{-- <div class="d-flex align-items-center mb-1 justify-content-center">
                                 <div>
-                                   <h3>₹{{$camp->rebate_price}} After Discount</h3>
+                                   <h3>{{ dynamicCurrency() }}{{$camp->rebate_price}} After Discount</h3>
                                 </div>
                                 <div class="percent bg-danger text-white">
                                     Deal: {{round((100-$camp->rebate_price/$camp->price*100)*100)/100}}%
                                 </div>
                                 <div class="d-flex align-items-center text-info font-weight-bold ml-3">
                                     <i class="sprite-icon-piggy-bank mr-1"></i>
-                                    YOU SAVE ₹{{$camp->price-$camp->rebate_price}}
+                                    YOU SAVE {{ dynamicCurrency() }}{{$camp->price-$camp->rebate_price}}
                                 </div>
                             </div> --}}
                             <div class="d-flex align-items-center mb-1 justify-content-center">
                                 <div>
-                                    <h2>₹{{$camp->rebate_price}} After Discount</h2>
+                                    <h2>{{ dynamicCurrency() }}{{$camp->rebate_price}} After Discount</h2>
                                 </div>
                             </div>
                             <div class="d-flex align-items-center mb-1 justify-content-center">
                                 <div>
-                                    <p>You will purchase for ₹{{$camp->price}} </p>
+                                    <p>You will purchase for {{ dynamicCurrency() }}{{$camp->price}} </p>
                                 </div>
                             </div>
                             <div class="d-flex align-items-center mb-1 justify-content-center">
                                 <div>
-                                    <p>You will recive cashback for ₹{{$camp->price-$camp->rebate_price}} </p>
+                                    <p>You will recive cashback for {{ dynamicCurrency() }}{{$camp->price-$camp->rebate_price}} </p>
                                 </div>
                             </div>
                             <div class="d-flex align-items-center mb-1 justify-content-center">
@@ -104,10 +104,10 @@
                             </div>
                             {{-- <div class="d-flex align-items-center mb-2-5">
                                 <h5 class="old-price lato-medium mb-0 mr-0-5">
-                                    <del>₹{{$camp->price}}</del>
+                                    <del>{{ dynamicCurrency() }}{{$camp->price}}</del>
                                 </h5>
                                 <h4 class="new-price text-green roboto-black mb-0">
-                                    ₹<span>{{$camp->rebate_price}}</span>
+                                    {{ dynamicCurrency() }}<span>{{$camp->rebate_price}}</span>
                                 </h4>
                             </div> --}}
                             {{--<div class="mb-2-5"><small class="d-block">
@@ -240,8 +240,8 @@
                         <div class="row">
 
                             <div class="col-7 d-flex align-items-center">
-                                <span class="full-price strikethrough text-danger">₹{{$camp->price}}</span>
-                                <span class="price text-green">₹{{$camp->rebate_price}}</span>
+                                <span class="full-price strikethrough text-danger">{{ dynamicCurrency() }}{{$camp->price}}</span>
+                                <span class="price text-green">{{ dynamicCurrency() }}{{$camp->rebate_price}}</span>
                             </div>
 
                             <div class="col-5 d-flex align-items-center justify-content-end discount">
