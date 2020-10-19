@@ -1,6 +1,6 @@
 @extends('backend.seller.layouts.app')
 @section('content')
-
+<link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.1/summernote.css" rel="stylesheet">
 <main class="main">
     <ol class="breadcrumb">
         <li class="breadcrumb-item">
@@ -195,7 +195,7 @@
 
                         </div>
 
-                        <div class="row align-items-center none">
+                        <div class="row align-items-center  d-none" id="asin-row">
 
                             <div class="col-xl-7">
 
@@ -325,7 +325,18 @@
     </script>
     @endif
     
-    
+     <script>
+    $(document).ready(function() {
+        $("#marketplace").on('change',function(){
+            if(1==$("#marketplace").val()){
+                $('#asin-row').removeClass('d-none').addClass('d-block');
+            }else{
+                $('#asin-row').removeClass('d-block').addClass('d-none');
+            }
+        })
+        
+    })
+    </script>
     <script>
     $(function() {
 

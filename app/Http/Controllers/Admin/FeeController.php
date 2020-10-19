@@ -40,6 +40,7 @@ class FeeController extends Controller
         $fee=Fee::Find($request->fee_id);
         $fee->rebate_fee=$request->rebate_fee;
         $fee->paypal_fee=$request->paypal_fee;
+        $fee->currency=$request->currency;
         $fee->save();
         return redirect()->back()->with('status','The fees has been saved.');
     }

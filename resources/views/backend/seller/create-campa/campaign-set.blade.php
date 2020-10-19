@@ -9,7 +9,7 @@
         </li>
         <li class="breadcrumb-item"><a href="{{route('seller.campaigns')}}">Campaigns</a></li>
         <li class="breadcrumb-item"><a href="{{route('seller.campaigns')}}">Campaign
-                #67856</a></li>
+                #{{$camp->id}}</a></li>
         <li class="breadcrumb-item active">Settings</li>
     </ol>
     <div class="container-fluid">
@@ -310,10 +310,18 @@
                                     Product URL <i class="fal fa-question-circle" data-toggle="tooltip"
                                         data-placement="top" title="The URL of your Product Listing"></i>
                                 </label>
+                                <!--https://www.amazon.in/s?url=search-alias%3Daps&field-keywords=B082HZQXHF&field-brand=VITAL%20ORGANICS -->
+                                @if($camp->marketplace == 1 && !is_null($camp->amazon_id) && !is_null($camp->brand_name) )
+                                <div class="controls">
+                                    <input class="form-control" id="product-url" name="product_url"
+                                        value="{{'https://www.amazon.in/s?url=search-alias%3Daps&field-keywords='.$camp->amazon_id.'&field-brand='.urlencode($camp->brand_name)}}" placeholder="Product URL">
+                                </div>
+                                @else
                                 <div class="controls">
                                     <input class="form-control" id="product-url" name="product_url"
                                         value="{{$camp->product_url}}" placeholder="Product URL">
                                 </div>
+                                @endif
                             </div>
 
                         </div>

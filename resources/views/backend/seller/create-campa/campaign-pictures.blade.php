@@ -13,7 +13,7 @@
         </li>
         <li class="breadcrumb-item"><a href="{{route('seller.campaigns')}}">Campaigns</a></li>
         <li class="breadcrumb-item"><a href="{{route('seller.campaigns')}}">Campaign
-                #67856</a></li>
+                #{{$camp->id}}</a></li>
         <li class="breadcrumb-item active">Pictures</li>
     </ol>
     @isset($msg)

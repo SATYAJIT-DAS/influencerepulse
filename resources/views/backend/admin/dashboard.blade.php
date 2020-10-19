@@ -203,18 +203,30 @@
                 <input type="hidden" name="fee_id" value="{{$fee->id}}">
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-xl-5">
+                        <div class="col-xl-3">
                             <div class="controls">
                                 <div class="input-group">
                                     <div class="input-group-prepend">
-                                        <span class="input-group-text">₹</span>
+                                        <span class="input-group-text">Currency </span>
+                                    </div>
+                                    <input class="form-control" id="currency" name="currency"
+                                        type="text" placeholder="Enter the Currency" value="{{$fee->currency}}">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-xl-3">
+                            <div class="controls">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">Fee amount</span>
                                     </div>
                                     <input class="form-control" id="rebate_fee" name="rebate_fee" step="0.01"
                                         type="number" placeholder="Enter the influencerpulse Fee" value="{{$fee->rebate_fee}}">
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-5">
+                        <div class="col-xl-3">
                             <div class="controls">
                                 <div class="input-group">
                                     <div class="input-group-prepend">
@@ -224,7 +236,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-2">
+                        <div class="col-xl-3">
                             <button type="submit" class="btn btn-primary">Save</button>
                         </div>
                     </div>
