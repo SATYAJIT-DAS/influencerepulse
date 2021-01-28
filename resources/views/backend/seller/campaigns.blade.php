@@ -123,10 +123,11 @@
                                         <th>Pricing</th>
                                         <th>Status</th>
                                         <th>
-                                            Claims <i class="fal fa-question-circle" data-toggle="tooltip"
+                                            Schedule <i class="fal fa-question-circle" data-toggle="tooltip"
                                                 data-placement="top" title="Number of claims today / Daily limit"></i>
                                         </th>
-                                        <th>Schedule</th>
+                                        <th>Amount </th>
+                                        <th>Link </th>
                                         <th>Wallet</th>
                                         <th></th>
                                     </tr>
@@ -171,6 +172,7 @@
                                             {{$camp->start_date}}<br>
                                             {{$camp->start_time}} </td>
                                         <td>{{ dynamicCurrency() }}{{ number_format($camp->wallet, 2, '.', ',') }}</td>
+                                        <td>{{url("/single-page/camp/{$camp->id}")}}</td>
                                         <td class="text-center">
                                             <div class="dropdown">
                                                 <button data-e2e="btn-actions" class="btn btn-primary btn-block dropdown-toggle" type="button" id="actions-menu"

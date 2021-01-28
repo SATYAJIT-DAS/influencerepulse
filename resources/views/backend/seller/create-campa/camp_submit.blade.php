@@ -7,8 +7,8 @@
             <a href="{{route('dashboard')}}"><i class="fal fa-home"></i> Home</a>
         </li>
         <li class="breadcrumb-item"><a href="{{route('seller.listings')}}">Campaign</a></li>
-        <li class="breadcrumb-item"><a href="{{route('seller.listings')}}">Campaign
-                #3682</a></li>
+        {{-- <li class="breadcrumb-item"><a href="{{route('seller.listings')}}">Campaign
+                #3682</a></li> --}}
         <li class="breadcrumb-item active">Pictures</li>
     </ol>
     @isset ($msg)
@@ -270,7 +270,7 @@
 
 
                     camp_id=$("#camp_id").val();
-                    private_url=window.location.hostname+'/shop_site/buyer/buy_confirm/'+camp_id;
+                    private_url=window.location.hostname+'/single-page/camp/'+camp_id;
                     $("#private-url").val(private_url);
 
 

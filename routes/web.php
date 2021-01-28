@@ -74,7 +74,7 @@ Route::get('/refund-policy', function () {
     return view('intro.refund-policy');
 })->name('intro.refund-policy');
 
-Route::get('/single-page/{id}/{state}', 'Intro\SingleController@show')->name('single-page');
+Route::get('/single-page/{state}/{id}', 'Intro\SingleController@show')->name('single-page');
 
 
 Route::get('/forget-password', function () {
@@ -437,7 +437,6 @@ Route::group(['middleware' => ['web', 'auth']], function () {
             Route::post('clear', 'Admin\HomeController@site_clear')->name('admin.clear');
 
             Route::get('clear', 'HomeController@clear');
-
         });
     });
 });

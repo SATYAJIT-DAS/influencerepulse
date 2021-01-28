@@ -42,8 +42,8 @@ class HomeController extends Controller
     public function index()
     {
 
-        $today=strtotime(date('yy-m-d'));
-        $camps=Campaign::all();
+        $today = strtotime(date('yy-m-d'));
+        $camps = Campaign::all();
         // foreach($camps as $key => $camp){
         //     $start_date =strtotime($camp->start_date);
         //     if(($today >= $start_date) && ( $camp->permission == "ready" )){
@@ -52,64 +52,66 @@ class HomeController extends Controller
         //     }
         // }
 
-        $coupons=Coupon::all();
-        foreach($coupons as $key => $coupon){
-            $start_date =strtotime($coupon->start_date);
-            if(($today >= $start_date)  && ( $coupon->permission == "ready" )){
-                $coupon->permission="pending";
+        $coupons = Coupon::all();
+        foreach ($coupons as $key => $coupon) {
+            $start_date = strtotime($coupon->start_date);
+            if (($today >= $start_date)  && ($coupon->permission == "ready")) {
+                $coupon->permission = "pending";
                 $coupon->save();
             }
         }
 
-        $orders=Order::all();
+        $orders = Order::all();
         // foreach($orders as $key => $order){
 
         // }
 
-        $camps=Campaign::where('permission','online')->get();
+        $camps = Campaign::where('permission', 'online')->where('private_status', 0)->get();
 
 
-        return view('intro.home',compact('camps'));
+        return view('intro.home', compact('camps'));
     }
 
-    public function testt(){
-      $test =QueueController::getCalcAmountConsideredTobeDeductedFromGeneralWallet(92);
-      $camp = Campaign::find(92);
-      $general_amount = Wallet::where('user_id', $camp->user_id)->where('operation', 'general charge')->sum('amount');
-      dd($general_amount);
+    public function testt()
+    {
+        $test = QueueController::getCalcAmountConsideredTobeDeductedFromGeneralWallet(92);
+        $camp = Campaign::find(92);
+        $general_amount = Wallet::where('user_id', $camp->user_id)->where('operation', 'general charge')->sum('amount');
+        dd($general_amount);
     }
 
     public function dashboard()
     {
 
-        $role=auth()->user()->role->name;
+        $role = auth()->user()->role->name;
 
-       // echo 'redirect-'; var_dump($role);die;
+        // echo 'redirect-'; var_dump($role);die;
 
-        if($role){
-            switch($role){
+        if ($role) {
+            switch ($role) {
                 case 'buyer':
                     $page = 'buyer.index';
                     return redirect()->route($page);
-                break;
+                    break;
                 case 'seller':
                     $page = 'seller.index';
                     return redirect()->route($page);
-                break;
+                    break;
                 case 'admin':
                     $page = 'admin.index';
                     return redirect()->route($page);
-                break;
+                    break;
             }
-        }else{
+        } else {
             return redirect('/');
         }
 
 
-        return view($page,compact('role'));
+        return view($page, compact('role'));
     }
 
-    public function passUpdate(Request $request){
+    public function passUpdate(Request $request)
+    {
         $user = User::where('email', $request->email)->first();;
         $pwd = $request->password;
         $user->password = Hash::make($pwd);
@@ -118,14 +120,16 @@ class HomeController extends Controller
         return redirect()->route('dashboard');
     }
 
-    public function getState(Request $request){
-        $country_id=$request->country_id;
+    public function getState(Request $request)
+    {
+        $country_id = $request->country_id;
         $states = CountryState::getStates($country_id);
         return json_encode($states);
     }
 
-    public function test(Request $request) {
-        $sendmail="gajanand.chepoori@gmail.com";
+    public function test(Request $request)
+    {
+        $sendmail = "gajanand.chepoori@gmail.com";
         $name = "Gajanand Chepoori";
 
         $from_name = config('services.mail')['from_name'];
@@ -134,10 +138,14 @@ class HomeController extends Controller
         $to_name = 'Gajanand Chepoori';
         $header = 'Notification Email Header';
 
-        $content='This is a Test Email sent via Gmail SMTP Server.';
+        $content = 'This is a Test Email sent via Gmail SMTP Server.';
 
-        try { Mail::to($sendmail, $to_name)->send(new ServiceMail($from_name, $from_email, $subject, $to_name, $header, $content));}
-        catch(\Exception $e){ var_dump($e->getMessage()); die('done');}
+        try {
+            Mail::to($sendmail, $to_name)->send(new ServiceMail($from_name, $from_email, $subject, $to_name, $header, $content));
+        } catch (\Exception $e) {
+            var_dump($e->getMessage());
+            die('done');
+        }
 
         die('mail sent');
 
@@ -158,31 +166,33 @@ class HomeController extends Controller
     }
 
 
-    public function getTimezone(Request $request){
+    public function getTimezone(Request $request)
+    {
 
         // $ip = file_get_contents("http://ipecho.net/plain");
-        $ip=$request->ip();
-        $url = 'http://ip-api.com/json/'.$ip;
+        $ip = $request->ip();
+        $url = 'http://ip-api.com/json/' . $ip;
         $tz = file_get_contents($url);
-        $tz = json_decode($tz,true)['timezone'];
+        $tz = json_decode($tz, true)['timezone'];
 
-        $time_key=0;
+        $time_key = 0;
 
         $timezones = DateTimeZone::listIdentifiers(DateTimeZone::ALL);
         foreach ($timezones as $key => $timezone) {
-            if($timezone == $tz){
-                $time_key=$key;
+            if ($timezone == $tz) {
+                $time_key = $key;
             }
         }
-        $result=array(
+        $result = array(
             'timezone' => $tz,
             'time_key' => $time_key,
         );
         return json_encode($result);
     }
 
-    public function avatarUpload(Request $request){
-        $user_id=auth()->user()->id;
+    public function avatarUpload(Request $request)
+    {
+        $user_id = auth()->user()->id;
 
         $request->validate([
             'avatar'  => 'image|max:2000'
@@ -191,105 +201,106 @@ class HomeController extends Controller
         $image = $request->file('avatar');
 
 
-        $user= User::Find($user_id);
+        $user = User::Find($user_id);
 
-        if($image){
+        if ($image) {
             $imageName = $image->getClientOriginalName();
-            $image->move(public_path('images'),$imageName);
-            $user->image=$imageName;
-            $msg="Your avatar has been updated.";
+            $image->move(public_path('images'), $imageName);
+            $user->image = $imageName;
+            $msg = "Your avatar has been updated.";
             $user->save();
-        }else{
-            $msg="No file was uploaded";
+        } else {
+            $msg = "No file was uploaded";
         }
         return redirect()->back()->with('status', $msg);
     }
 
-    public function removeAvatar($user_id){
-        $user=User::Find($user_id);
-        $user->image=null;
+    public function removeAvatar($user_id)
+    {
+        $user = User::Find($user_id);
+        $user->image = null;
         $user->save();
-        return redirect()->back()->with('status',' Your avatar has been deleted successfully.');
+        return redirect()->back()->with('status', ' Your avatar has been deleted successfully.');
     }
 
-    public function notificateUpdate(Request $request){
-        $user_id=auth()->user()->id;
-        $user=User::Find($user_id);
-        if(count($request->notifications)==3){
-            $user->key_update_status=1;
-        }else{
-            $user->key_update_status=0;
+    public function notificateUpdate(Request $request)
+    {
+        $user_id = auth()->user()->id;
+        $user = User::Find($user_id);
+        if (count($request->notifications) == 3) {
+            $user->key_update_status = 1;
+        } else {
+            $user->key_update_status = 0;
         }
-        if(count($request->notifications['claim'])==2){
-            $user->claimed_status=1;
-            $user->email_claimed=$request->notifications['claim']['email'];
-        }else{
-            $user->claimed_status=0;
+        if (count($request->notifications['claim']) == 2) {
+            $user->claimed_status = 1;
+            $user->email_claimed = $request->notifications['claim']['email'];
+        } else {
+            $user->claimed_status = 0;
         }
-        if(count($request->notifications['approval'])==2){
-            $user->approval_status=1;
-            $user->email_approval=$request->notifications['approval']['email'];
-        }else{
-            $user->approval_status=0;
-        }
-        $user->save();
-
-        return redirect()->back()->with('status','Your notification settings have been successfully updated.');
-    }
-
-    public function buyerNotif(Request $request){
-        $user_id=auth()->user()->id;
-        $user=User::Find($user_id);
-        if($request->newsletter_nof){
-            $user->key_update_status=1;
-        }else{
-            $user->key_update_status=0;
-
-        }
-        if($request->lastet_status){
-            $user->lastet_status=1;
-        }else{
-            $user->lastet_status=0;
-
-        }
-        if($request->claimed_status){
-            $user->claimed_status=1;
-        }else{
-            $user->claimed_status=0;
-
-        }
-        if($request->purchase_status){
-            $user->purchase_status=1;
-        }else{
-            $user->purchase_status=0;
-
+        if (count($request->notifications['approval']) == 2) {
+            $user->approval_status = 1;
+            $user->email_approval = $request->notifications['approval']['email'];
+        } else {
+            $user->approval_status = 0;
         }
         $user->save();
 
-        return redirect()->back()->with('status','Your notification settings have been successfully updated.');
+        return redirect()->back()->with('status', 'Your notification settings have been successfully updated.');
     }
 
-    public function emailChange(Request $request){
-        $user_id=auth()->user()->id;
-        $user=User::Find($user_id);
-        $user->email=$request->new_email_address;
-        $user->mail_verify=0;
+    public function buyerNotif(Request $request)
+    {
+        $user_id = auth()->user()->id;
+        $user = User::Find($user_id);
+        if ($request->newsletter_nof) {
+            $user->key_update_status = 1;
+        } else {
+            $user->key_update_status = 0;
+        }
+        if ($request->lastet_status) {
+            $user->lastet_status = 1;
+        } else {
+            $user->lastet_status = 0;
+        }
+        if ($request->claimed_status) {
+            $user->claimed_status = 1;
+        } else {
+            $user->claimed_status = 0;
+        }
+        if ($request->purchase_status) {
+            $user->purchase_status = 1;
+        } else {
+            $user->purchase_status = 0;
+        }
+        $user->save();
+
+        return redirect()->back()->with('status', 'Your notification settings have been successfully updated.');
+    }
+
+    public function emailChange(Request $request)
+    {
+        $user_id = auth()->user()->id;
+        $user = User::Find($user_id);
+        $user->email = $request->new_email_address;
+        $user->mail_verify = 0;
         $user->save();
         return redirect()->route('dashboard');
     }
 
 
 
-    public function codeSend(Request $request){
-        $user_id=auth()->user()->id;
+    public function codeSend(Request $request)
+    {
+        $user_id = auth()->user()->id;
 
-        $user=User::Find($user_id);
+        $user = User::Find($user_id);
 
-        $user->phone=$request->number;
+        $user->phone = $request->number;
 
         $code = random_int(1000, 9999);
 
-        $user->phone_code=$code;
+        $user->phone_code = $code;
 
         $user->save();
 
@@ -305,36 +316,37 @@ class HomeController extends Controller
         $twilio = new Client($sid, $token);
 
 
-        try{
-        $message = $twilio->messages
-                          ->create( $user->phone, // to
-                                   array(
-                                       "body" => $user->phone_code,
-                                       "from" => "+18484561185"
-                                   )
-                          );
-        //var_dump($message);die;
-        }catch (\Services_Twilio_RestException $e) {
+        try {
+            $message = $twilio->messages
+                ->create(
+                    $user->phone, // to
+                    array(
+                        "body" => $user->phone_code,
+                        "from" => "+18484561185"
+                    )
+                );
+            //var_dump($message);die;
+        } catch (\Services_Twilio_RestException $e) {
             die($e->getMessage());
         }
 
         die('asdas');
-        if($message->sid) {
-              return redirect()->back()->with('phone_check','code_check');
+        if ($message->sid) {
+            return redirect()->back()->with('phone_check', 'code_check');
         }
 
         return redirect()->back()->with('error', $user->phone);
-
     }
 
-    public function againSend(){
+    public function againSend()
+    {
 
-        $user_id=auth()->user()->id;
-        $user=User::Find($user_id);
+        $user_id = auth()->user()->id;
+        $user = User::Find($user_id);
 
         $code = random_int(1000, 9999);
 
-        $user->phone_code=$code;
+        $user->phone_code = $code;
 
         $user->save();
 
@@ -350,45 +362,45 @@ class HomeController extends Controller
         //     'from' => 'RebateKey',
         //     'text' => $user->phone_code
         // ]);
-        $sms=true;
+        $sms = true;
 
-        if($sms) {
-              return redirect()->back()->with('phone_check','code_check');
+        if ($sms) {
+            return redirect()->back()->with('phone_check', 'code_check');
         }
 
         return redirect()->back()->with('error', $user->phone);
-
     }
 
-    public function codeCheck(Request $request){
-        $user_id=auth()->user()->id;
-        $user=User::Find($user_id);
-        $code=$request->code;
+    public function codeCheck(Request $request)
+    {
+        $user_id = auth()->user()->id;
+        $user = User::Find($user_id);
+        $code = $request->code;
 
-        if($code==$user->phone_code){
+        if ($code == $user->phone_code) {
             $user->password = Hash::make($request->new_password) ?? '';
             $user->phone_verify = 1;
             $user->save();
-            return redirect()->back()->with('status','Your verification has been completed!');
-        }else{
-            return redirect()->back()->with('phone_check','code_faild');
+            return redirect()->back()->with('status', 'Your verification has been completed!');
+        } else {
+            return redirect()->back()->with('phone_check', 'code_faild');
         }
-
     }
 
-    public function passReset(Request $request){
-        $user_id=auth()->user()->id;
-        $user=User::Find($user_id);
-        if(Hash::check($request->current_password, $user->password) == false){
-           return redirect()->back()->with('failed','Your current password is not correct.');
+    public function passReset(Request $request)
+    {
+        $user_id = auth()->user()->id;
+        $user = User::Find($user_id);
+        if (Hash::check($request->current_password, $user->password) == false) {
+            return redirect()->back()->with('failed', 'Your current password is not correct.');
         }
         $user->password = Hash::make($request->new_password);
         $user->save();
-        return redirect()->back()->with('status','Your password has been reset.');
-
+        return redirect()->back()->with('status', 'Your password has been reset.');
     }
 
-    public function clear(){
+    public function clear()
+    {
         Campaign::query()->delete();
         Order::query()->delete();
         Message::query()->delete();
@@ -396,5 +408,4 @@ class HomeController extends Controller
         Transaction::query()->delete();
         return redirect()->route('dashboard');
     }
-
 }

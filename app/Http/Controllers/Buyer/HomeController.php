@@ -31,10 +31,11 @@ class HomeController extends Controller
     public function index()
     {
         $today = strtotime(date('yy-m-d'));
-        $camps = Campaign::all();
+        //$camps = Campaign::all();
+        //$camps = Campaign::where('permission', 'online')->where('private_status', 0)->get();
         $categories = Category::all();
         $markets = Marketplace::all();
-        $camps = Campaign::where('permission', 'online')->orderby('updated_at', 'DESC')->get();
+        $camps = Campaign::where('permission', 'online')->where('private_status', 0)->orderby('updated_at', 'DESC')->get();
         $coupons = Coupon::where('permission', 'online')->get();
         $mail_verify = auth()->user()->mail_verify;
         return view('backend.buyer.dashboard', compact('camps', 'categories', 'coupons', 'mail_verify', 'markets'));
@@ -47,8 +48,9 @@ class HomeController extends Controller
         return $num;
     }
 
-    public function confirm($camp_id){
-    	 $camp = Campaign::FindOrFail($camp_id);
+    public function confirm($camp_id)
+    {
+        $camp = Campaign::FindOrFail($camp_id);
         if ($camp->daily_count >= $camp->daily_rebates) {
             return redirect()->back()->with('status', 'Sorry, deals are closed for the day, please try to avail deal tomorrow.');
         }
@@ -65,7 +67,7 @@ class HomeController extends Controller
         if ($existing_orders) {
             return redirect()->back()->with('status', 'You have already purchased this order.');
         }
-        $order=new Order();
+        $order = new Order();
         $order->camp_id = $camp_id;
         $order->buyer_id = auth()->user()->id;
         $order->status = 'before going marketplace';
@@ -81,10 +83,10 @@ class HomeController extends Controller
             return redirect()->back()->with('status', 'Sorry, deals are closed for the day, please try to avail deal tomorrow.');
         }
         $new_order = Order::Find($request->order_id);
-        if(empty( $new_order)){
-               // var_dump();
-                 return redirect()->route('buyer.index')->withErrors(['The Deal been expired']);;
-            }
+        if (empty($new_order)) {
+            // var_dump();
+            return redirect()->route('buyer.index')->withErrors(['The Deal been expired']);;
+        }
         $buyer_id = auth()->user()->id;
         $new_order->buyer_id = auth()->user()->id;
         $new_order->camp_id = $request->camp_id;
@@ -93,7 +95,7 @@ class HomeController extends Controller
 
         if (!$new_order->start_time) {
             $new_order->start_time = $current;
-             $camp->daily_count += 1;
+            $camp->daily_count += 1;
             $camp->total_count += 1;
             $camp->save();
         }
@@ -101,7 +103,7 @@ class HomeController extends Controller
         $new_order->save();
         // left time count
         $left_time = strtotime($current) - strtotime($new_order->start_time);
-        $left_time = (60*60) - $left_time;
+        $left_time = (60 * 60) - $left_time;
         $orders = Order::where('buyer_id', $buyer_id)->where('status', 'Waiting for purchase')
             ->orwhere('status', 'Expired')
             ->orderby('updated_at', 'DESC')->get();
@@ -112,23 +114,25 @@ class HomeController extends Controller
             FROM messages
             LEFT JOIN orders ON orders.id=messages.order_id
             WHERE orders.buyer_id=:id", ['id' => $buyer_id]);
-        return view('backend.buyer.confirm_redirect',
-            compact('camp', 'orders', 'new_order', 'current', 'left_time', 'purcha_count', 'dispute_count', 'msg_count'))->with(['message' => "Please confirm the order id"]);;
+        return view(
+            'backend.buyer.confirm_redirect',
+            compact('camp', 'orders', 'new_order', 'current', 'left_time', 'purcha_count', 'dispute_count', 'msg_count')
+        )->with(['message' => "Please confirm the order id"]);;
     }
 
     public function againConfirm($order_id)
     {
         $buyer_id = auth()->user()->id;
         $new_order = Order::find($order_id);
-        if(empty( $new_order)){
-               // var_dump();
-                 return redirect()->route('buyer.index')->withErrors(['The Deal been expired']);;
-            }
+        if (empty($new_order)) {
+            // var_dump();
+            return redirect()->route('buyer.index')->withErrors(['The Deal been expired']);;
+        }
         $camp = Campaign::FindOrFail($new_order->camp_id);
         $orders = Order::where('buyer_id', $buyer_id)->orderby('updated_at', 'DESC')->get();
-       // dd($orders);
+        // dd($orders);
         $current = date('yy-m-d h:i:s');
-        $left_time = (60*60)  - strtotime($current) + strtotime($new_order->start_time);
+        $left_time = (60 * 60)  - strtotime($current) + strtotime($new_order->start_time);
         $purcha_count = Order::where('buyer_id', $buyer_id)->where('status', 'Waiting for purchase')->count();
         $dispute_count = Order::where('buyer_id', $buyer_id)->where('status', 'disputes')->count();
         $msg_count = DB::select("
@@ -136,9 +140,11 @@ class HomeController extends Controller
             FROM messages
             LEFT JOIN orders ON orders.id=messages.order_id
             WHERE orders.buyer_id=:id", ['id' => $buyer_id]);
-            //dd($new_order);
-        return view('backend.buyer.confirm_redirect',
-            compact('camp', 'orders', 'new_order', 'left_time', 'current', 'left_time', 'purcha_count', 'dispute_count', 'msg_count'));
+        //dd($new_order);
+        return view(
+            'backend.buyer.confirm_redirect',
+            compact('camp', 'orders', 'new_order', 'left_time', 'current', 'left_time', 'purcha_count', 'dispute_count', 'msg_count')
+        );
     }
 
     public function orderPurchase(Request $request)
@@ -320,7 +326,6 @@ class HomeController extends Controller
                         break;
                 }
             }
-
         }
 
         $coupons = Coupon::where('permission', 'online')->get();
@@ -332,9 +337,11 @@ class HomeController extends Controller
 
         $remaining_deals_for_the_day = 0;
 
-        $cate_size=count($category_id);
-        return view('backend.buyer.dashboard',
-            compact('camps','categories','coupons','mail_verify','markets','sort','term','min_price','max_price','marketplace_id','category_id','cate_size','remaining_deals_for_the_day'));
+        $cate_size = count($category_id);
+        return view(
+            'backend.buyer.dashboard',
+            compact('camps', 'categories', 'coupons', 'mail_verify', 'markets', 'sort', 'term', 'min_price', 'max_price', 'marketplace_id', 'category_id', 'cate_size', 'remaining_deals_for_the_day')
+        );
     }
 
 

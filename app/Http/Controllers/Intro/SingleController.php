@@ -46,19 +46,17 @@ class SingleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id, $state)
+    public function show($state, $id)
     {
-        if($state == 'camp'){
-            $camp=Campaign::Find($id);
-            $camp_count=Campaign::where('permission','online')->count();
-            $camps=Campaign::where('permission','online')->get();
-            if($camp_count >= 4){
-                $camps=Campaign::where('permission','online')->get()->random(4);
+        if ($state == 'camp') {
+            $camp = Campaign::Find($id);
+            $camp_count = Campaign::where('permission', 'online')->count();
+            $camps = Campaign::where('permission', 'online')->get();
+            if ($camp_count >= 4) {
+                $camps = Campaign::where('permission', 'online')->get()->random(4);
             }
             //var_dump($camp->pic);die;
-            return view('intro.single',compact('camp','camps'));
-        }else{
-
+            return view('intro.single', compact('camp', 'camps'));
         }
         return $state;
     }
