@@ -31,6 +31,11 @@
                     About Us
                 </a>
             </li>
+            <li class="nav-item d-md-down-none">
+                <a class="nav-link" href="{{ route('intro.gems') }}">
+                    Gems
+                </a>
+            </li>
             <!-- <li class="nav-item d-md-down-none">
                 <a class="nav-link" href="{{ route('intro.faq.buyer') }}">
                     FAQ

@@ -74,6 +74,9 @@ Route::get('/refund-policy', function () {
     return view('intro.refund-policy');
 })->name('intro.refund-policy');
 
+Route::get('/gems', function () {
+    return view('intro.gems');
+})->name('intro.gems');
 Route::get('/single-page/{state}/{id}', 'Intro\SingleController@show')->name('single-page');
 
 
