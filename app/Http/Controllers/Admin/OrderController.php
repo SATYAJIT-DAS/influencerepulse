@@ -27,7 +27,7 @@ class OrderController extends Controller
         $paidouts=Order::where('status','paidout')->orderby('updated_at','DESC')->get();
     	$disputes=Order::where('status', 'disputed')->orderby('updated_at','DESC')->get();
 
-        $declines=Order::where('status', 'Declined')->orderby('updated_at','DESC')->get();
+       $declines=Order::where('status', 'Declined')->orderby('updated_at','DESC')->get();
 
         $paid_com=Order::where('status', 'paid completed')->orderby('updated_at','DESC')->get();
         $cancelled=Order::where('status', 'Cancelled')->orwhere('status', 'Expired')->orderby('updated_at','DESC')->get();
@@ -36,6 +36,7 @@ class OrderController extends Controller
             ->orwhere('status','vic_seller')
             ->orderby('updated_at','DESC')
             ->get();
+            // dd($resolves);
     	return view('backend.admin.order_manage',
             compact('preapps','declines','apps','paid_com','paidouts','disputes','resolves','cancelled'));
     }
