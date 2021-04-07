@@ -129,17 +129,17 @@
                                         <tr>
                                             <td>{{$order->id}}</td>
                                             <td>
-                                                <img src="{{asset('public/images/'.$order->getcamp->pic[0]->image_path)}}" class="deal-img">
+                                                <img src="{{asset('public/images/'.$order->getcamp->pic[0]->image_path ? $order->getcamp->pic[0]->image_path :'')}}" class="deal-img">
                                             </td>
-                                            <td style="width: 30%;">{{$order->getcamp->product_name}}</td>
+                                            <td style="width: 30%;">{{$order->getcamp->product_name ? $order->getcamp->product_name :''}}</td>
                                             <td>
-                                                {{$order->getcamp->user->name}}</td>
+                                                {{$order->getcamp->user->name ? $order->getcamp->user->name : ''}}</td>
                                             <td>
                                                 {{$order->getBuyer->name}}</td>
                                             <td>
                                                 {{$order->order_id}}</td>
                                              <td>
-                                                {{ dynamicCurrency() }}{{$order->getcamp->price-$order->getcamp->rebate_price}}
+                                                {{ dynamicCurrency() }}{{$order->getcamp->price-$order->getcamp->rebate_price ? $order->getcamp->price-$order->getcamp->rebate_price:""}}
                                             </td>
                                             <td>
                                                 <span class="text-danger">{{$order->status}}</span>
@@ -147,7 +147,7 @@
                                             <!-- <td>
                                                 <a class="btn btn-primary btn-block msg-class" data-toggle="modal"
                                                     data-target="#msg-modal"
-                                                    data-id="{{$order->id}}" data-to="{{$order->getcamp->user->name}}"
+                                                    data-id="{{$order->id}}" data-to="{{$order->getcamp->user->name ? $order->getcamp->user->name:"" }}"
                                                     href="">
                                                     Message Seller </a>
                                                 <a class="btn btn-dark btn-block"
@@ -195,18 +195,18 @@
                                         @foreach($apps as $order)
                                         <tr>
                                             <td>{{$order->id}}</td>
-                                            <td>
-                                                <img src="{{asset('public/images/'.$order->getcamp->pic[0]->image_path)}}" class="deal-img">
+                                           <td>
+                                                <img src="{{asset('public/images/'.$order->getcamp->pic[0]->image_path ? $order->getcamp->pic[0]->image_path :'')}}" class="deal-img">
                                             </td>
-                                            <td style="width: 30%;">{{$order->getcamp->product_name}}</td>
+                                            <td style="width: 30%;">{{$order->getcamp->product_name ? $order->getcamp->product_name :''}}</td>
                                             <td>
-                                                {{$order->getcamp->user->name}}</td>
-                                         	<td>
+                                                {{$order->getcamp->user->name ? $order->getcamp->user->name : ''}}</td>
+                                            <td>
                                                 {{$order->getBuyer->name}}</td>
                                             <td>
                                                 {{$order->order_id}}</td>
                                              <td>
-                                                {{ dynamicCurrency() }}{{$order->getcamp->price-$order->getcamp->rebate_price}}
+                                                {{ dynamicCurrency() }}{{$order->getcamp->price-$order->getcamp->rebate_price ? $order->getcamp->price-$order->getcamp->rebate_price:""}}
                                             </td>
                                             <td>
                                                 <span class="text-danger">{{$order->status}}</span>
@@ -264,17 +264,17 @@
                                         <tr>
                                             <td>{{$order->id}}</td>
                                             <td>
-                                                <img src="{{asset('public/images/'.$order->getcamp->pic[0]->image_path)}}" class="deal-img">
+                                                <img src="{{asset('public/images/'.$order->getcamp->pic[0]->image_path ? $order->getcamp->pic[0]->image_path :'')}}" class="deal-img">
                                             </td>
-                                            <td style="width: 30%;">{{$order->getcamp->product_name}}</td>
+                                            <td style="width: 30%;">{{$order->getcamp->product_name ? $order->getcamp->product_name :''}}</td>
                                             <td>
-                                                {{$order->getcamp->user->name}}</td>
+                                                {{$order->getcamp->user->name ? $order->getcamp->user->name : ''}}</td>
                                             <td>
                                                 {{$order->getBuyer->name}}</td>
                                             <td>
                                                 {{$order->order_id}}</td>
                                              <td>
-                                                {{ dynamicCurrency() }}{{$order->getcamp->price-$order->getcamp->rebate_price}}
+                                                {{ dynamicCurrency() }}{{$order->getcamp->price-$order->getcamp->rebate_price ? $order->getcamp->price-$order->getcamp->rebate_price:""}}
                                             </td>
                                             <td>
                                                 <span class="text-danger">{{$order->status}}</span>
@@ -341,17 +341,17 @@
                                         <tr>
                                             <td>{{$order->id}}</td>
                                             <td>
-                                                <img src="{{asset('public/images/'.$order->getcamp->pic[0]->image_path)}}" class="deal-img">
+                                                <img src="{{asset('public/images/'.$order->getcamp->pic[0]->image_path ? $order->getcamp->pic[0]->image_path :'')}}" class="deal-img">
                                             </td>
-                                            <td style="width: 30%;">{{$order->getcamp->product_name}}</td>
+                                            <td style="width: 30%;">{{$order->getcamp->product_name ? $order->getcamp->product_name :''}}</td>
                                             <td>
-                                                {{$order->getcamp->user->name}}</td>
+                                                {{$order->getcamp->user->name ? $order->getcamp->user->name : ''}}</td>
                                             <td>
                                                 {{$order->getBuyer->name}}</td>
                                             <td>
                                                 {{$order->order_id}}</td>
                                              <td>
-                                                {{ dynamicCurrency() }}{{$order->getcamp->price-$order->getcamp->rebate_price}}
+                                                {{ dynamicCurrency() }}{{$order->getcamp->price-$order->getcamp->rebate_price ? $order->getcamp->price-$order->getcamp->rebate_price:""}}
                                             </td>
                                             <td>
                                                 <span class="text-danger">{{$order->status}}</span>
@@ -411,17 +411,17 @@
                                         <tr>
                                             <td>{{$order->id}}</td>
                                             <td>
-                                                <img src="{{asset('public/images/'.$order->getcamp->pic[0]->image_path)}}" class="deal-img">
+                                                <img src="{{asset('public/images/'.$order->getcamp->pic[0]->image_path ? $order->getcamp->pic[0]->image_path :'')}}" class="deal-img">
                                             </td>
-                                            <td style="width: 30%;">{{$order->getcamp->product_name}}</td>
+                                            <td style="width: 30%;">{{$order->getcamp->product_name ? $order->getcamp->product_name :''}}</td>
                                             <td>
-                                                {{$order->getcamp->user->name}}</td>
+                                                {{$order->getcamp->user->name ? $order->getcamp->user->name : ''}}</td>
                                             <td>
                                                 {{$order->getBuyer->name}}</td>
                                             <td>
                                                 {{$order->order_id}}</td>
                                              <td>
-                                                {{ dynamicCurrency() }}{{$order->getcamp->price-$order->getcamp->rebate_price}}
+                                                {{ dynamicCurrency() }}{{$order->getcamp->price-$order->getcamp->rebate_price ? $order->getcamp->price-$order->getcamp->rebate_price:""}}
                                             </td>
                                             <td>
                                                 <span class="text-danger">{{$order->status}}</span>
@@ -486,18 +486,18 @@
                                         @foreach($disputes as $order)
                                         <tr>
                                             <td>{{$order->id}}</td>
-                                            <td>
-                                                <img src="{{asset('public/images/'.$order->getcamp->pic[0]->image_path)}}" class="deal-img">
+                                             <td>
+                                                <img src="{{asset('public/images/'.$order->getcamp->pic[0]->image_path ? $order->getcamp->pic[0]->image_path :'')}}" class="deal-img">
                                             </td>
-                                            <td style="width: 30%;">{{$order->getcamp->product_name}}</td>
+                                            <td style="width: 30%;">{{$order->getcamp->product_name ? $order->getcamp->product_name :''}}</td>
                                             <td>
-                                                {{$order->getcamp->user->name}}</td>
-                                         	<td>
+                                                {{$order->getcamp->user->name ? $order->getcamp->user->name : ''}}</td>
+                                            <td>
                                                 {{$order->getBuyer->name}}</td>
                                             <td>
                                                 {{$order->order_id}}</td>
                                              <td>
-                                                {{ dynamicCurrency() }}{{$order->getcamp->price-$order->getcamp->rebate_price}}
+                                                {{ dynamicCurrency() }}{{$order->getcamp->price-$order->getcamp->rebate_price ? $order->getcamp->price-$order->getcamp->rebate_price:""}}
                                             </td>
                                             <td>
                                                 <span class="text-danger">{{$order->dis_reason}}</span>
@@ -604,17 +604,17 @@
                                         <tr>
                                             <td>{{$order->id}}</td>
                                             <td>
-                                                <img src="{{asset('public/images/'.$order->getcamp->pic[0]->image_path)}}" class="deal-img">
+                                                <img src="{{asset('public/images/'.$order->getcamp->pic[0]->image_path ? $order->getcamp->pic[0]->image_path :'')}}" class="deal-img">
                                             </td>
-                                            <td style="width: 30%;">{{$order->getcamp->product_name}}</td>
+                                            <td style="width: 30%;">{{$order->getcamp->product_name ? $order->getcamp->product_name :''}}</td>
                                             <td>
-                                                {{$order->getcamp->user->name}}</td>
+                                                {{$order->getcamp->user->name ? $order->getcamp->user->name : ''}}</td>
                                             <td>
                                                 {{$order->getBuyer->name}}</td>
                                             <td>
                                                 {{$order->order_id}}</td>
                                              <td>
-                                                {{ dynamicCurrency() }}{{$order->getcamp->price-$order->getcamp->rebate_price}}
+                                                {{ dynamicCurrency() }}{{$order->getcamp->price-$order->getcamp->rebate_price ? $order->getcamp->price-$order->getcamp->rebate_price:""}}
                                             </td>
                                             <td>
                                                 <span class="text-danger">Resolved</span>
@@ -665,18 +665,18 @@
                                         @foreach($cancelled as $order)
                                         <tr>
                                             <td>{{$order->id}}</td>
-                                            <td>
-                                                <img src="{{asset('public/images/'.$order->getcamp->pic[0]->image_path)}}" class="deal-img">
+                                             <td>
+                                                <img src="{{asset('public/images/'.$order->getcamp->pic[0]->image_path ? $order->getcamp->pic[0]->image_path :'')}}" class="deal-img">
                                             </td>
-                                            <td style="width: 30%;">{{$order->getcamp->product_name}}</td>
+                                            <td style="width: 30%;">{{$order->getcamp->product_name ? $order->getcamp->product_name :''}}</td>
                                             <td>
-                                                {{$order->getcamp->user->name}}</td>
+                                                {{$order->getcamp->user->name ? $order->getcamp->user->name : ''}}</td>
                                             <td>
                                                 {{$order->getBuyer->name}}</td>
                                             <td>
                                                 {{$order->order_id}}</td>
                                              <td>
-                                                {{ dynamicCurrency() }}{{$order->getcamp->price-$order->getcamp->rebate_price}}
+                                                {{ dynamicCurrency() }}{{$order->getcamp->price-$order->getcamp->rebate_price ? $order->getcamp->price-$order->getcamp->rebate_price:""}}
                                             </td>
                                             <td>
                                                 <span class="text-danger">{{$order->dis_reason}}</span>
