@@ -129,7 +129,7 @@
                                         <tr>
                                             <td>{{$order->id}}</td>
                                             <td>
-                                                <img src="{{asset('public/images/'.$order->getcamp->pic[0]->image_path ? $order->getcamp->pic[0]->image_path :'')}}" class="deal-img">
+                                                <img src="{{asset('public/images/'.$order->getcamp->pic[0]->image_path )}}" class="deal-img">
                                             </td>
                                             <td style="width: 30%;">{{$order->getcamp->product_name ? $order->getcamp->product_name :''}}</td>
                                             <td>
@@ -196,7 +196,7 @@
                                         <tr>
                                             <td>{{$order->id}}</td>
                                            <td>
-                                                <img src="{{asset('public/images/'.$order->getcamp->pic[0]->image_path ? $order->getcamp->pic[0]->image_path :'')}}" class="deal-img">
+                                                <img src="{{asset('public/images/'.$order->getcamp->pic[0]->image_path )}}" class="deal-img">
                                             </td>
                                             <td style="width: 30%;">{{$order->getcamp->product_name ? $order->getcamp->product_name :''}}</td>
                                             <td>
@@ -264,7 +264,7 @@
                                         <tr>
                                             <td>{{$order->id}}</td>
                                             <td>
-                                                <img src="{{asset('public/images/'.$order->getcamp->pic[0]->image_path ? $order->getcamp->pic[0]->image_path :'')}}" class="deal-img">
+                                                <img src="{{asset('public/images/'.$order->getcamp->pic[0]->image_path )}}" class="deal-img">
                                             </td>
                                             <td style="width: 30%;">{{$order->getcamp->product_name ? $order->getcamp->product_name :''}}</td>
                                             <td>
@@ -341,7 +341,7 @@
                                         <tr>
                                             <td>{{$order->id}}</td>
                                             <td>
-                                                <img src="{{asset('public/images/'.$order->getcamp->pic[0]->image_path ? $order->getcamp->pic[0]->image_path :'')}}" class="deal-img">
+                                                <img src="{{asset('public/images/'.$order->getcamp->pic[0]->image_path )}}" class="deal-img">
                                             </td>
                                             <td style="width: 30%;">{{$order->getcamp->product_name ? $order->getcamp->product_name :''}}</td>
                                             <td>
@@ -411,7 +411,7 @@
                                         <tr>
                                             <td>{{$order->id}}</td>
                                             <td>
-                                                <img src="{{asset('public/images/'.$order->getcamp->pic[0]->image_path ? $order->getcamp->pic[0]->image_path :'')}}" class="deal-img">
+                                                <img src="{{asset('public/images/'.$order->getcamp->pic[0]->image_path )}}" class="deal-img">
                                             </td>
                                             <td style="width: 30%;">{{$order->getcamp->product_name ? $order->getcamp->product_name :''}}</td>
                                             <td>
@@ -487,7 +487,7 @@
                                         <tr>
                                             <td>{{$order->id}}</td>
                                              <td>
-                                                <img src="{{asset('public/images/'.$order->getcamp->pic[0]->image_path ? $order->getcamp->pic[0]->image_path :'')}}" class="deal-img">
+                                                <img src="{{asset('public/images/'.$order->getcamp->pic[0]->image_path )}}" class="deal-img">
                                             </td>
                                             <td style="width: 30%;">{{$order->getcamp->product_name ? $order->getcamp->product_name :''}}</td>
                                             <td>
@@ -604,7 +604,7 @@
                                         <tr>
                                             <td>{{$order->id}}</td>
                                             <td>
-                                                <img src="{{asset('public/images/'.$order->getcamp->pic[0]->image_path ? $order->getcamp->pic[0]->image_path :'')}}" class="deal-img">
+                                                <img src="{{asset('public/images/'.$order->getcamp->pic[0]->image_path )}}" class="deal-img">
                                             </td>
                                             <td style="width: 30%;">{{$order->getcamp->product_name ? $order->getcamp->product_name :''}}</td>
                                             <td>
@@ -660,80 +660,7 @@
                                     </tr>
                                 </thead>
 
-                                <tbody>
-                                    @if(count($cancelled) != 0)
-                                        @foreach($cancelled as $order)
-                                        <tr>
-                                            <td>{{$order->id}}</td>
-                                             <td>
-                                                <img src="{{asset('public/images/'.$order->getcamp->pic[0]->image_path ? $order->getcamp->pic[0]->image_path :'')}}" class="deal-img">
-                                            </td>
-                                            <td style="width: 30%;">{{$order->getcamp->product_name ? $order->getcamp->product_name :''}}</td>
-                                            <td>
-                                                {{$order->getcamp->user->name ? $order->getcamp->user->name : ''}}</td>
-                                            <td>
-                                                {{$order->getBuyer->name}}</td>
-                                            <td>
-                                                {{$order->order_id}}</td>
-                                             <td>
-                                                {{ dynamicCurrency() }}{{$order->getcamp->price-$order->getcamp->rebate_price ? $order->getcamp->price-$order->getcamp->rebate_price:""}}
-                                            </td>
-                                            <td>
-                                                <span class="text-danger">{{$order->dis_reason}}</span>
-                                            </td>
-                                            <td>
-                                                <div class="dropdown">
-                                                    <button data-e2e="btn-actions"
-                                                        class="btn btn-primary btn-block dropdown-toggle" type="button"
-                                                        id="actions-menu" data-toggle="dropdown">
-                                                        Actions
-                                                    </button>
-                                                    <div class="dropdown-menu dropdown-menu-right"
-                                                        aria-labelledby="actions-menu">
-
-                                                        <a class="dropdown-item msg-class" data-toggle="modal"
-                                                        data-target="#msg-modal"
-                                                        data-id="{{$order->id}}" data-to="{{$order->getcamp->user->name}}"
-                                                        data-type="seller" href="">
-                                                        Message Seller </a>
-
-                                                        <a class="dropdown-item msg-class" data-toggle="modal"
-                                                        data-target="#msg-modal" data-type="buyer"
-                                                        data-id="{{$order->id}}" data-to="{{$order->getBuyer->name}}"
-                                                        href="">
-                                                        Message Buyer </a>
-                                                    </div>
-
-                                                </div>
-
-
-                                                <div class="dropdown">
-                                                    <button data-e2e="btn-actions"
-                                                        class="btn btn-danger btn-block dropdown-toggle" type="button"
-                                                        id="actions-menu" data-toggle="dropdown">
-                                                        Decision
-                                                    </button>
-                                                    <div class="dropdown-menu dropdown-menu-right"
-                                                        aria-labelledby="actions-menu">
-
-                                                        <a class="dropdown-item time-class" data-id="{{$order->id}}" data-toggle="modal"
-                                                        data-target="#time-delay" href="">
-                                                        Time Delay </a>
-
-                                                    </div>
-
-                                                </div>
-
-                                            </td>
-                                        </tr>
-                                        @endforeach
-                                    @else
-                                    <tr>
-                                        <td colspan="8" class="text-center">
-                                            No issues yet. </td>
-                                    </tr>
-                                    @endif
-                                </tbody>
+                              
                             </table>
                         </div>
                     </div>
