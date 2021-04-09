@@ -451,7 +451,7 @@ function gen_2() {
     marketplace +
     "/s/ref=nb_sb_noss_1?url=search-alias%3Daps&field-keywords= " +
     keyword_2 +
-    "note+9+screen+protector&hidden-keywords=" +
+    "&hidden-keywords=" +
     assin_2 +
     "&rh=i:aps,ssx:relevance";
   //$('#matketplace_exmple_url_2').html(example_url);
